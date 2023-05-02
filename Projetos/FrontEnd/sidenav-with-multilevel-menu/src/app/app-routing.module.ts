@@ -1,28 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CoupensComponent } from './coupens/coupens.component';
+import { CoupensComponent } from './orcamento/orcamento.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MediaComponent } from './media/media.component';
-import { PagesComponent } from './pages/pages.component';
-import { ProductsComponent } from './products/products.component';
-import { SettingsComponent } from './settings/settings.component';
-import { StatisticsComponent } from './statistics/statistics.component';
+import { FornecedoresComponent } from './fornecedores/fornecedores.component';
+import { PagesComponent } from './cliente/cliente.component';
+import { ProductsComponent } from './produtos/produtos.component';
+import { SettingsComponent } from './configuracoes/configuracoes.component';
+import { StatisticsComponent } from './material/material.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
   {
-    path: 'products',
-    loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)
+    path: 'produtos',
+    loadChildren: () => import('./produtos/produtos.module').then(m => m.ProductsModule)
   },
-  {path: 'statistics', component: StatisticsComponent},
+  {path: 'material', component: StatisticsComponent},
   {
-    path: 'coupens',
-    loadChildren: () => import('./coupens/coupens.module').then(m => m.CoupensModule)
+    path: 'orcamento',
+    loadChildren: () => import('./orcamento/orcamento.module').then(m => m.CoupensModule)
   },
-  {path: 'pages', component: PagesComponent},
-  {path: 'media', component: MediaComponent},
-  {path: 'settings', component: SettingsComponent}
+  {path: 'cliente', component: PagesComponent},
+  {path: 'fornecedores', component: FornecedoresComponent},
+  {path: 'configuracoes', component: SettingsComponent}
 ];
 
 @NgModule({

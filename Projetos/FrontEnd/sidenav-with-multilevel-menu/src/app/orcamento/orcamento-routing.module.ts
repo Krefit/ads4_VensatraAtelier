@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CoupenListComponent } from './coupen-list/coupen-list.component';
-import { CoupensComponent } from './coupens.component';
+import { CoupensComponent } from './orcamento.component';
 
 const routes: Routes = [
   {

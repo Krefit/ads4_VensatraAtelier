@@ -7,10 +7,10 @@ import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { StatisticsComponent } from './statistics/statistics.component';
-import { PagesComponent } from './pages/pages.component';
-import { MediaComponent } from './media/media.component';
-import { SettingsComponent } from './settings/settings.component';
+import { StatisticsComponent } from './material/material.component';
+import { PagesComponent } from './cliente/cliente.component';
+import { FornecedoresComponent } from './fornecedores/fornecedores.component';
+import { SettingsComponent } from './configuracoes/configuracoes.component';
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
 
 @NgModule({
@@ -21,7 +21,7 @@ import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
     DashboardComponent,
     StatisticsComponent,
     PagesComponent,
-    MediaComponent,
+    FornecedoresComponent,
     SettingsComponent,
     SublevelMenuComponent
   ],

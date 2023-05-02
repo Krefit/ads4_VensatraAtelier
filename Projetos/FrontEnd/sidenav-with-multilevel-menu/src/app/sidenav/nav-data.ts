@@ -7,28 +7,28 @@ export const navbarData: INavbarData[] = [
         label: 'Dashboard'
     },
     {
-        routeLink: 'products',
+        routeLink: 'produtos',
         icon: 'fal fa-box-open',
-        label: 'Products',
+        label: 'Produtos',
         items: [
             {
-                routeLink: 'products/level1.1',
+                routeLink: 'produtos/level1.1',
                 label: 'Level 1.1',
                 items: [
                     {
-                        routeLink: 'products/level2.1',
+                        routeLink: 'produtos/level2.1',
                         label: 'Level 2.1',
                     },
                     {
-                        routeLink: 'products/level2.2',
+                        routeLink: 'produtos/level2.2',
                         label: 'Level 2.2',
                         items: [
                             {
-                                routeLink: 'products/level3.1',
+                                routeLink: 'produtos/level3.1',
                                 label: 'Level 3.1'
                             },
                             {
-                                routeLink: 'products/level3.2',
+                                routeLink: 'produtos/level3.2',
                                 label: 'Level 3.2'
                             }
                         ]
@@ -36,53 +36,53 @@ export const navbarData: INavbarData[] = [
                 ]
             },
             {
-                routeLink: 'products/level1.2',
+                routeLink: 'produtos/level1.2',
                 label: 'Level 1.2',
             }
         ]
     },
     {
-        routeLink: 'statistics',
+        routeLink: 'material',
         icon: 'fal fa-chart-bar',
-        label: 'Statistics'
+        label: 'Material'
     },
     {
-        routeLink: 'coupens',
+        routeLink: 'orcamento',
         icon: 'fal fa-tags',
-        label: 'Coupens',
+        label: 'Orçamento',
         items: [
             {
-                routeLink: 'coupens/list',
+                routeLink: 'orcamento/list',
                 label: 'List Coupens'
             },
             {
-                routeLink: 'coupens/create',
+                routeLink: 'orcamento/create',
                 label: 'Create Coupens'
             }
         ]
     },
     {
-        routeLink: 'pages',
+        routeLink: 'cliente',
         icon: 'fal fa-file',
-        label: 'Pages'
+        label: 'Cliente'
     },
     {
-        routeLink: 'media',
+        routeLink: 'fornecedores',
         icon: 'fal fa-camera',
-        label: 'Media'
+        label: 'Fornecedores'
     },
     {
-        routeLink: 'settings',
+        routeLink: 'configuracoes',
         icon: 'fal fa-cog',
-        label: 'Settings',
+        label: 'Configurações',
         expanded: true,
         items: [
             {
-                routeLink: 'settings/profile',
+                routeLink: 'configuracoes/profile',
                 label: 'Profile'
             },
             {
-                routeLink: 'settings/customize',
+                routeLink: 'configuracoes/customize',
                 label: 'Customize'
             }
         ]
