@@ -13,7 +13,6 @@ import { FornecedoresComponent } from './fornecedores/fornecedores.component';
 import { StatisticsComponent } from './material/material.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
