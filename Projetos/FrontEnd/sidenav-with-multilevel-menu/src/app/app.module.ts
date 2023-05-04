@@ -12,6 +12,7 @@ import { PagesComponent } from './cliente/cliente.component';
 import { FornecedoresComponent } from './fornecedores/fornecedores.component';
 import { SettingsComponent } from './configuracoes/configuracoes.component';
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

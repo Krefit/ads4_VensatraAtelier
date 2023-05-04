@@ -8,7 +8,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/cliente")
+@RequestMapping(value = "/cliente")
 public class ClienteREST {
 
     @Autowired
