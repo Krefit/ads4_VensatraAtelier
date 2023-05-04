@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 
-import { ClientServiceService } from './../app/services/client-service.service';
+
 
 @Component({
   selector: 'app-pages',
