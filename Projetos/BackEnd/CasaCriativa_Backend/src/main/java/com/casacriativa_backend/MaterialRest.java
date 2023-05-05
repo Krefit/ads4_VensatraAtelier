@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping(value = "/material")
 public class MaterialRest {
     @Autowired
     private MaterialDAO materialDAO;

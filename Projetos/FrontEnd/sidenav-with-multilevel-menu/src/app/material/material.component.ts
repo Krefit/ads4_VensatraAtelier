@@ -9,6 +9,24 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./material.component.scss']
 })
 
+export class StatisticsComponent{
+  material: Material[] = [];
+
+  constructor(private http: HttpClient){}
+
+  ngOnInit(){
+    this.getMaterial();
+  }
+
+  getMaterial(){
+    this.http.get<Material[]>('http://localhost:8080/material')
+      .subscribe((data: Material[]) => {
+        this.material = data;
+      })
+  }
+  displayedColumns: string[] = ['matId', 'matDescricao', 'matPreco', 'matQuantidade'];
+  
+}
 
 export interface Material{
   Mat_ID: number;
@@ -17,6 +35,7 @@ export interface Material{
   MatQuantidade: number;
 }
 
+/*
 export class StatisticsComponent implements OnInit {
 
   constructor(private httpClient: HttpClient) {}
@@ -24,7 +43,8 @@ export class StatisticsComponent implements OnInit {
 
   Material: Observable<Material[]> = of([]);
 
-  //displayedColumns: Material[];
+  displayedColumns: Material[] =[];
+  
 
   listarMateriais(): Observable<Material[]>{
     return this.httpClient.get('http://localhost:8080/material').pipe(
@@ -39,4 +59,7 @@ export class StatisticsComponent implements OnInit {
     this.listarMateriais();
   }
 
-}
+}*/
+
+
+

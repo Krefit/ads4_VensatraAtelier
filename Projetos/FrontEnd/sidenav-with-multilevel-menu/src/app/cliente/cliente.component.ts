@@ -12,12 +12,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
-    constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
 
-    listarclientes(){
-  this.httpClient.get('http://localhost:8080/cliente').subscribe((r:any) =>{console.log(r)})
-    }
+  listarclientes() {
+    this.httpClient.get('http://localhost:8080/cliente').subscribe(
+      (r: any) => {
+        console.log(r)
+      }
+    )
+  }
   ngOnInit(): void {
     this.listarclientes();
   }
