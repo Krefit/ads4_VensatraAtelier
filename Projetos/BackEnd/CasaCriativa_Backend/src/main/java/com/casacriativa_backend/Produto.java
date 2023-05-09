@@ -18,7 +18,7 @@ public class Produto {
     private int ProdQtdMaterial;
     private int ProdTempoMaoObra;
     private float ProdCustoExtra;
-    private int ProdProcentLucro;
+    private int ProdPorcentLucro;
     private int ProdIdFornecedor;
 
     public int getProdId() {
@@ -77,12 +77,12 @@ public class Produto {
         ProdCustoExtra = prodCustoExtra;
     }
 
-    public int getProdProcentLucro() {
-        return ProdProcentLucro;
+    public int getProdPorcentLucro() {
+        return ProdPorcentLucro;
     }
 
-    public void setProdProcentLucro(int prodProcentLucro) {
-        ProdProcentLucro = prodProcentLucro;
+    public void setProdPorcentLucro(int prodPorcentLucro) {
+        ProdPorcentLucro = prodPorcentLucro;
     }
 
     public int getProdIdFornecedor() {

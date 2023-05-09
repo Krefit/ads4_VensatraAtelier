@@ -9,7 +9,7 @@ export const navbarData: INavbarData[] = [
     {
         routeLink: 'produtos',
         icon: 'fal fa-box-open',
-        label: 'Produtos',
+        label: 'Produtos Inutilizar',
         items: [
             {
                 routeLink: 'produtos/level1.1',
@@ -87,4 +87,9 @@ export const navbarData: INavbarData[] = [
             }
         ]
     },
+    {
+        routeLink: 'precificacao',
+        icon: 'fal fa-cog',
+        label: 'Produtos'
+    }
 ];
