@@ -12,8 +12,10 @@ import { SettingsComponent } from './configuracoes/configuracoes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FornecedoresComponent } from './fornecedores/fornecedores.component';
 import { StatisticsComponent } from './material/material.component';
+import { OrcamentosComponent } from './orcamentos/orcamentos.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
     PagesComponent,
     FornecedoresComponent,
     SettingsComponent,
-    SublevelMenuComponent
+    SublevelMenuComponent,
+    OrcamentosComponent
   ],
   imports: [
     BrowserModule,

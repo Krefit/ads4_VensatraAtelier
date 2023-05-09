@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-statistics',
@@ -11,6 +10,7 @@ import { map } from 'rxjs/operators';
 
 export class StatisticsComponent{
   material: Material[] = [];
+  displayedColumns: string[] = ['matId', 'matDescricao', 'matPreco', 'matQuantidade'];
 
   constructor(private http: HttpClient){}
 
@@ -24,8 +24,8 @@ export class StatisticsComponent{
         this.material = data;
       })
   }
-  displayedColumns: string[] = ['matId', 'matDescricao', 'matPreco', 'matQuantidade'];
-  
+
+
 }
 
 export interface Material{
@@ -35,31 +35,6 @@ export interface Material{
   MatQuantidade: number;
 }
 
-/*
-export class StatisticsComponent implements OnInit {
-
-  constructor(private httpClient: HttpClient) {}
-
-
-  Material: Observable<Material[]> = of([]);
-
-  displayedColumns: Material[] =[];
-  
-
-  listarMateriais(): Observable<Material[]>{
-    return this.httpClient.get('http://localhost:8080/material').pipe(
-      map((r: any) =>{
-      return r;
-    })
-    );
-  }
-
-  ngOnInit(): void {
-
-    this.listarMateriais();
-  }
-
-}*/
 
 
 
