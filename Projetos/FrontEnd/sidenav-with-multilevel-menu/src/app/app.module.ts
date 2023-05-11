@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
@@ -14,6 +14,11 @@ import { FornecedoresComponent } from './fornecedores/fornecedores.component';
 import { StatisticsComponent } from './material/material.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { CoreServiceComponent } from './core-service/core-service.component';
+
+
 
 @NgModule({
   declarations: [
@@ -25,16 +30,28 @@ import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
     PagesComponent,
     FornecedoresComponent,
     SettingsComponent,
-    SublevelMenuComponent
+    SublevelMenuComponent,
+    CoreServiceComponent,
+
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    FormsModule,
+
+
+
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,CommonModule],
 })
 export class AppModule { }
+export class MyComponentModule { }
+export class FormFieldOverviewExample {}
+
