@@ -1,3 +1,18 @@
+
+
+<div class="container">
+
+  <mat-form-field appearance="outline">
+    <mat-label><mat-icon>search  </mat-icon>  Pesquisar</mat-label>
+    <!-- <input type="text" matInput [matAutocomplete]="auto"> -->
+    <input type="text" matInput [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of valoresFiltrados" [value]="option">
+        {{ option.OrcaID }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
 <table mat-table [dataSource]="orcamentos">
 
   <!--- Note that these columns can be defined in any order.
@@ -47,5 +62,6 @@
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
 
+</table>
+</div>

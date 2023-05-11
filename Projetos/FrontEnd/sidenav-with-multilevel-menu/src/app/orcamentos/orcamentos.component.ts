@@ -8,9 +8,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./orcamentos.component.scss']
 })
 
+
+
 export class OrcamentosComponent{
   orcamentos: Orcamentos[] = [];
   displayedColumns: string [] = ['orcaID', 'orcaIDCliente', 'orcaDtInicioProd', 'orcaDtEntrega', 'orcaIDProduto', 'orcaQtdProduto', 'orcaDesconto'];
+
+  arr = Object.values(this.orcamentos);
+  valoresFiltrados: any[]=[];
+
+  valorFiltrado(values: string){
+    this.valoresFiltrados = this.arr.filter(option =>
+      option.OrcaID);
+
+  }
+
+  // filterOptions(value: string) {
+  //   // Perform filtering logic based on user input
+  //   this.filteredOptions = arr.filter(option =>
+  //     option.column1.toLowerCase().includes(value.toLowerCase()) ||
+  //     option.column2.toLowerCase().includes(value.toLowerCase()) ||
+  //     option.column3.toLowerCase().includes(value.toLowerCase())
+  //   );
+  // }
 
   constructor(private http: HttpClient){}
 
@@ -24,6 +44,7 @@ export class OrcamentosComponent{
         this.orcamentos = data;
       })
   }
+
 
 
 }
