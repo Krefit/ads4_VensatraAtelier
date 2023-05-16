@@ -4,7 +4,6 @@ import { CoupensComponent } from './orcamento/orcamento.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FornecedoresComponent } from './fornecedores/fornecedores.component';
 import { PagesComponent } from './cliente/cliente.component';
-import { ProductsComponent } from './produtos/produtos.component';
 import { SettingsComponent } from './configuracoes/configuracoes.component';
 import { StatisticsComponent } from './material/material.component';
 import { ProdutosComponent } from './produto/produtos.component';
@@ -13,10 +12,6 @@ import { ProdutosComponent } from './produto/produtos.component';
 const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
-  {
-    path: 'produtos',
-    loadChildren: () => import('./produtos/produtos.module').then(m => m.ProductsModule)
-  },
   {path: 'material', component: StatisticsComponent},
   {
     path: 'orcamento',
