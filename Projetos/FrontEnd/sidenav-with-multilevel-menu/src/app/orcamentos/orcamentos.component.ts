@@ -2,8 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 
+
 @Component({
-  selector: 'app-orcamento',
+  selector: 'app-orcamento',    //ORCAMENTO ?
   templateUrl: './orcamentos.component.html',
   styleUrls: ['./orcamentos.component.scss']
 })
