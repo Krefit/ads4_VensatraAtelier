@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c8446cf8-da51-45f8-8df0-06d8ea763c60" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/cliente/cliente.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/cliente/cliente.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/fornecedores/fornecedores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/fornecedores/fornecedores.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/sidenav/nav-data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/sidenav/nav-data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +27,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/letyc/OneDrive/Documentos/GitHub/ads4_VensatraAtelier"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Faculdade/ads4_VensatraAtelier&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\betol\\AppData\\Local\\JetBrains\\Toolbox\\apps\\IDEA-U\\ch-0\\231.9011.34\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -36,8 +51,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682367802709</updated>
+      <workItem from="1684419233531" duration="824000" />
+      <workItem from="1684429184972" duration="142000" />
+      <workItem from="1684429346598" duration="45000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
