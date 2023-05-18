@@ -3,10 +3,6 @@ import { NgModule } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-<<<<<<< Updated upstream
-import { MatFormFieldModule } from '@angular/material/form-field';
-=======
->>>>>>> Stashed changes
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
@@ -17,12 +13,6 @@ import { FornecedoresListComponent } from './fornecedores/fornecedores-list/forn
 import { StatisticsComponent } from './material/material.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
-<<<<<<< Updated upstream
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { CoreServiceComponent } from './core-service/core-service.component';
-
-=======
 import {MatInputModule} from "@angular/material/input";
 import {MatChipsModule} from "@angular/material/chips";
 import {MatButtonModule} from "@angular/material/button";
@@ -33,7 +23,6 @@ import { FornecedorEditarComponent } from './fornecedores/fornecedor-editar/forn
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCardModule} from "@angular/material/card";
->>>>>>> Stashed changes
 
 
 @NgModule({
@@ -47,13 +36,7 @@ import {MatCardModule} from "@angular/material/card";
     FornecedoresListComponent,
     SettingsComponent,
     SublevelMenuComponent,
-<<<<<<< Updated upstream
-    CoreServiceComponent,
-
-
-=======
     FornecedorEditarComponent
->>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
@@ -61,14 +44,6 @@ import {MatCardModule} from "@angular/material/card";
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
-<<<<<<< Updated upstream
-    MatFormFieldModule,
-    FormsModule,
-
-
-
-
-=======
     MatInputModule,
     MatChipsModule,
     MatButtonModule,
@@ -78,10 +53,9 @@ import {MatCardModule} from "@angular/material/card";
     MatDialogModule,
     MatSnackBarModule,
     MatCardModule
->>>>>>> Stashed changes
   ],
   providers: [],
-  bootstrap: [AppComponent,CommonModule],
+  bootstrap: [AppComponent/*,CommonModule*/],
 })
 export class AppModule { }
 export class MyComponentModule { }
