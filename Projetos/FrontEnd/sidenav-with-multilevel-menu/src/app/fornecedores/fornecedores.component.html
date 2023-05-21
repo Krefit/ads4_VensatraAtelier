@@ -1,1 +1,60 @@
-<h1>Media</h1>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+
+  </div>
+
+  <div class="row">
+    <mat-form-field appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" placeholder="Ex. Technical" formControlName="firstName">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>CNPJ</mat-label>
+        <input matInput placeholder="Ex. Babaji" formControlName="lastName">
+    </mat-form-field>
+</div>
+
+</form>
+<table mat-table [dataSource]="fornecedores">
+
+  <ng-container matColumnDef="fornId">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let fornecedor"> {{fornecedor.fornId}} </td>
+  </ng-container>
+
+    <ng-container matColumnDef="fornNome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let fornecedor"> {{fornecedor.fornNome}} </td>
+    </ng-container>
+
+
+  <ng-container matColumnDef="fornCNPJ">
+    <th mat-header-cell *matHeaderCellDef> CNPJ </th>
+    <td mat-cell *matCellDef="let fornecedor"> {{fornecedor.fornCNPJ}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fornEndereco">
+    <th mat-header-cell *matHeaderCellDef> Endereço </th>
+    <td mat-cell *matCellDef="let fornecedor"> {{fornecedor.fornEndereco}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fornTelefone">
+    <th mat-header-cell *matHeaderCellDef> Telefone </th>
+    <td mat-cell *matCellDef="let fornecedor"> {{fornecedor.fornTelefone}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fornEstado">
+    <th mat-header-cell *matHeaderCellDef> Estado </th>
+    <td mat-cell *matCellDef="let fornecedor"> {{fornecedor.fornEstado}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fornCidade">
+    <th mat-header-cell *matHeaderCellDef> Cidade </th>
+    <td mat-cell *matCellDef="let fornecedor"> {{fornecedor.fornCidade}} </td>
+  </ng-container>
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
