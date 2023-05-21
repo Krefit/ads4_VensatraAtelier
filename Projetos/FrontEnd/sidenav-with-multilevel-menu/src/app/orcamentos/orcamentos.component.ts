@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Orcamentos } from './model/orcamentos';
+import { Orcamentos } from '../model/orcamentos';
 import { OrcamentosService } from './service/orcamentos.service'
 
 

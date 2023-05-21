@@ -21,6 +21,8 @@ import { StatisticsComponent } from './material/material.component';
 import { OrcamentosComponent } from './orcamentos/orcamentos.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 
 
@@ -49,7 +51,8 @@ import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
     MatIconModule,
     MatAutocompleteModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Material } from '../model/material';
 import { MaterialService } from './service/material.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,10 +11,13 @@ import { MaterialService } from './service/material.service';
 })
 
 export class StatisticsComponent{
-  material: Material[] = [];
+  material: Observable<Material[]>;
   displayedColumns: string[] = ['matId', 'matDescricao', 'matPreco', 'matQuantidade'];
 
- constructor(private materialService: MaterialService){}
+ constructor(private materialService: MaterialService){
+    this.material=this.materialService.list();
+ }
+
 
   ngOnInit(){
 

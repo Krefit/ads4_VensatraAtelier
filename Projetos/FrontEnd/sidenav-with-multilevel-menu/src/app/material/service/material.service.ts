@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { delay } from 'rxjs';
 import { Material } from 'src/app/model/material';
 
 @Injectable({
@@ -13,6 +14,9 @@ export class MaterialService {
   constructor(private httpClient: HttpClient) { }
 
   list(){
-    this.httpClient.get<Material[]>(this.API)
+    return this.httpClient.get<Material[]>(this.API)
+    .pipe(
+      delay(60000)
+    );
   }
 }

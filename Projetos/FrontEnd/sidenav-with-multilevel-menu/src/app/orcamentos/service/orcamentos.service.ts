@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Orcamentos } from '../model/orcamentos';
+import { Orcamentos } from '../../model/orcamentos';
+import { delay } from 'rxjs';
 
 
 @Injectable({
@@ -14,6 +15,9 @@ export class OrcamentosService {
   constructor(private httpClient: HttpClient) {}
 
   list(){
-    return this.httpClient.get<Orcamentos[]>(this.API);
+    return this.httpClient.get<Orcamentos[]>(this.API)
+    .pipe(
+
+    );
   }
 }
