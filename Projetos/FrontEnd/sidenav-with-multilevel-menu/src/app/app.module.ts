@@ -26,6 +26,7 @@ import { FornecedorEditarComponent } from './fornecedores/fornecedor-editar/forn
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCardModule} from "@angular/material/card";
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -63,7 +64,7 @@ import {MatCardModule} from "@angular/material/card";
     MatToolbarModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatCardModule
+    MatProgressSpinnerModule
   ],
   providers: [],
 })
