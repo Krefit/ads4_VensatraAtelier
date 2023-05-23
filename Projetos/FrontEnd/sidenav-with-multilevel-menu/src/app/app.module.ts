@@ -19,10 +19,15 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatToolbarModule} from "@angular/material/toolbar";
-import { FornecedorEditarComponent } from './fornecedores/fornecedor-editar/fornecedor-editar.component';
+import {FornecedorEditarComponent} from './fornecedores/fornecedor-editar/fornecedor-editar.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {MatCardModule} from "@angular/material/card";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatRadioModule} from "@angular/material/radio";
+import {MatSelectModule} from "@angular/material/select";
+import {MatNativeDateModule} from "@angular/material/core";
 
 
 @NgModule({
@@ -36,7 +41,8 @@ import {MatCardModule} from "@angular/material/card";
     FornecedoresListComponent,
     SettingsComponent,
     SublevelMenuComponent,
-    FornecedorEditarComponent
+    FornecedorEditarComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -52,12 +58,17 @@ import {MatCardModule} from "@angular/material/card";
     MatToolbarModule,
     MatDialogModule,
     MatSnackBarModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatNativeDateModule
+
   ],
   providers: [],
   bootstrap: [AppComponent/*,CommonModule*/],
 })
-export class AppModule { }
-export class MyComponentModule { }
-export class FormFieldOverviewExample {}
+export class AppModule {
+}
 

@@ -21,7 +21,6 @@ export class FornecedoresListComponent implements OnInit {
     'telefone',
     'estado',
     'cidade',
-    'action',
   ];
   dataSource!: MatTableDataSource<any>;
 
