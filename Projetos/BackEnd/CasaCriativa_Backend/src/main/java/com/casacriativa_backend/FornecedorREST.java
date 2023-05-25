@@ -7,14 +7,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/fornecedor")
+@RequestMapping
+
+        ("/fornecedores")
 public class FornecedorREST {
 
     @Autowired
     private FornecedorDAO fornecedorDAO;
 
     @GetMapping
-    public List<Fornecedor>get(){return fornecedorDAO.findAll();}
+    public List<Fornecedor> get() {
+        return fornecedorDAO.findAll();
+    }
 
     @PostMapping
     public void post(@RequestBody Fornecedor fornecedor){fornecedorDAO.save(fornecedor);}

@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import { FornecedorServicesService } from '../sidenav/services/fornecedor-services.service';
-import { FormBuilder } from '@angular/forms';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {CoreService} from "../services/core.service";
+
+
 
 @Component({
   selector: 'app-media',
@@ -8,7 +12,8 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./fornecedores.component.scss']
 })
 export class FornecedoresComponent implements OnInit {
-fornForm: FornGroup;
+fornForm: FormGroup;
+
 
 
 fornecedores: string[] = [

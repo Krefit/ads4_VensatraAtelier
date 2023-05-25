@@ -54,7 +54,7 @@ export class FornecedorEditarComponent {
           .updateFornecedor(this.data.id, this.empForm.value)
           .subscribe({
             next: (val: any) => {
-              this._coreService.openSnackBar('Employee detail updated!');
+              this._coreService.openSnackBar('Fornecedor detail updated!');
               this._dialogRef.close(true);
             },
             error: (err: any) => {
@@ -64,7 +64,7 @@ export class FornecedorEditarComponent {
       } else {
         this._empService.addFornecedor(this.empForm.value).subscribe({
           next: (val: any) => {
-            this._coreService.openSnackBar('Employee added successfully');
+            this._coreService.openSnackBar('FornecedorS added successfully');
             this._dialogRef.close(true);
           },
           error: (err: any) => {

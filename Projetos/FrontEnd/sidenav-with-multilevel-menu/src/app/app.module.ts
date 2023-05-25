@@ -28,6 +28,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatRadioModule} from "@angular/material/radio";
 import {MatSelectModule} from "@angular/material/select";
 import {MatNativeDateModule} from "@angular/material/core";
+import {MatSortModule} from "@angular/material/sort";
 
 
 @NgModule({
@@ -44,28 +45,29 @@ import {MatNativeDateModule} from "@angular/material/core";
     FornecedorEditarComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    MatTableModule,
-    MatInputModule,
-    MatChipsModule,
-    MatButtonModule,
-    MatIconModule,
-    MatPaginatorModule,
-    MatToolbarModule,
-    MatDialogModule,
-    MatSnackBarModule,
-    MatCardModule,
-    ReactiveFormsModule,
-    MatDatepickerModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatNativeDateModule
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        MatTableModule,
+        MatInputModule,
+        MatChipsModule,
+        MatButtonModule,
+        MatIconModule,
+        MatPaginatorModule,
+        MatToolbarModule,
+        MatDialogModule,
+        MatSnackBarModule,
+        MatCardModule,
+        ReactiveFormsModule,
+        MatDatepickerModule,
+        MatRadioModule,
+        MatSelectModule,
+        MatNativeDateModule,
+        MatSortModule
 
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent/*,CommonModule*/],
 })
