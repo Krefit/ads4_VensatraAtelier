@@ -8,12 +8,12 @@
     <div class="row">
       <mat-form-field appearance="outline">
         <mat-label>Nome</mat-label>
-        <input matInput type="text" placeholder="Sementes Plante Ltda" formControlName="firstName">
+        <input matInput type="text" placeholder="Sementes Plante Ltda" formControlName="fornEstado">
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>CNPJ</mat-label>
-        <input matInput placeholder="Ex. 37.375.508/0001-84" formControlName="lastName">
+        <input matInput placeholder="Ex. 37.375.508/0001-84" formControlName="fornCNPJ">
       </mat-form-field>
     </div>
 
@@ -21,12 +21,12 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Endereço</mat-label>
-        <input matInput type="email" placeholder="AV. Castelo Branco 2739" formControlName="email">
+        <input matInput type="email" placeholder="AV. Castelo Branco 2739" formControlName="fornEndereco">
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Telefone</mat-label>
-        <input matInput type="email" placeholder="(62) 3233-4430" formControlName="email">
+        <input matInput type="email" placeholder="(62) 3233-4430" formControlName="fornTelefone">
       </mat-form-field>
 
       <mat-form-field appearance="outline">
@@ -41,14 +41,14 @@
     <div class="row">
       <mat-form-field appearance="outline">
         <mat-label>Estado</mat-label>
-        <mat-select formControlName="education">
-          <mat-option *ngFor="let val of fornecedor" [value]="val">{{val}}
+        <mat-select formControlName="fornNome">
+          <mat-option *ngFor="let val of estados" [value]="val">{{val}}
           </mat-option>
         </mat-select>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Cidade</mat-label>
-        <input matInput placeholder="Ex. Goiânia" formControlName="company">
+        <input matInput placeholder="Ex. Goiânia" formControlName="fornCidade">
       </mat-form-field>
     </div>
   </div>

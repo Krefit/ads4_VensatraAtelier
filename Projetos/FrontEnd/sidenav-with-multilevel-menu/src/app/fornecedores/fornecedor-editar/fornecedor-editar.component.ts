@@ -12,16 +12,37 @@ import {FornecedoresService} from "../../services/fornecedores.service";
 export class FornecedorEditarComponent {
   empForm: FormGroup;
 
-  fornecedor: string[] = [
-    'id',
-    'nome',
-    'cnpj',
-    'endereco',
-    'telefone',
-    'estado',
-    'cidade',
-    'action',
+  estados: string[] = [
+    'Acre',
+    'Alagoas',
+    'Amapá',
+    'Amazonas',
+    'Bahia',
+    'Ceará',
+    'Distrito Federal',
+    'Espírito Santo',
+    'Goiás',
+    'Maranhão',
+    'Mato Grosso',
+    'Mato Grosso do Sul',
+    'Minas Gerais',
+    'Pará',
+    'Paraíba',
+    'Paraná',
+    'Pernambuco',
+    'Piauí',
+    'Rio de Janeiro',
+    'Rio Grande do Norte',
+    'Rio Grande do Sul',
+    'Rondônia',
+    'Roraima',
+    'Santa Catarina',
+    'São Paulo',
+    'Sergipe',
+    'Tocantins'
   ];
+
+  
 
   constructor(
     private _fb: FormBuilder,
@@ -31,16 +52,13 @@ export class FornecedorEditarComponent {
     private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
-      firstName: '',
-      lastName: '',
-      email: '',
-      dob: '',
-      gender: '',
-      education: '',
-      company: '',
-      experience: '',
-      package: '',
-    });
+      fornEstado: "",
+      fornNome: "",
+      fornEndereco: "",
+      fornTelefone: "",
+      fornCidade: "",
+      fornCNPJ: ""
+  });
   }
 
   ngOnInit(): void {
@@ -61,6 +79,7 @@ export class FornecedorEditarComponent {
               console.error(err);
             },
           });
+          console.log(this.empForm.value);
       } else {
         this._empService.addFornecedor(this.empForm.value).subscribe({
           next: (val: any) => {
