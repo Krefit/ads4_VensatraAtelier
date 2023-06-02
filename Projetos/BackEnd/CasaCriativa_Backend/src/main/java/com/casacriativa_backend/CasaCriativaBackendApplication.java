@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CasaCriativaBackendApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CasaCriativaBacke,0ndApplication.class, args);
+        SpringApplication.run(CasaCriativaBackendApplication.class, args);
     }
 
 }
