@@ -12,23 +12,24 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FornecedoresListComponent } from './fornecedores/fornecedores-list/fornecedores-list.component';
 import { StatisticsComponent } from './material/material.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
-import { SublevelMenuComponent } from './sidenav/sublevel-menu.component';
-import {MatInputModule} from "@angular/material/input";
-import {MatChipsModule} from "@angular/material/chips";
-import {MatButtonModule} from "@angular/material/button";
-import {MatIconModule} from "@angular/material/icon";
-import {MatPaginatorModule} from "@angular/material/paginator";
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {FornecedorEditarComponent} from './fornecedores/fornecedor-editar/fornecedor-editar.component';
-import {MatDialogModule} from "@angular/material/dialog";
-import {MatSnackBarModule} from "@angular/material/snack-bar";
-import {MatCardModule} from "@angular/material/card";
-import {ReactiveFormsModule} from "@angular/forms";
-import {MatDatepickerModule} from "@angular/material/datepicker";
-import {MatRadioModule} from "@angular/material/radio";
-import {MatSelectModule} from "@angular/material/select";
-import {MatNativeDateModule} from "@angular/material/core";
-import {MatSortModule} from "@angular/material/sort";
+import { MatInputModule } from "@angular/material/input";
+import { MatChipsModule } from "@angular/material/chips";
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { FornecedorEditarComponent } from './fornecedores/fornecedor-editar/fornecedor-editar.component';
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { MatCardModule } from '@angular/material/card';
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatRadioModule } from "@angular/material/radio";
+import { MatSelectModule } from "@angular/material/select";
+import { MatNativeDateModule } from "@angular/material/core";
+import { MatSortModule } from "@angular/material/sort";
+import { OrcamentosComponent } from './orcamento/orcamento.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -41,33 +42,34 @@ import {MatSortModule} from "@angular/material/sort";
     PagesComponent,
     FornecedoresListComponent,
     SettingsComponent,
-    SublevelMenuComponent,
     FornecedorEditarComponent,
+    OrcamentosComponent,
 
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        AppRoutingModule,
-        HttpClientModule,
-        MatTableModule,
-        MatInputModule,
-        MatChipsModule,
-        MatButtonModule,
-        MatIconModule,
-        MatPaginatorModule,
-        MatToolbarModule,
-        MatDialogModule,
-        MatSnackBarModule,
-        MatCardModule,
-        ReactiveFormsModule,
-        MatDatepickerModule,
-        MatRadioModule,
-        MatSelectModule,
-        MatNativeDateModule,
-        MatSortModule
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatTableModule,
+    MatInputModule,
+    MatChipsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatPaginatorModule,
+    MatToolbarModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatCardModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatNativeDateModule,
+    MatSortModule,
+    MatProgressSpinnerModule
 
-    ],
+  ],
   providers: [],
   bootstrap: [AppComponent/*,CommonModule*/],
 })

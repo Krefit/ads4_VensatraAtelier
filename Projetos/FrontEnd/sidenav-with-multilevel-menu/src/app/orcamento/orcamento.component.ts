@@ -1,22 +1,39 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Orcamentos } from '../models/orcamentos';
+import { OrcamentosService } from '../services/orcamentos.service';
+
+
+
 
 @Component({
-  selector: 'app-coupens',
+  selector: 'app-orcamento',    //ORCAMENTO ?
   templateUrl: './orcamento.component.html',
-  styleUrls: ['./orcamento.component.scss']
+  styleUrls: ['./orcamento.component.scss'],
 })
-export class CoupensComponent implements OnInit {
-
-  constructor(private httpClient: HttpClient) { }
-
-  listarOrcamento(){
-    this.httpClient.get('http://localhost:8080/orcamento').subscribe((r:any)=> {console.log(r)});
-  }
 
 
-  ngOnInit(): void {
-    this.listarOrcamento();
-  }
+
+export class OrcamentosComponent{
+
+  orcamentos: Observable<Orcamentos[]>;
+  displayedColumns = ['orcaID', 'orcaIDCliente', 'orcaDtInicioProd', 'orcaDtEntrega', 'orcaIDProduto', 'orcaQtdProduto', 'orcaDesconto'];
+
+
+
+      constructor(private orcamentosService: OrcamentosService){
+        this.orcamentos=this.orcamentosService.list();
+      }
+
+   ngOnInit(){
+  //   this.getOrcamentos();
+   }
+
 
 }
+
+
+
+
+
+
