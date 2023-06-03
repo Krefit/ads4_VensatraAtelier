@@ -23,38 +23,38 @@
       <!-- ID Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+        <td mat-cell *matCellDef="let row"> {{row.fornID}} </td>
       </ng-container>
 
       <!-- Progress Column -->
       <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
-        <td mat-cell *matCellDef="let row"> {{row.nome}}</td>
+        <td mat-cell *matCellDef="let row"> {{row.fornNome}}</td>
       </ng-container>
 
       <ng-container matColumnDef="cnpj">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> CNPJ </th>
-        <td mat-cell *matCellDef="let row"> {{row.cnpj}}</td>
+        <td mat-cell *matCellDef="let row"> {{row.fornCNPJ}}</td>
       </ng-container>
 
       <ng-container matColumnDef="endereco">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Endereço </th>
-        <td mat-cell *matCellDef="let row"> {{row.endereco}}</td>
+        <td mat-cell *matCellDef="let row"> {{row.fornEndereco}}</td>
       </ng-container>
 
       <ng-container matColumnDef="telefone">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Telefone </th>
-        <td mat-cell *matCellDef="let row"> {{row.telefone}}</td>
+        <td mat-cell *matCellDef="let row"> {{row.fornTelefone}}</td>
       </ng-container>
 
       <ng-container matColumnDef="estado">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
-        <td mat-cell *matCellDef="let row"> {{row.estado}}</td>
+        <td mat-cell *matCellDef="let row"> {{row.fornEstado}}</td>
       </ng-container>
 
       <ng-container matColumnDef="cidade">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Cidade </th>
-        <td mat-cell *matCellDef="let row"> {{row.cidade}}</td>
+        <td mat-cell *matCellDef="let row"> {{row.fornCidade}}</td>
       </ng-container>
 
       <ng-container matColumnDef="action">
