@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
@@ -6,6 +6,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {FornecedoresService} from "../../services/fornecedores.service";
 import {CoreService} from "../../services/core.service";
 import {FornecedorEditarComponent} from "../fornecedor-editar/fornecedor-editar.component";
+import {Fornecedores} from "../../models";
 
 @Component({
   selector: 'app-media',
@@ -21,9 +22,9 @@ export class FornecedoresListComponent implements OnInit {
     'telefone',
     'estado',
     'cidade',
+    'action',
   ];
   dataSource!: MatTableDataSource<any>;
-
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
@@ -71,18 +72,20 @@ export class FornecedoresListComponent implements OnInit {
     }
   }
 
-  deleteFornecedor(id: number) {
-    this._fornService.deleteFornecedor(id).subscribe({
-      next: (res) => {
-        this._coreService.openSnackBar('Employee deleted!', 'done');
-        this.getFornecedorListar();
-      },
-      error: console.log,
-    });
+  deleteFornecedor(id : number) {
+    if (id != null) {
+      this._fornService.deleteFornecedor(id).subscribe({
+        next: (res) => {
+          this._coreService.openSnackBar('Fornecedor Excluido!', 'done');
+          this.getFornecedorListar();
+        },
+        error: console.log,
+      });
+    }
   }
 
   openEditForm(data: any) {
-    const dialogRef = this._dialog.open(FornecedorEditarComponent, {
+    const dialogRef= this._dialog.open(FornecedorEditarComponent, {
       data,
     });
 

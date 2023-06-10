@@ -32,6 +32,9 @@ import { OrcamentosComponent } from './orcamento/orcamento.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +47,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     SettingsComponent,
     FornecedorEditarComponent,
     OrcamentosComponent,
+
+
 
   ],
   imports: [

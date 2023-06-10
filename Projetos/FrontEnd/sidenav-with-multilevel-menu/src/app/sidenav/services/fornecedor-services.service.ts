@@ -22,8 +22,10 @@ export class FornecedorServicesService {
   }
 
   deleteFornecedor(id: number): Observable<any> {
-    return this._http.delete(`http://localhost:8080/fornecedores/${id}`);
+    return this._http.delete(`http://localhost:8080/fornecedores/${id}`,);
   }
+
+
 
 
 }
