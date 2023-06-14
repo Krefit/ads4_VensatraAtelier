@@ -30,6 +30,7 @@ import { MatNativeDateModule } from "@angular/material/core";
 import { MatSortModule } from "@angular/material/sort";
 import { OrcamentosComponent } from './orcamento/orcamento.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { LoginComponent } from './login/login/login.component';
 
 
 
@@ -47,6 +48,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     SettingsComponent,
     FornecedorEditarComponent,
     OrcamentosComponent,
+    LoginComponent,
 
 
 
