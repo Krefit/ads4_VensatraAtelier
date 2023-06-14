@@ -8,6 +8,7 @@ import { StatisticsComponent } from './material/material.component';
 import { OrcamentosComponent } from './orcamento/orcamento.component';
 
 
+
 const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path: 'cliente', component: PagesComponent},
   {path: 'fornecedores', component: FornecedoresListComponent},
   {path: 'configuracoes', component: SettingsComponent}
+
 ];
 
 @NgModule({

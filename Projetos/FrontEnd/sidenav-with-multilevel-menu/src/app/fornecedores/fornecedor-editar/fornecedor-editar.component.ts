@@ -42,7 +42,7 @@ export class FornecedorEditarComponent {
     'Tocantins'
   ];
 
-  
+
 
   constructor(
     private _fb: FormBuilder,
@@ -52,12 +52,15 @@ export class FornecedorEditarComponent {
     private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
-      fornEstado: "",
+      fornID: "",
       fornNome: "",
+      fornCNPJ: "",
       fornEndereco: "",
       fornTelefone: "",
+      fornEstado: "",
       fornCidade: "",
-      fornCNPJ: ""
+
+
   });
   }
 
@@ -69,10 +72,10 @@ export class FornecedorEditarComponent {
     if (this.empForm.valid) {
       if (this.data) {
         this._empService
-          .updateFornecedor(this.data.id, this.empForm.value)
+          .updateFornecedor(this.data.fornID, this.empForm.value)
           .subscribe({
             next: (val: any) => {
-              this._coreService.openSnackBar('Fornecedor detail updated!');
+              this._coreService.openSnackBar('Fornecedor editado com sucesso!');
               this._dialogRef.close(true);
             },
             error: (err: any) => {
@@ -83,15 +86,30 @@ export class FornecedorEditarComponent {
       } else {
         this._empService.addFornecedor(this.empForm.value).subscribe({
           next: (val: any) => {
-            this._coreService.openSnackBar('FornecedorS added successfully');
+            this._coreService.openSnackBar('Fornecedor adicionado com sucesso!');
             this._dialogRef.close(true);
           },
           error: (err: any) => {
             console.error(err);
           },
         });
+
       }
     }
   }
+  deleteFornecedor() {
+    if (this.data) {
+      this._empService.deleteFornecedor(this.data.fornID).subscribe({
+        next: (val: any) => {
+          this._coreService.openSnackBar('Fornecedor excluído com sucesso!');
+          this._dialogRef.close(true);
+        },
+        error: (err: any) => {
+          console.error(err);
+        },
+      });
+    }
+  }
+
 }
 
