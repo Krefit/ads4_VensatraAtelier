@@ -1,1 +1,44 @@
-<p>login works!</p>
+
+<div class="full-screen">
+  <div class="box">
+  <div class=".container" (ngSubmit)="submitLogin()">
+    <h1>LOGIN</h1>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" [formGroup]="loginForm" >
+      <mat-label>USER</mat-label>
+      <input matInput formControlName="user" [placeholder]="userFormControl.errors?.['format'] ? 'Campo Obrigatório' : 'Digite seu usuário'"
+      (blur)="checkErrorsAndSetPlaceholderUser()" value="">
+    </mat-form-field>
+
+      <div class="mensagem-erro"
+        *ngIf="loginForm.get('user')?.errors?.['user'] && loginForm.get('user')?.errors?.['touched']">
+          Campo Inválido!
+      </div>
+  </form>
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width" [formGroup]="loginForm">
+        <mat-label>PASSWORD</mat-label>
+        <input matInput formControlName="password" type="password" [placeholder]="passwordFormControl.errors?.['format'] ? 'Campo Obrigatório' : 'Digite sua senha'"
+        (blur)="checkErrorsAndSetPlaceholderPassword()" value="">
+      </mat-form-field>
+
+      <div class="mensagem-erro"
+      *ngIf="loginForm.get('password')?.errors?.['password'] && loginForm.get('password')?.errors?.['touched']">
+          Campo Inválido!
+      </div>
+  </form>
+
+        <section>
+          <div class="example-label"></div>
+          <div class="content-button-login">
+
+            <button class="button-config" mat-button [disabled]="!loginForm.valid">
+              <mat-icon class="material-symbols-outlined">
+              login
+              </mat-icon></button>
+          </div>
+
+        </section>
+  </div>
+  </div>

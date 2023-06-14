@@ -6,10 +6,21 @@ import { PagesComponent } from './cliente/cliente.component';
 import { SettingsComponent } from './configuracoes/configuracoes.component';
 import { StatisticsComponent } from './material/material.component';
 import { OrcamentosComponent } from './orcamento/orcamento.component';
+import { LoginComponent } from './login/login/login.component';
 
 
 
 const routes: Routes = [
+    {
+    path: '', pathMatch: 'full',
+    redirectTo: 'login'
+    }
+    ,
+    {
+      path: 'login', component: LoginComponent
+    },
+
+
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
   {

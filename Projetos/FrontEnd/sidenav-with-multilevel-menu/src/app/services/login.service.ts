@@ -7,11 +7,17 @@ import { LoginModel } from '../models/loginModel';
 })
 export class LoginService {
 
-  private API = 'http://localhost:8080/login' //usuario?
+  private API = 'http://localhost:8080/login' //sem classe no back
 
+  estaLogado: boolean = false;
   constructor(private httpClient: HttpClient) { }
 
   list(){
-    return this.httpClient.get<LoginModel>
+    return this.httpClient.get<LoginModel[]>(this.API)
+  }
+
+  fazerLogin() {
+    this.estaLogado = true;
   }
 }
+

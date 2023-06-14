@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LoginComponent } from './login/login/login.component';
+import { LoginService } from './services/login.service';
 
 interface SideNavToggle {
   screenWidth: number;
@@ -11,6 +13,11 @@ interface SideNavToggle {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  private servicoLogin!: LoginService;
+  estaLogado: boolean = false;
+  // fazerLogin();
+
   title = 'sidenav-with-multilevel-menu';
 
   isSideNavCollapsed = false;
