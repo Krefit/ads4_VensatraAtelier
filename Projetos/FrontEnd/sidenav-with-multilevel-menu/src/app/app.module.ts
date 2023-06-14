@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BodyComponent } from './body/body.component';
-import { PagesComponent } from './cliente/cliente.component';
 import { SettingsComponent } from './configuracoes/configuracoes.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FornecedoresListComponent } from './fornecedores/fornecedores-list/fornecedores-list.component';
@@ -30,6 +29,9 @@ import { MatNativeDateModule } from "@angular/material/core";
 import { MatSortModule } from "@angular/material/sort";
 import { OrcamentosComponent } from './orcamento/orcamento.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ClienteEditarComponent } from './cliente/cliente-editar/cliente-editar.component';
+import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
+
 
 
 
@@ -42,11 +44,13 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     SidenavComponent,
     DashboardComponent,
     StatisticsComponent,
-    PagesComponent,
     FornecedoresListComponent,
     SettingsComponent,
     FornecedorEditarComponent,
     OrcamentosComponent,
+    ClienteEditarComponent,
+    ClienteListComponent,
+
 
 
 

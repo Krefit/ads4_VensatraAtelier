@@ -49,7 +49,7 @@ public class Cliente {
     }
 
     public Cliente setCliEndereco(String cliEndereco) {
-        CliEndereco = cliEndereco;
+            CliEndereco = cliEndereco;
         return this;
     }
 

@@ -1,59 +1,59 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
 import {MatDialog} from "@angular/material/dialog";
-import {FornecedoresService} from "../../services/fornecedores.service";
 import {CoreService} from "../../services/core.service";
-import {FornecedorEditarComponent} from "../fornecedor-editar/fornecedor-editar.component";
-
+import {ClienteEditarComponent} from "../cliente-editar/cliente-editar.component";
+import {ClienteService} from "../../services/cliente.service";
 
 @Component({
-  selector: 'app-media',
-  templateUrl: './fornecedores-list.component.html',
-  styleUrls: ['./fornecedores-list.component.scss']
+  selector: 'app-cliente-list',
+  templateUrl: './cliente-list.component.html',
+  styleUrls: ['./cliente-list.component.scss']
 })
-export class FornecedoresListComponent implements OnInit {
+export class ClienteListComponent implements OnInit{
   displayedColumns: string[] = [
     'id',
     'nome',
-    'cnpj',
+    'cpf_cnpj',
     'endereco',
+    'data_nascimento',
+    'email',
     'telefone',
-    'estado',
-    'cidade',
     'action',
   ];
+
   dataSource!: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-
   constructor(
     private _dialog: MatDialog,
-    private _fornService: FornecedoresService,
+    private _cliService: ClienteService,
     private _coreService: CoreService
 
 
   ) {}
 
   ngOnInit(): void {
-    this.getFornecedorListar();
+    this.getClienteListar();
   }
 
   openAddEditEmpForm() {
-    const dialogRef = this._dialog.open(FornecedorEditarComponent);
+    const dialogRef
+      = this._dialog.open(ClienteEditarComponent);
     dialogRef.afterClosed().subscribe({
       next: (val) => {
         if (val) {
-          this.getFornecedorListar();
+          this.getClienteListar();
         }
       },
     });
   }
 
-  getFornecedorListar() {
-    this._fornService.getFornecedorList().subscribe({
+  getClienteListar() {
+    this._cliService.getClienteList().subscribe({
       next: (res) => {
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
@@ -72,12 +72,12 @@ export class FornecedoresListComponent implements OnInit {
     }
   }
 
-  deleteFornecedor(id : number) {
+  deleteCliente(id : number) {
     if (id != null) {
-      this._fornService.deleteFornecedor(id).subscribe({
+      this._cliService.deleteCliente(id).subscribe({
         next: (res) => {
-          this._coreService.openSnackBar('Fornecedor Excluido!', 'done');
-          this.getFornecedorListar();
+          this._coreService.openSnackBar('Cliente Excluido!', 'done');
+          this.getClienteListar();
         },
         error: console.log,
       });
@@ -85,14 +85,14 @@ export class FornecedoresListComponent implements OnInit {
   }
 
   openEditForm(data: any) {
-    const dialogRef= this._dialog.open(FornecedorEditarComponent, {
+    const dialogRef= this._dialog.open(ClienteEditarComponent, {
       data,
     });
 
     dialogRef.afterClosed().subscribe({
       next: (val) => {
         if (val) {
-          this.getFornecedorListar();
+          this.getClienteListar();
         }
       },
     });

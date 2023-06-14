@@ -1,51 +1,43 @@
 <div mat-dialog-title>
-  <h1> Fornecedor </h1>
+  <h1>Cliente</h1>
 </div>
 
 <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
   <div mat-dialog-content class="content">
 
-
     <div class="row">
-
       <mat-form-field appearance="outline">
         <mat-label>Nome</mat-label>
-        <input matInput type="nome" placeholder="Sementes Plante Ltda" formControlName="fornNome">
+        <input matInput type="nome" placeholder="Humberto Munhoz" formControlName="cliNome">
       </mat-form-field>
 
       <mat-form-field appearance="outline">
-        <mat-label>CNPJ</mat-label>
-        <input matInput type="cnpj" placeholder="Ex. 37.375.508/0001-84" formControlName="fornCNPJ">
+        <mat-label>CPF_CNPJ</mat-label>
+        <input matInput type="cpf_cnpj" placeholder="028.534.201-08" formControlName="cliCPF_CNPJ">
       </mat-form-field>
     </div>
 
     <div class="row">
-
       <mat-form-field appearance="outline">
         <mat-label>Endereço</mat-label>
-        <input matInput type="endereço" placeholder="AV. Castelo Branco 2739" formControlName="fornEndereco">
+        <input matInput type="endereco" placeholder="Rua 240" formControlName="cliEndereco">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Data Nascimento</mat-label>
+        <input matInput type="data nascimento" placeholder="24/06/1989" formControlName="cliDtNascimento">
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" placeholder="Maria@hotmail.com" formControlName="cliEmail">
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Telefone</mat-label>
-        <input matInput type="telefone" placeholder="(62) 3233-4430" formControlName="fornTelefone">
-      </mat-form-field>
-
-    </div>
-
-    <div class="row">
-
-      <mat-form-field appearance="outline">
-        <mat-label>Estado</mat-label>
-        <mat-select formControlName="fornEstado">
-          <mat-option *ngFor="let val of estados" [value]="val">{{val}}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-
-      <mat-form-field appearance="outline">
-        <mat-label>Cidade</mat-label>
-        <input matInput type="cidade" placeholder="Ex. Goiânia" formControlName="fornCidade">
+        <input matInput type="telefone" placeholder="(62)3233-4430" formControlName="cliTelefone">
       </mat-form-field>
     </div>
   </div>
@@ -53,5 +45,4 @@
     <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
     <button mat-raised-button color="primary" type="submit">{{data ? 'Update': 'Save'}}</button>
   </div>
-
 </form>
