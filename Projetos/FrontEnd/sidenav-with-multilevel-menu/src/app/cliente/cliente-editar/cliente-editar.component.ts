@@ -31,7 +31,15 @@ export class ClienteEditarComponent {
   }
   ngOnInit(): void {
     this.empForm.patchValue(this.data);
+
+    // Verifica se o objeto data está definido e possui a propriedade cliDtNascimento
+    if (this.data && this.data.cliDtNascimento) {
+      const dataNascimento = this.data.cliDtNascimento;
+      const dataFormatada = new Date(dataNascimento).toLocaleString("pt-BR");
+      this.empForm.get('cliDtNascimento')?.setValue(dataFormatada);
+    }
   }
+
   onFormSubmit() {
     if (this.empForm.valid) {
       if (this.data) {
