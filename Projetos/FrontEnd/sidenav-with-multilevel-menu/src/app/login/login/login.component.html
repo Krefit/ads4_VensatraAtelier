@@ -1,31 +1,38 @@
 
 <div class="full-screen">
   <div class="box">
-  <div class=".container" (ngSubmit)="submitLogin()">
+  <div class=".container">
+    <form class="login" [formGroup]="loginForm" (ngSubmit)="submitLogin()">
     <h1>LOGIN</h1>
-  <form class="example-form">
-    <mat-form-field class="example-full-width" [formGroup]="loginForm" >
-      <mat-label>USER</mat-label>
-      <input matInput formControlName="user" [placeholder]="userFormControl.errors?.['format'] ? 'Campo Obrigatório' : 'Digite seu usuário'"
-      (blur)="checkErrorsAndSetPlaceholderUser()" value="">
+
+  <form class="example-form" >
+    <mat-form-field class="example-full-width">
+      <mat-label>EMAIL</mat-label>
+      <input matInput type="email" formControlName="email" [placeholder]="emailFormControl.errors?.['format'] ? 'Campo Obrigatório' : 'Digite seu usuário'"
+      (blur)="checkErrorsAndSetPlaceholderEmail()" value="">
     </mat-form-field>
 
       <div class="mensagem-erro"
-        *ngIf="loginForm.get('user')?.errors?.['user'] && loginForm.get('user')?.errors?.['touched']">
-          Campo Inválido!
+        *ngIf="loginForm.get('email')?.errors?.['required'] && loginForm.get('email')?.errors?.['touched']">
+          Campo Obrigatório!
+      </div>
+
+      <div class="mensagem-erro"
+        *ngIf="loginForm.get('email')?.errors?.['email'] && loginForm.get('email')?.errors?.['touched']">
+          Formato do Email não é Válido!
       </div>
   </form>
 
     <form class="example-form">
-      <mat-form-field class="example-full-width" [formGroup]="loginForm">
+      <mat-form-field class="example-full-width">
         <mat-label>PASSWORD</mat-label>
         <input matInput formControlName="password" type="password" [placeholder]="passwordFormControl.errors?.['format'] ? 'Campo Obrigatório' : 'Digite sua senha'"
         (blur)="checkErrorsAndSetPlaceholderPassword()" value="">
       </mat-form-field>
 
       <div class="mensagem-erro"
-      *ngIf="loginForm.get('password')?.errors?.['password'] && loginForm.get('password')?.errors?.['touched']">
-          Campo Inválido!
+      *ngIf="loginForm.get('password')?.errors?.['required'] && loginForm.get('password')?.errors?.['touched']">
+          Campo Obrigatório!
       </div>
   </form>
 
@@ -40,5 +47,6 @@
           </div>
 
         </section>
+  </form>
   </div>
   </div>

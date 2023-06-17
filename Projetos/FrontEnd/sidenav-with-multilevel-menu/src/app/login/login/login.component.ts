@@ -4,6 +4,8 @@ import { LoginModel } from 'src/app/models/loginModel';
 import { LoginService } from 'src/app/services/login.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -25,7 +27,7 @@ export class LoginComponent {
 
     this.loginForm = this.formBuilder.group(
     {
-      user: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]]
     }
 
@@ -34,22 +36,22 @@ export class LoginComponent {
   }
 
 
-  userFormControl: FormControl = new FormControl('', Validators.required);
-  checkErrorsAndSetPlaceholderUser(): void {
-  const userField = this.userFormControl;
+  emailFormControl: FormControl = new FormControl('', Validators.required);
+  checkErrorsAndSetPlaceholderEmail(): void {
+  const emailField = this.emailFormControl;
 
-  if (userField.errors) {
-    userField.setErrors({}); // Limpa os erros para evitar recursividade
-    userField.updateValueAndValidity(); // Atualiza a validade do campo
+  if (emailField.errors) {
+    emailField.setErrors({}); // Limpa os erros para evitar recursividade
+    emailField.updateValueAndValidity(); // Atualiza a validade do campo
 
     // Define o valor do placeholder como "Formato inválido"
-    userField.setValidators(Validators.required);
-    userField.updateValueAndValidity();
-    userField.setErrors({ format: true });
+    emailField.setValidators(Validators.required);
+    emailField.updateValueAndValidity();
+    emailField.setErrors({ format: true });
   } else {
     // Define o valor do placeholder original
-    userField.setValidators(Validators.required);
-    userField.updateValueAndValidity();
+    emailField.setValidators(Validators.required);
+    emailField.updateValueAndValidity();
   }
 }
 
