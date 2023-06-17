@@ -14,6 +14,8 @@ interface SideNavToggle {
 })
 export class AppComponent {
 
+  isAuthenticated: boolean = false;
+
   private servicoLogin!: LoginService;
   estaLogado: boolean = false;
   // fazerLogin();

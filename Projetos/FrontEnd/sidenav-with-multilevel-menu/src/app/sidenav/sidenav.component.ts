@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { fadeInOut, INavbarData } from './helper';
 import { navbarData } from './nav-data';
 
+
 interface SideNavToggle {
   screenWidth: number;
   collapsed: boolean;
@@ -17,7 +18,7 @@ interface SideNavToggle {
     fadeInOut,
     trigger('rotate', [
       transition(':enter', [
-        animate('1000ms', 
+        animate('1000ms',
           keyframes([
             style({transform: 'rotate(0deg)', offset: '0'}),
             style({transform: 'rotate(2turn)', offset: '1'})
@@ -28,6 +29,7 @@ interface SideNavToggle {
   ]
 })
 export class SidenavComponent implements OnInit {
+
 
   @Output() onToggleSideNav: EventEmitter<SideNavToggle> = new EventEmitter();
   collapsed = false;

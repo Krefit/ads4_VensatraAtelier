@@ -1,4 +1,4 @@
-<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+<div class="sidenav"  [ngClass]="collapsed ? 'sidenav-collapsed': ''">
     <div class="logo-container">
         <button class="logo " (click)="toggleCollapse()">C</button>
         <div class="logo-text" @fadeInOut *ngIf="collapsed">Casa Criativa</div>
@@ -35,7 +35,7 @@
                     </span>
                 </a>
                 <div *ngIf="collapsed && data.items && data.items.length > 0">
-                    
+
                 </div>
             </li>
         </ul>
