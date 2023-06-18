@@ -23,4 +23,8 @@ export class FornecedoresService {
   deleteFornecedor(id: number): Observable<any> {
     return this.fornecedoresServico.delete(`http://localhost:8080/fornecedores/${id}`);
   }
+
+  getFornecedorPorId(id: number): Observable<any>{
+    return this.fornecedoresServico.get(`http://localhost:8080/produto/${id}`);
+  }
 }

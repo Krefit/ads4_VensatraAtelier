@@ -3,6 +3,8 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {CoreService} from "../../services/core.service";
 import {ProdutoService} from "../../services/produto.service";
+import { MaterialService } from 'src/app/services/material.service';
+import { FornecedoresService } from 'src/app/services/fornecedores.service';
 
 @Component({
   selector: 'app-produto-editar',
@@ -11,13 +13,18 @@ import {ProdutoService} from "../../services/produto.service";
 })
 export class ProdutoEditarComponent {
   empForm: FormGroup;
+  materials: any[] = [];
+  fornecedor: any[] = [];
 
   constructor(
     private _fb: FormBuilder,
     private _empService: ProdutoService,
     private _dialogRef: MatDialogRef<ProdutoEditarComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private _coreService: CoreService
+    private _coreService: CoreService,
+    private _materialService: MaterialService,
+    private _fornService: FornecedoresService
+
   ) {
     this.empForm = this._fb.group({
       ProdID: "",
@@ -33,7 +40,21 @@ export class ProdutoEditarComponent {
   }
   ngOnInit(): void {
     this.empForm.patchValue(this.data);
+    this.loadMaterials();
+    this.loadFornecedor();
 
+  }
+
+  loadMaterials() {
+    this._materialService.list().subscribe((materials) => {
+      this.materials = materials;
+    });
+  }
+
+  loadFornecedor(){
+    this._fornService.getFornecedorList().subscribe((fornecedor) =>{
+      this.fornecedor = fornecedor;
+    })
   }
 
   onFormSubmit() {

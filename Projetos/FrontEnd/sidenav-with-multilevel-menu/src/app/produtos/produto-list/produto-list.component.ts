@@ -6,6 +6,8 @@ import {MatDialog} from "@angular/material/dialog";
 import {CoreService} from "../../services/core.service";
 import {ProdutoEditarComponent} from "../produto-editar/produto-editar.component";
 import {ProdutoService} from "../../services/produto.service";
+import { FornecedoresService } from 'src/app/services/fornecedores.service';
+import { MaterialService } from 'src/app/services/material.service';
 
 @Component({
   selector: 'app-produto-list',
@@ -17,12 +19,16 @@ export class ProdutoListComponent implements OnInit{
     'id',
     'descricao',
     'categoria',
-    'idMaterial',
+    //'idMaterial',
+    'material',
     'qtdMaterial',
     'tempoMaoObra',
     'custoExtra',
     'procentLucro',
-    'idFornecedor',
+    //'idFornecedor',
+    'fornecedor',
+    'action',
+    
   ];
 
   dataSource!: MatTableDataSource<any>;
@@ -32,13 +38,17 @@ export class ProdutoListComponent implements OnInit{
   constructor(
     private _dialog: MatDialog,
     private _prodService: ProdutoService,
-    private _coreService: CoreService
+    private _coreService: CoreService,
+    private _fornService: FornecedoresService,
+    private _matService: MaterialService
 
 
   ) {}
 
   ngOnInit(): void {
     this.getProdutoListar();
+
+    
   }
 
   openAddEditEmpForm() {
@@ -53,12 +63,35 @@ export class ProdutoListComponent implements OnInit{
     });
   }
 
+  getFornecedoresPorId(id: number){
+    if(id!= null) {
+      this._fornService.getFornecedorPorId(id).subscribe({})
+    }
+  }
+
+  
+
   getProdutoListar() {
     this._prodService.getProdutoList().subscribe({
       next: (res) => {
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
+
+        //Trazer dados de outra tabela
+        this._matService.list().subscribe((materialArray: any[]) => {
+          this.dataSource.data = this.dataSource.data.map((row: any) => {
+            const material = materialArray.find((m: any) => m.matID === row.prodIdMaterial);
+            return { ...row, material: material ? material.matDescricao : '' };
+          });
+        });
+
+        this._fornService.getFornecedorList().subscribe((fornecedorArray: any[]) => {
+          this.dataSource.data = this.dataSource.data.map((row: any) => {
+            const fornecedor = fornecedorArray.find((m: any) => m.fornID === row.prodIdFornecedor);
+            return { ...row, fornecedor: fornecedor ? fornecedor.fornNome : ''};
+          });
+        });
       },
       error: console.log,
     });

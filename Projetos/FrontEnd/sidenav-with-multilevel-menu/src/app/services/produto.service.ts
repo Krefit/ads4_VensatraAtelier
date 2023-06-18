@@ -23,4 +23,8 @@ export class ProdutoService {
   deleteProduto(id: number): Observable<any> {
     return this.produtoServico.delete(`http://localhost:8080/produto/${id}`);
   }
+
+  getProdutosPorId(id: number): Observable<any>{
+    return this.produtoServico.get(`http://localhost:8080/produto/${id}`);
+  }
 }

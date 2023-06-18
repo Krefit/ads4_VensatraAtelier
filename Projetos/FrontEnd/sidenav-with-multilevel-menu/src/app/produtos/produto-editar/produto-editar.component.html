@@ -21,7 +21,11 @@
 
             <mat-form-field appearance="outline">
                 <mat-label>Material</mat-label>
-                <input matInput type="material" placeholder="folha A4" formControlName="prodIdMaterial">
+                <mat-select formControlName="prodIdMaterial" placeholder="Selecione o material">
+                    <mat-option *ngFor="let material of materials" [value]="material.matID">
+                      {{ material.matDescricao }}
+                    </mat-option>
+                  </mat-select>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
@@ -34,7 +38,11 @@
 
             <mat-form-field appearance="outline">
                 <mat-label>Fornecedor</mat-label>
-                <input matInput type="fornecedor" placeholder="Fornecedor" formControlName="prodIdFornecedor">
+                <mat-select formControlName="prodIdMaterial" placeholder="Selecione o material">
+                    <mat-option *ngFor="let fornecedor of fornecedor" [value]="fornecedor.fornID">
+                      {{ fornecedor.fornNome }}
+                    </mat-option>
+                  </mat-select>
             </mat-form-field>
 
             <mat-form-field appearance="outline">

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay } from 'rxjs';
+import { Observable, delay } from 'rxjs';
 import { Material } from '../models/material';
 
 
@@ -19,5 +19,9 @@ export class MaterialService {
     .pipe(
       delay(600)
     );
+  }
+
+  getFornecedorPorId(id: number): Observable<any>{
+    return this.httpClient.get(`http://localhost:8080/produto/${id}`);
   }
 }
