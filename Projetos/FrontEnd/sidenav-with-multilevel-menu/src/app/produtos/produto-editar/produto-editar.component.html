@@ -1,0 +1,63 @@
+<div mat-dialog-title>
+    <h1>Produto</h1>
+</div>
+
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content">
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Descrição</mat-label>
+                <input matInput type="descricao" placeholder="Caneca branca" formControlName="prodDescricao">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Categoria</mat-label>
+                <input matInput type="categoria" placeholder="Dias das mães" formControlName="prodCategoria">
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Material</mat-label>
+                <input matInput type="material" placeholder="folha A4" formControlName="prodIdMaterial">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Qtd. Material</mat-label>
+                <input matInput type="quantidade de material" placeholder="2" formControlName="prodQtdMaterial">
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Fornecedor</mat-label>
+                <input matInput type="fornecedor" placeholder="Fornecedor" formControlName="prodIdFornecedor">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Tempo de mão de obra</mat-label>
+                <input matInput type="tempo mao obra" placeholder="10h" formControlName="prodTempoMaoObra">
+            </mat-form-field>
+        </div>
+
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>% de lucro</mat-label>
+                <input matInput type="porcentagem lucro" placeholder="25%" formControlName="prodProcentLucro">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Custo Extra</mat-label>
+                <input matInput type="custo extra" placeholder="25%" formControlName="prodCustoExtra">
+            </mat-form-field>
+        </div>
+
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancelar</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'Salvar': 'Salvar'}}</button>
+    </div>
+</form>

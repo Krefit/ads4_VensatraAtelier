@@ -6,6 +6,8 @@ import { SettingsComponent } from './configuracoes/configuracoes.component';
 import { StatisticsComponent } from './material/material.component';
 import { OrcamentosComponent } from './orcamento/orcamento.component';
 import {ClienteListComponent} from "./cliente/cliente-list/cliente-list.component";
+import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
+
 
 
 
@@ -13,10 +15,7 @@ import {ClienteListComponent} from "./cliente/cliente-list/cliente-list.componen
 const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
-  {
-    path: 'produtos',
-    loadChildren: () => import('./produtos/produtos.module').then(m => m.ProductsModule)
-  },
+  {path: 'produtos', component: ProdutoListComponent},
   {path: 'material', component: StatisticsComponent},
   {path: 'orcamento', component: OrcamentosComponent},
   {path: 'fornecedores', component: FornecedoresListComponent},

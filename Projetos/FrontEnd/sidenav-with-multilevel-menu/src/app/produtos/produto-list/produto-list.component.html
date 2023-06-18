@@ -1,0 +1,93 @@
+<mat-card class="Cliente">
+    <mat-card-content>
+      <mat-toolbar color="">
+        <span>Casa Criativa</span>
+        <span class="example-spacer"></span>
+        <button mat-raised-button (click)="openAddEditEmpForm()">
+          Adicionar Produto
+        </button>
+      </mat-toolbar>
+      <div class="main-body">
+  
+        <mat-form-field>
+          <mat-label>Filtro</mat-label>
+          <input matInput (keyup)="applyFilter($event)" placeholder="Sementes Plante" #input>
+        </mat-form-field>
+  
+        <div class="table-container">
+  
+          <table mat-table [dataSource]="dataSource" matSort>
+  
+            <!-- ID Column -->
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+              <td mat-cell *matCellDef="let row"> {{row.prodId}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="descricao">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Descrição</th>
+              <td mat-cell *matCellDef="let row"> {{row.prodDescricao}}</td>
+            </ng-container>
+  
+            <ng-container matColumnDef="categoria">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Categoria</th>
+              <td mat-cell *matCellDef="let row"> {{row.prodCategoria}}</td>
+            </ng-container>
+  
+            <ng-container matColumnDef="idMaterial">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Material</th>
+              <td mat-cell *matCellDef="let row"> {{row.prodIdMaterial}}</td>
+            </ng-container>
+  
+            <ng-container matColumnDef="qtdMaterial">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Quantidade Material</th>
+              <td mat-cell *matCellDef="let row"> {{row.prodQtdMaterial}}</td>
+            </ng-container>
+  
+            <ng-container matColumnDef="tempoMaoObra">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Tempo de mão de Obra</th>
+              <td mat-cell *matCellDef="let row"> {{row.prodTempoMaoObra}}</td>
+            </ng-container>
+  
+            <ng-container matColumnDef="procentLucro">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>% de lucro</th>
+              <td mat-cell *matCellDef="let row"> {{row.prodProcentLucro}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="idFornecedor">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Fornecedor</th>
+                <td mat-cell *matCellDef="let row"> {{row.prodIdFornecedor}}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="custoExtra">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Custo Extra</th>
+                <td mat-cell *matCellDef="let row"> {{row.prodCustoExtra}}</td>
+              </ng-container>
+  
+              <ng-container matColumnDef="action">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+                <td mat-cell *matCellDef="let row">
+                  <button mat-icon-button color="primary" (click)="openEditForm(row)">
+                    <mat-icon>edit</mat-icon>
+                  </button>
+                  <button mat-icon-button color="warn"  (click)="deleteProduto(row.prodId)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </ng-container>
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+            <!-- Row shown when there is no matching data. -->
+            <tr class="mat-row" *matNoDataRow>
+              <td class="mat-cell" colspan="4">Nenhum dado correspondente "{{input.value}}"</td>
+            </tr>
+          </table>
+  
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  

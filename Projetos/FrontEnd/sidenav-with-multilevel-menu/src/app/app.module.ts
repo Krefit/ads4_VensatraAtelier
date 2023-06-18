@@ -31,6 +31,8 @@ import { OrcamentosComponent } from './orcamento/orcamento.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ClienteEditarComponent } from './cliente/cliente-editar/cliente-editar.component';
 import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
+import { ProdutoEditarComponent } from './produtos/produto-editar/produto-editar.component';
+import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
 
 
 
@@ -50,6 +52,9 @@ import { ClienteListComponent } from './cliente/cliente-list/cliente-list.compon
     OrcamentosComponent,
     ClienteEditarComponent,
     ClienteListComponent,
+    ProdutoEditarComponent,
+    ProdutoListComponent,
+    
 
 
 
