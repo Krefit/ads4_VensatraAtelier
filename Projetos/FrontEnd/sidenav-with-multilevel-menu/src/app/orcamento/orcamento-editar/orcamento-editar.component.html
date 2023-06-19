@@ -1,0 +1,49 @@
+<div mat-dialog-title>
+  <h1>Orçamento</h1>
+</div>
+
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>IDCliente</mat-label>
+        <input matInput type="id_cliente" placeholder="Humberto Munhoz" formControlName="orcaIDCliente">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Data Inicio Produção</mat-label>
+        <input matInput type="data_inicio_producao" placeholder="19/05/2023" formControlName="orcaDtInicioProd">
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>Desconto</mat-label>
+        <input matInput type="desconto" placeholder="25%" formControlName="orcaDesconto">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Data Entrega</mat-label>
+        <input matInput type="data_entrega" placeholder="21/06/2023" formControlName="orcaDtEntrega">
+      </mat-form-field>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>IDProduto</mat-label>
+        <input matInput type="id_produto" placeholder="********" formControlName="orcaIDProduto">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Qtde Produto</mat-label>
+        <input matInput type="quantidade_produto" placeholder="2 Unidades" formControlName="orcaQtdProduto">
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'Update': 'Save'}}</button>
+  </div>
+</form>
+

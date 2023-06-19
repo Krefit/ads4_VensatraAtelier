@@ -4,8 +4,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FornecedoresListComponent } from './fornecedores/fornecedores-list/fornecedores-list.component';
 import { SettingsComponent } from './configuracoes/configuracoes.component';
 import { StatisticsComponent } from './material/material.component';
-import { OrcamentosComponent } from './orcamento/orcamento.component';
 import {ClienteListComponent} from "./cliente/cliente-list/cliente-list.component";
+import {OrcamentoListComponent} from "./orcamento/orcamento-list/orcamento-list.component";
 
 
 
@@ -18,8 +18,8 @@ const routes: Routes = [
     loadChildren: () => import('./produtos/produtos.module').then(m => m.ProductsModule)
   },
   {path: 'material', component: StatisticsComponent},
-  {path: 'orcamento', component: OrcamentosComponent},
   {path: 'fornecedores', component: FornecedoresListComponent},
+  {path: 'orcamento', component: OrcamentoListComponent},
   {path: 'configuracoes', component: SettingsComponent},
   {path: 'cliente', component: ClienteListComponent}
 
