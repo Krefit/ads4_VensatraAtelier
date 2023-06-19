@@ -36,12 +36,12 @@ import { AuthGuard } from './login/login/authGuard';
       {
         path: 'material',
         component: StatisticsComponent,
-        canActivate: [AuthGuard]
+        //  canActivate: [AuthGuard]
       },
       {
         path: 'orcamento',
         component: OrcamentosComponent,
-        canActivate: [AuthGuard]
+        // canActivate: [AuthGuard]
       },
       {
         path: 'cliente',

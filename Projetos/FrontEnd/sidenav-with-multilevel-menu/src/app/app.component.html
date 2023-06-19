@@ -1,7 +1,7 @@
 
 <router-outlet>
   <div class="background-color">
-<app-sidenav *ngIf="isAuthenticated" mode="side" opened (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+<app-sidenav  mode="side" opened (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
 <app-body
     [collapsed]="isSideNavCollapsed"
     [screenWidth]="screenWidth"
