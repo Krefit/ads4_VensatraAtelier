@@ -1,0 +1,84 @@
+<mat-card class="Orcamentos">
+  <mat-card-content>
+    <mat-toolbar color="">
+      <span>Casa Criativa</span>
+      <span class="example-spacer"></span>
+      <button mat-raised-button (click)="openAddEditEmpForm()">
+        Adicionar Orçamentos
+      </button>
+    </mat-toolbar>
+    <div class="main-body">
+
+      <mat-form-field>
+        <mat-label>Filtro</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Sementes Plante" #input>
+      </mat-form-field>
+
+      <div class="table-container">
+
+        <table mat-table [dataSource]="dataSource" matSort>
+
+          <!-- ID Column -->
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>IDOrçamento</th>
+            <td mat-cell *matCellDef="let row"> {{row.orcaID}} </td>
+          </ng-container>
+
+          <!-- Progress Column -->
+          <ng-container matColumnDef="id_cliente">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>IDCliente </th>
+            <td mat-cell *matCellDef="let row"> {{row.orcaIDCliente}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="dt_producao">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Produção</th>
+            <td mat-cell *matCellDef="let row"> {{row.orcaDtInicioProd}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="data_entrega">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Entrega</th>
+            <td mat-cell *matCellDef="let row"> {{row.orcaDtEntrega}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="id_produto">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>ID Produto</th>
+            <td mat-cell *matCellDef="let row"> {{row.orcaIDProduto}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="qtde_produto">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Qtde Produto</th>
+            <td mat-cell *matCellDef="let row"> {{row.orcaQtdProduto}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="desconto">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Desconto</th>
+            <td mat-cell *matCellDef="let row"> {{row.orcaDesconto}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+            <td mat-cell *matCellDef="let row">
+              <button mat-icon-button color="primary" (click)="openEditForm(row)">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn"  (click)="deleteOrcamento(row.orcaID)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+          <!-- Row shown when there is no matching data. -->
+          <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">Nenhum dado correspondente "{{input.value}}"</td>
+          </tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+

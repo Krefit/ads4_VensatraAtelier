@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { delay } from 'rxjs';
+import {delay, Observable} from 'rxjs';
 import { Orcamentos } from '../models/orcamentos';
 
 
@@ -11,14 +11,20 @@ import { Orcamentos } from '../models/orcamentos';
 
 export class OrcamentosService {
 
-  private API = 'http://localhost:8080/orcamento';
+  constructor(private orcamentoServico: HttpClient) { }
+  addOrcamento(data: any): Observable<any> {
+    return this.orcamentoServico.post('http://localhost:8080/orcamento', data);
+  }
 
-  constructor(private httpClient: HttpClient) {}
+  updateOrcamento(id: number, data: any): Observable<any> {
+    return this.orcamentoServico.put(`http://localhost:8080/orcamento/${id}`, data);
+  }
 
-  list(){
-    return this.httpClient.get<Orcamentos[]>(this.API)
-    .pipe(
-      delay(600)
-    );
+  getOrcamentoList(): Observable<any> {
+    return this.orcamentoServico.get('http://localhost:8080/orcamento');
+  }
+
+  deleteOrcamento(id: number): Observable<any> {
+    return this.orcamentoServico.delete(`http://localhost:8080/orcamento/${id}`);
   }
 }

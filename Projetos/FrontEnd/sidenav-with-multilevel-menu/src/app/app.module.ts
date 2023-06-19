@@ -27,7 +27,6 @@ import { MatRadioModule } from "@angular/material/radio";
 import { MatSelectModule } from "@angular/material/select";
 import { MatNativeDateModule } from "@angular/material/core";
 import { MatSortModule } from "@angular/material/sort";
-import { OrcamentosComponent } from './orcamento/orcamento.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ClienteEditarComponent } from './cliente/cliente-editar/cliente-editar.component';
 import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
@@ -35,6 +34,8 @@ import { ProdutoEditarComponent } from './produtos/produto-editar/produto-editar
 import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
 import { MaterialEditarComponent } from './material/material-editar/material-editar.component';
 import { MaterialListComponent } from './material/material-list/material-list.component';
+import { OrcamentoEditarComponent } from './orcamento/orcamento-editar/orcamento-editar.component';
+import { OrcamentoListComponent } from './orcamento/orcamento-list/orcamento-list.component';
 
 
 
@@ -51,14 +52,15 @@ import { MaterialListComponent } from './material/material-list/material-list.co
     FornecedoresListComponent,
     SettingsComponent,
     FornecedorEditarComponent,
-    OrcamentosComponent,
     ClienteEditarComponent,
     ClienteListComponent,
     ProdutoEditarComponent,
     ProdutoListComponent,
     MaterialEditarComponent,
     MaterialListComponent,
-    
+
+    OrcamentoEditarComponent,
+    OrcamentoListComponent,
 
 
 

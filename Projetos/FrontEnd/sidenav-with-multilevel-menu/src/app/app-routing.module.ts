@@ -4,11 +4,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FornecedoresListComponent } from './fornecedores/fornecedores-list/fornecedores-list.component';
 import { SettingsComponent } from './configuracoes/configuracoes.component';
 import { StatisticsComponent } from './material/material.component';
-import { OrcamentosComponent } from './orcamento/orcamento.component';
 import {ClienteListComponent} from "./cliente/cliente-list/cliente-list.component";
 import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
 import { MaterialListComponent } from './material/material-list/material-list.component';
 
+import {OrcamentoListComponent} from "./orcamento/orcamento-list/orcamento-list.component";
 
 
 
@@ -18,8 +18,9 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'produtos', component: ProdutoListComponent},
   {path: 'material', component: MaterialListComponent},
-  {path: 'orcamento', component: OrcamentosComponent},
+  {path: 'orcamento', component: OrcamentoListComponent},
   {path: 'fornecedores', component: FornecedoresListComponent},
+  {path: 'orcamento', component: OrcamentoListComponent},
   {path: 'configuracoes', component: SettingsComponent},
   {path: 'cliente', component: ClienteListComponent}
 
