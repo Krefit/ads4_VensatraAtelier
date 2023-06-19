@@ -1,8 +1,8 @@
-import {Component, Inject} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {CoreService} from "../../services/core.service";
-import {ProdutoService} from "../../services/produto.service";
+import { Component, Inject, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
+import { CoreService } from "../../services/core.service";
+import { ProdutoService } from "../../services/produto.service";
 import { MaterialService } from 'src/app/services/material.service';
 import { FornecedoresService } from 'src/app/services/fornecedores.service';
 
@@ -11,8 +11,8 @@ import { FornecedoresService } from 'src/app/services/fornecedores.service';
   templateUrl: './produto-editar.component.html',
   styleUrls: ['./produto-editar.component.scss']
 })
-export class ProdutoEditarComponent {
-  empForm: FormGroup;
+export class ProdutoEditarComponent implements OnInit {
+  empForm!: FormGroup;
   materials: any[] = [];
   fornecedor: any[] = [];
 
@@ -24,54 +24,55 @@ export class ProdutoEditarComponent {
     private _coreService: CoreService,
     private _materialService: MaterialService,
     private _fornService: FornecedoresService
+  ) {}
 
-  ) {
-    this.empForm = this._fb.group({
-      ProdID: "",
-      prodCategoria: "",
-      prodDescricao: "",
-      prodIdMaterial: "",
-      prodQtdMaterial: "",
-      prodTempoMaoObra: "",
-      prodCustoExtra: "",
-      prodProcentLucro: "",
-      prodIdFornecedor: "",
-    });
-  }
   ngOnInit(): void {
-    this.empForm.patchValue(this.data);
+    this.initializeForm();
     this.loadMaterials();
     this.loadFornecedor();
-
+    if (this.data) {
+      this.empForm.patchValue(this.data);
+    }
   }
 
-  loadMaterials() {
+  initializeForm(): void {
+    this.empForm = this._fb.group({
+      ProdID: [0],
+      prodCategoria: ['', Validators.required],
+      prodDescricao: ['', Validators.required],
+      prodIdMaterial: [0, Validators.required],
+      prodQtdMaterial: [0, [Validators.required, Validators.min(1)]],
+      prodTempoMaoObra: [0],
+      prodCustoExtra: [0],
+      prodProcentLucro: [0],
+      prodIdFornecedor: [0, Validators.required],
+    });
+  }
+
+  loadMaterials(): void {
     this._materialService.list().subscribe((materials) => {
       this.materials = materials;
     });
   }
 
-  loadFornecedor(){
-    this._fornService.getFornecedorList().subscribe((fornecedor) =>{
+  loadFornecedor(): void {
+    this._fornService.getFornecedorList().subscribe((fornecedor) => {
       this.fornecedor = fornecedor;
-    })
+    });
   }
 
-  onFormSubmit() {
+  onFormSubmit(): void {
     if (this.empForm.valid) {
       if (this.data) {
-        this._empService
-          .updateProduto(this.data.ProdID, this.empForm.value)
-          .subscribe({
-            next: (val: any) => {
-              this._coreService.openSnackBar('produto editado com sucesso!');
-              this._dialogRef.close(true);
-            },
-            error: (err: any) => {
-              console.error(err);
-            },
-          });
-        console.log(this.empForm.value);
+        this._empService.updateProduto(this.data.prodId, this.empForm.value).subscribe({
+          next: (val: any) => {
+            this._coreService.openSnackBar('Produto editado com sucesso!');
+            this._dialogRef.close(true);
+          },
+          error: (err: any) => {
+            console.error(err);
+          },
+        });
       } else {
         this._empService.addProduto(this.empForm.value).subscribe({
           next: (val: any) => {
@@ -82,13 +83,13 @@ export class ProdutoEditarComponent {
             console.error(err);
           },
         });
-
       }
     }
   }
-  deleteProduto() {
+
+  deleteProduto(): void {
     if (this.data) {
-      this._empService.deleteProduto(this.data.ProdID).subscribe({
+      this._empService.deleteProduto(this.data.prodId).subscribe({
         next: (val: any) => {
           this._coreService.openSnackBar('Produto excluído com sucesso!');
           this._dialogRef.close(true);

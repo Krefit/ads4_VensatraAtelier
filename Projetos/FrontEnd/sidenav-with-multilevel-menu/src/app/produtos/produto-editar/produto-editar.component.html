@@ -1,71 +1,85 @@
 <div mat-dialog-title>
     <h1>Produto</h1>
-</div>
-
-<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  </div>
+  
+  <form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
     <div mat-dialog-content class="content">
-
-        <div class="row">
-            <mat-form-field appearance="outline">
-                <mat-label>Descrição</mat-label>
-                <input matInput type="descricao" placeholder="Caneca branca" formControlName="prodDescricao">
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-                <mat-label>Categoria</mat-label>
-                <input matInput type="categoria" placeholder="Dias das mães" formControlName="prodCategoria">
-            </mat-form-field>
-        </div>
-
-        <div class="row">
-
-            <mat-form-field appearance="outline">
-                <mat-label>Material</mat-label>
-                <mat-select formControlName="prodIdMaterial" placeholder="Selecione o material">
-                    <mat-option *ngFor="let material of materials" [value]="material.matID">
-                      {{ material.matDescricao }}
-                    </mat-option>
-                  </mat-select>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-                <mat-label>Qtd. Material</mat-label>
-                <input matInput type="quantidade de material" placeholder="2" formControlName="prodQtdMaterial">
-            </mat-form-field>
-        </div>
-
-        <div class="row">
-
-            <mat-form-field appearance="outline">
-                <mat-label>Fornecedor</mat-label>
-                <mat-select formControlName="prodIdMaterial" placeholder="Selecione o material">
-                    <mat-option *ngFor="let fornecedor of fornecedor" [value]="fornecedor.fornID">
-                      {{ fornecedor.fornNome }}
-                    </mat-option>
-                  </mat-select>
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-                <mat-label>Tempo de mão de obra</mat-label>
-                <input matInput type="tempo mao obra" placeholder="10h" formControlName="prodTempoMaoObra">
-            </mat-form-field>
-        </div>
-
-        <div class="row">
-            <mat-form-field appearance="outline">
-                <mat-label>% de lucro</mat-label>
-                <input matInput type="porcentagem lucro" placeholder="25%" formControlName="prodProcentLucro">
-            </mat-form-field>
-
-            <mat-form-field appearance="outline">
-                <mat-label>Custo Extra</mat-label>
-                <input matInput type="custo extra" placeholder="25%" formControlName="prodCustoExtra">
-            </mat-form-field>
-        </div>
-
+  
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Descrição</mat-label>
+          <input matInput type="text" placeholder="Caneca branca" formControlName="prodDescricao">
+          <mat-error *ngIf="empForm.get('prodDescricao')?.invalid && empForm.get('prodDescricao')?.touched">
+            A descrição é obrigatória.
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Categoria</mat-label>
+          <input matInput type="text" placeholder="Dias das mães" formControlName="prodCategoria">
+          <mat-error *ngIf="empForm.get('prodCategoria')?.invalid && empForm.get('prodCategoria')?.touched">
+            A categoria é obrigatória.
+          </mat-error>
+        </mat-form-field>
+      </div>
+  
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Material</mat-label>
+          <mat-select formControlName="prodIdMaterial" placeholder="Selecione o material">
+            <mat-option *ngFor="let material of materials" [value]="material.matID">
+              {{ material.matDescricao }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="empForm.get('prodIdMaterial')?.invalid && empForm.get('prodIdMaterial')?.touched">
+            Selecione um material.
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Qtd. Material</mat-label>
+          <input matInput type="number" placeholder="2" formControlName="prodQtdMaterial">
+          <mat-error *ngIf="empForm.get('prodQtdMaterial')?.invalid && empForm.get('prodQtdMaterial')?.touched">
+            A quantidade de material é obrigatória e deve ser um número válido maior que zero.
+          </mat-error>
+        </mat-form-field>
+      </div>
+  
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Fornecedor</mat-label>
+          <mat-select formControlName="prodIdFornecedor" placeholder="Selecione o fornecedor">
+            <mat-option *ngFor="let fornecedor of fornecedor" [value]="fornecedor.fornID">
+              {{ fornecedor.fornNome }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="empForm.get('prodIdFornecedor')?.invalid && empForm.get('prodIdFornecedor')?.touched">
+            Selecione um fornecedor.
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Tempo de mão de obra</mat-label>
+          <input matInput type="number" placeholder="10" formControlName="prodTempoMaoObra">
+        </mat-form-field>
+      </div>
+  
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>% de lucro</mat-label>
+          <input matInput type="number" placeholder="25" formControlName="prodProcentLucro">
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline">
+          <mat-label>Custo Extra</mat-label>
+          <input matInput type="number" placeholder="25" formControlName="prodCustoExtra">
+        </mat-form-field>
+      </div>
+  
     </div>
     <div mat-dialog-actions class="action">
-        <button mat-raised-button type="button" [mat-dialog-close]="false">Cancelar</button>
-        <button mat-raised-button color="primary" type="submit">{{data ? 'Salvar': 'Salvar'}}</button>
+      <button mat-raised-button type="button" [mat-dialog-close]="false">Cancelar</button>
+      <button mat-raised-button color="primary" type="submit">{{data ? 'Salvar': 'Salvar'}}</button>
     </div>
-</form>
+  </form>
+  

@@ -33,6 +33,8 @@ import { ClienteEditarComponent } from './cliente/cliente-editar/cliente-editar.
 import { ClienteListComponent } from './cliente/cliente-list/cliente-list.component';
 import { ProdutoEditarComponent } from './produtos/produto-editar/produto-editar.component';
 import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
+import { MaterialEditarComponent } from './material/material-editar/material-editar.component';
+import { MaterialListComponent } from './material/material-list/material-list.component';
 
 
 
@@ -54,6 +56,8 @@ import { ProdutoListComponent } from './produtos/produto-list/produto-list.compo
     ClienteListComponent,
     ProdutoEditarComponent,
     ProdutoListComponent,
+    MaterialEditarComponent,
+    MaterialListComponent,
     
 
 

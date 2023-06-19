@@ -22,6 +22,26 @@ export class MaterialService {
   }
 
   getFornecedorPorId(id: number): Observable<any>{
-    return this.httpClient.get(`http://localhost:8080/produto/${id}`);
+    return this.httpClient.get(`http://localhost:8080/material/${id}`);
+  }
+
+  addMaterial(data: any): Observable<any> {
+    return this.httpClient.post('http://localhost:8080/material', data);
+  }
+
+  updateMaterial(id: number, data: any): Observable<any> {
+    return this.httpClient.put(`http://localhost:8080/material/${id}`, data);
+  }
+
+  getMaterialList(): Observable<any> {
+    return this.httpClient.get('http://localhost:8080/material');
+  }
+
+  deleteMaterial(id: number): Observable<any> {
+    return this.httpClient.delete(`http://localhost:8080/material/${id}`);
+  }
+
+  getMaterialsPorId(id: number): Observable<any>{
+    return this.httpClient.get(`http://localhost:8080/material/${id}`);
   }
 }

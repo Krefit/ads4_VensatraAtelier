@@ -7,6 +7,7 @@ import { StatisticsComponent } from './material/material.component';
 import { OrcamentosComponent } from './orcamento/orcamento.component';
 import {ClienteListComponent} from "./cliente/cliente-list/cliente-list.component";
 import { ProdutoListComponent } from './produtos/produto-list/produto-list.component';
+import { MaterialListComponent } from './material/material-list/material-list.component';
 
 
 
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'produtos', component: ProdutoListComponent},
-  {path: 'material', component: StatisticsComponent},
+  {path: 'material', component: MaterialListComponent},
   {path: 'orcamento', component: OrcamentosComponent},
   {path: 'fornecedores', component: FornecedoresListComponent},
   {path: 'configuracoes', component: SettingsComponent},
