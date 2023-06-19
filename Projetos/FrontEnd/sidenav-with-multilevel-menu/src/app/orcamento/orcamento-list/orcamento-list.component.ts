@@ -6,6 +6,8 @@ import {MatDialog} from "@angular/material/dialog";
 import {CoreService} from "../../services/core.service";
 import {OrcamentosService} from "../../services/orcamentos.service";
 import {OrcamentoEditarComponent} from "../orcamento-editar/orcamento-editar.component";
+import { ClienteService } from 'src/app/services/cliente.service';
+import { ProdutoService } from 'src/app/services/produto.service';
 
 @Component({
   selector: 'app-orcamento-list',
@@ -15,12 +17,15 @@ import {OrcamentoEditarComponent} from "../orcamento-editar/orcamento-editar.com
 export class OrcamentoListComponent implements  OnInit{
   displayedColumns: string[] = [
     'id',
-    'id_cliente',
+    //'id_cliente',
+    'cliente',
     'dt_producao',
     'data_entrega',
-    'id_produto',
+    //'id_produto',
+    'produto',
     'qtde_produto',
     'desconto',
+
     'action',
   ];
   dataSource!: MatTableDataSource<any>;
@@ -30,7 +35,9 @@ export class OrcamentoListComponent implements  OnInit{
   constructor(
     private _dialog: MatDialog,
     private _orcaService: OrcamentosService,
-    private _coreService: CoreService
+    private _coreService: CoreService,
+    private _cliService: ClienteService,
+    private _prdService: ProdutoService
 
 
   ) {}
@@ -38,6 +45,12 @@ export class OrcamentoListComponent implements  OnInit{
   ngOnInit(): void {
     this.getOrcamentoListar();
   }
+
+getClientePorId(id: number){
+  if(id!= null){
+    this._cliService.getClientePorId(id).subscribe({})
+  }
+}
 
   openAddEditEmpForm() {
     const dialogRef
@@ -57,6 +70,20 @@ export class OrcamentoListComponent implements  OnInit{
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
+
+
+        this._cliService.getClienteList().subscribe((clienteArray: any[]) => {
+          this.dataSource.data = this.dataSource.data.map((row: any) => {
+            const cliente = clienteArray.find((m: any) => m.cliID === row.orcaIDCliente);
+            return { ...row, cliente: cliente ? cliente.cliNome : '' };
+          });
+        });
+        this._prdService.getProdutoList().subscribe((produtoArray: any[]) => {
+          this.dataSource.data = this.dataSource.data.map((row: any) => {
+            const produto = produtoArray.find((m: any) => m.prodID === row.orcaIDProduto);
+            return { ...row, produto: produto ? produto.prodDescricao : '' };
+          });
+        });
       },
       error: console.log,
     });

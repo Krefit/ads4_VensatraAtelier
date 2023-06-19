@@ -23,4 +23,10 @@ export class ClienteService {
   deleteCliente(id: number): Observable<any> {
     return this.clienteServico.delete(`http://localhost:8080/cliente/${id}`);
   }
+
+  getClientePorId(id: number): Observable<any> {
+    return this.clienteServico.get(`http://localhost:8080/cliente/${id}`);
+  }
+
+
 }
