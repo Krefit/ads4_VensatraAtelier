@@ -16,6 +16,9 @@ public class Cliente {
     String CliCPF_CNPJ;
     String CliEndereco;
     Date CliDtNascimento;
+    String CliEmail;
+    String CliTelefone;
+
 
     public int getCliID() {
         return CliID;
@@ -80,6 +83,4 @@ public class Cliente {
         return this;
     }
 
-    String CliEmail;
-    String CliTelefone;
 }
