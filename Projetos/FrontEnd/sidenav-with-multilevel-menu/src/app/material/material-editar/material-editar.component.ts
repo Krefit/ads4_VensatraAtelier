@@ -1,13 +1,13 @@
-import {Component, Inject} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {CoreService} from "../../services/core.service";
+import { Component, Inject } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { CoreService } from '../../services/core.service';
 import { MaterialService } from 'src/app/services/material.service';
 
 @Component({
   selector: 'app-Material-editar',
   templateUrl: './material-editar.component.html',
-  styleUrls: ['./material-editar.component.scss']
+  styleUrls: ['./material-editar.component.scss'],
 })
 export class MaterialEditarComponent {
   empForm: FormGroup;
@@ -19,22 +19,19 @@ export class MaterialEditarComponent {
     private _empService: MaterialService,
     private _dialogRef: MatDialogRef<MaterialEditarComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private _coreService: CoreService,
-
+    private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
-      matID: "",
-      matDescricao: "",
-      matQuantidade: 0,
-      matPreco: 0,
+      matID: [''],
+      matDescricao: ['', Validators.required],
+      matQuantidade: [0, [Validators.required, Validators.min(1)]],
+      matPreco: [0, [Validators.required, Validators.min(1)]],
     });
   }
+
   ngOnInit(): void {
     this.empForm.patchValue(this.data);
-
   }
-
-  
 
   onFormSubmit() {
     if (this.empForm.valid) {
@@ -61,10 +58,10 @@ export class MaterialEditarComponent {
             console.error(err);
           },
         });
-
       }
     }
   }
+
   deleteMaterial() {
     if (this.data) {
       this._empService.deleteMaterial(this.data.matID).subscribe({
