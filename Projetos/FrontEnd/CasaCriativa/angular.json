@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CasaCriativa": {
+    "sidenav-with-multilevel-menu": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,19 +17,21 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/casa-criativa",
+            "outputPath": "dist/sidenav-with-multilevel-menu",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -60,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "CasaCriativa:build:production"
+              "browserTarget": "sidenav-with-multilevel-menu:build:production"
             },
             "development": {
-              "browserTarget": "CasaCriativa:build:development"
+              "browserTarget": "sidenav-with-multilevel-menu:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CasaCriativa:build"
+            "browserTarget": "sidenav-with-multilevel-menu:build"
           }
         },
         "test": {
@@ -82,12 +88,14 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -96,6 +104,6 @@
     }
   },
   "cli": {
-    "analytics": "65a60f76-ae79-4423-8d44-946436e4a786"
+    "analytics": "119d3966-25e0-4f23-8bf8-0720c5378c2e"
   }
 }

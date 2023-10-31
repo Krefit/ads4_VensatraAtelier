@@ -1,0 +1,4 @@
+
+b	java:S112+"FDefine and throw a dedicated exception instead of using a generic one.(ØÉ¿á8ŒéÍÉŸ1
+ˆ
+java:S3655"fCall "recordFoundOptional.isPresent()" or "!recordFoundOptional.isEmpty()" before accessing the value.(§Í‡ÿÿÿÿÿ8ƒŒßôŸ1
