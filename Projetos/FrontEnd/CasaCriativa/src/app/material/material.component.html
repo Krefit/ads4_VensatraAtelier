@@ -9,30 +9,30 @@
         <div *ngIf="material | async as material; else loading">
           <table mat-table [dataSource]="material">
             <!-- Position Column -->
-            <ng-container matColumnDef="matId">
+            <ng-container matColumnDef="id">
               <th mat-header-cell *matHeaderCellDef>ID</th>
-              <td mat-cell *matCellDef="let material">{{ material.matID }}</td>
+              <td mat-cell *matCellDef="let material">{{ material.id }}</td>
             </ng-container>
 
             <!-- Name Column -->
-            <ng-container matColumnDef="matDescricao">
+            <ng-container matColumnDef="descricao">
               <th mat-header-cell *matHeaderCellDef>Descrição</th>
               <td mat-cell *matCellDef="let material">
-                {{ material.matDescricao }}
+                {{ material.descricao }}
               </td>
             </ng-container>
 
             <!-- Weight Column -->
-            <ng-container matColumnDef="matPreco">
+            <ng-container matColumnDef="preco">
               <th mat-header-cell *matHeaderCellDef>Preço</th>
-              <td mat-cell *matCellDef="let material">{{ material.matPreco }}</td>
+              <td mat-cell *matCellDef="let material">{{ material.preco }}</td>
             </ng-container>
 
             <!-- Symbol Column -->
-            <ng-container matColumnDef="matQuantidade">
+            <ng-container matColumnDef="quantidade">
               <th mat-header-cell *matHeaderCellDef>Quantidade</th>
               <td mat-cell *matCellDef="let material">
-                {{ material.matQuantidade }}
+                {{ material.quantidade }}
               </td>
             </ng-container>
 

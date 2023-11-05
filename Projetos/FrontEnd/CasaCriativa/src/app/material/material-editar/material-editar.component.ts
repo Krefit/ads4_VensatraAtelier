@@ -22,10 +22,10 @@ export class MaterialEditarComponent {
     private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
-      matID: [''],
-      matDescricao: ['', Validators.required],
-      matQuantidade: [0, [Validators.required, Validators.min(1)]],
-      matPreco: [0, [Validators.required, Validators.min(1)]],
+      id: [''],
+      descricao: ['', Validators.required],
+      quantidade: [0, [Validators.required, Validators.min(1)]],
+      preco: [0, [Validators.required, Validators.min(1)]],
     });
   }
 
@@ -34,6 +34,7 @@ export class MaterialEditarComponent {
   }
 
   onFormSubmit() {
+
     if (this.empForm.valid) {
       if (this.data) {
         this._empService
@@ -49,6 +50,7 @@ export class MaterialEditarComponent {
           });
         console.log(this.empForm.value);
       } else {
+      console.log(this.empForm.value)
         this._empService.addMaterial(this.empForm.value).subscribe({
           next: (val: any) => {
             this._coreService.openSnackBar('Material adicionado com sucesso!');

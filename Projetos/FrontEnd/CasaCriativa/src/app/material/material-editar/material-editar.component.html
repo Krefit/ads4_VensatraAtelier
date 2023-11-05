@@ -8,7 +8,7 @@
       <div class="row">
           <mat-form-field appearance="outline">
               <mat-label>Descrição</mat-label>
-              <input matInput type="text" placeholder="Caneca branca" formControlName="matDescricao" required>
+              <input matInput type="text" placeholder="Caneca branca" formControlName="descricao" required>
               <mat-error *ngIf="empForm.get('matDescricao')?.invalid && empForm.get('matDescricao')?.touched">
                   Campo Descrição é obrigatório.
               </mat-error>
@@ -18,7 +18,7 @@
       <div class="row">
           <mat-form-field appearance="outline">
               <mat-label>Quantidade</mat-label>
-              <input matInput type="number" placeholder="10" formControlName="matQuantidade" required>
+              <input matInput type="number" placeholder="10" formControlName="quantidade" required>
               <mat-error *ngIf="empForm.get('matQuantidade')?.invalid && empForm.get('matQuantidade')?.touched">
                   Campo Quantidade é obrigatório.
               </mat-error>
@@ -26,7 +26,7 @@
 
           <mat-form-field appearance="outline">
               <mat-label>Preço</mat-label>
-              <input matInput type="number" placeholder="2" formControlName="matPreco" required>
+              <input matInput type="number" placeholder="2" formControlName="preco" required>
               <mat-error *ngIf="empForm.get('matPreco')?.invalid && empForm.get('matPreco')?.touched">
                   Campo Preço é obrigatório.
               </mat-error>

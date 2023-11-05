@@ -14,7 +14,7 @@ import { Material } from '../models/material';
 
 export class StatisticsComponent{
   material: Observable<Material[]>;
-  displayedColumns: string[] = ['matId', 'matDescricao', 'matPreco', 'matQuantidade'];
+  displayedColumns: string[] = ["id", "descricao", "preco", "quantidade"];
 
  constructor(private materialService: MaterialService){
     this.material=this.materialService.list();
