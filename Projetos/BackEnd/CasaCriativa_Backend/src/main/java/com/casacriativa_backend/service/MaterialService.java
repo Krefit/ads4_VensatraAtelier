@@ -2,7 +2,6 @@ package com.casacriativa_backend.service;
 
 import com.casacriativa_backend.model.Material;
 import com.casacriativa_backend.repository.MaterialRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -42,4 +41,9 @@ public class MaterialService {
     public void deleteMaterial(Integer id){
         materialRepository.deleteById(id);
     }
+
+    public Material getMaterialPorID(int materialId) {
+        return materialRepository.findById(materialId).orElse(null);
+    }
+
 }

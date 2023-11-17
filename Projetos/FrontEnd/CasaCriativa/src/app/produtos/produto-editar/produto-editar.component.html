@@ -14,13 +14,6 @@
           </mat-error>
         </mat-form-field>
   
-        <mat-form-field appearance="outline">
-          <mat-label>Categoria</mat-label>
-          <input matInput type="text" placeholder="Dias das mães" formControlName="prodCategoria">
-          <mat-error *ngIf="empForm.get('prodCategoria')?.invalid && empForm.get('prodCategoria')?.touched">
-            A categoria é obrigatória.
-          </mat-error>
-        </mat-form-field>
       </div>
   
       <div class="row">
@@ -28,7 +21,7 @@
           <mat-label>Material</mat-label>
           <mat-select formControlName="prodIdMaterial" placeholder="Selecione o material">
             <mat-option *ngFor="let material of materials" [value]="material.matID">
-              {{ material.matDescricao }}
+              {{ material.descricao }}
             </mat-option>
           </mat-select>
           <mat-error *ngIf="empForm.get('prodIdMaterial')?.invalid && empForm.get('prodIdMaterial')?.touched">
@@ -44,37 +37,9 @@
           </mat-error>
         </mat-form-field>
       </div>
+      
+      
   
-      <div class="row">
-        <mat-form-field appearance="outline">
-          <mat-label>Fornecedor</mat-label>
-          <mat-select formControlName="prodIdFornecedor" placeholder="Selecione o fornecedor">
-            <mat-option *ngFor="let fornecedor of fornecedor" [value]="fornecedor.fornID">
-              {{ fornecedor.fornNome }}
-            </mat-option>
-          </mat-select>
-          <mat-error *ngIf="empForm.get('prodIdFornecedor')?.invalid && empForm.get('prodIdFornecedor')?.touched">
-            Selecione um fornecedor.
-          </mat-error>
-        </mat-form-field>
-  
-        <mat-form-field appearance="outline">
-          <mat-label>Tempo de mão de obra</mat-label>
-          <input matInput type="number" placeholder="10" formControlName="prodTempoMaoObra">
-        </mat-form-field>
-      </div>
-  
-      <div class="row">
-        <mat-form-field appearance="outline">
-          <mat-label>% de lucro</mat-label>
-          <input matInput type="number" placeholder="25" formControlName="prodProcentLucro">
-        </mat-form-field>
-  
-        <mat-form-field appearance="outline">
-          <mat-label>Custo Extra</mat-label>
-          <input matInput type="number" placeholder="25" formControlName="prodCustoExtra">
-        </mat-form-field>
-      </div>
   
     </div>
     <div mat-dialog-actions class="action">

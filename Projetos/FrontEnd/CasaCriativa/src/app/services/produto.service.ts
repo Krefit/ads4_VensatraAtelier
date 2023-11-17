@@ -28,4 +28,12 @@ export class ProdutoService {
   getProdutosPorId(id: number): Observable<any>{
     return this.produtoServico.get(`${this.API}/${id}`);
   }
+
+  getProdutosPorDescricao(descricao: string):Observable<any>{
+    return this.produtoServico.get(`${this.API}/${descricao}`);
+  }
+
+  addMaterial_Produto(idproduto: number, idmaterial: number, data: any): Observable<any>{
+    return this.produtoServico.post(`${this.API}/${idproduto}/material/${idmaterial}`, data)
+  }
 }

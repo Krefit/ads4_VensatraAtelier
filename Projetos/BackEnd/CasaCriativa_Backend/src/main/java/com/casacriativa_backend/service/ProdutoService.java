@@ -12,9 +12,11 @@ public class ProdutoService {
 
 
     private final ProdutoRepository produtoRepository;
+    private final MaterialService materialService;
 
-    public ProdutoService(ProdutoRepository produtoRepository) {
+    public ProdutoService(ProdutoRepository produtoRepository, MaterialService materialService) {
         this.produtoRepository = produtoRepository;
+        this.materialService = materialService;
     }
 
     public List<Produto> listarProduto() {
@@ -25,12 +27,12 @@ public class ProdutoService {
         produtoRepository.save(produto);
     }
 
+
     public void editarProduto(Integer id, Produto produto) {
         Optional<Produto> recordFoundOptional = produtoRepository.findById(id);
         if (recordFoundOptional.isEmpty()) {
             Produto recordFound = recordFoundOptional.get();
             recordFound.setDescricao(produto.getDescricao());
-            recordFound.setQuantidade(produto.getQuantidade());
 
             produtoRepository.save(recordFound);
         } else {

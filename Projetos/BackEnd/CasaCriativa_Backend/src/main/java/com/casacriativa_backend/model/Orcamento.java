@@ -25,7 +25,7 @@ public class Orcamento {
     @Column(name = "desconto", nullable = false)
     private BigDecimal desconto;
     @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "produto_id", nullable = false)
+    @JoinColumn(name = "produto_id", nullable = true)
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<Produto> produto;
 

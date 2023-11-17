@@ -38,14 +38,7 @@ export class ProdutoEditarComponent implements OnInit {
   initializeForm(): void {
     this.empForm = this._fb.group({
       ProdID: [0],
-      prodCategoria: ['', Validators.required],
       prodDescricao: ['', Validators.required],
-      prodIdMaterial: [0, Validators.required],
-      prodQtdMaterial: [0, [Validators.required, Validators.min(1)]],
-      prodTempoMaoObra: [0],
-      prodCustoExtra: [0],
-      prodProcentLucro: [0],
-      prodIdFornecedor: [0, Validators.required],
     });
   }
 

@@ -5,336 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8446cf8-da51-45f8-8df0-06d8ea763c60" name="Changes" comment="Subindo modificações do projeto.">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/consolestorage/flexible_search_region.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/consolestorage/solr_region.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a51618ad-cd80-41eb-a318-c1a0d35074e3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a51618ad-cd80-41eb-a318-c1a0d35074e3/storage_v2/_src_/database/casaCriativa.c8V1xg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a51618ad-cd80-41eb-a318-c1a0d35074e3/storage_v2/_src_/database/casaCriativa.c8V1xg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a51618ad-cd80-41eb-a318-c1a0d35074e3/storage_v2/_src_/database/casaCriativa.c8V1xg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/a51618ad-cd80-41eb-a318-c1a0d35074e3/storage_v2/_src_/database/casaCriativa.c8V1xg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/hybrisProjectSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/111d2e7dd14fc19e4e6a2a284ff34a921ffbf8a0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14413d4ed2b12311aef9afb1e6b6b0b44703a7c5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30c3cbda1d37632f2c8c4592e2f60e7195c80b87" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/445d39987bcd6fad8279f4c4036cde22d238733a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/482b6d7336e5030744a72a72d328cf874f32a24b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d238d466660be21d104696939fad81f48355d1d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/7141245045c44e6c4a6d4d1ebcfdb5124fe903f5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7abef9cb1498b07a7700aa1c824389bcb6e51726" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8fc94d1676014aa30bc841d0e61751088c419999" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/968be9152e3779f1ef18a2ff81f80a2080f1ee87" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/9810d2f59dda45ae36efdd0c939eb23f093bd127" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9dd82ae938a28e667b7ca923e3c9f8f37b4cadb3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a8b7781545731421ebac8e4e1fc281dd8dcdc02d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b4552074d41c5a08ba11f7bc6593b47540b8b889" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b887316916e5864d26d72476cdfeea6038d0256d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bc0dad8ac3c533e94809357dcb13f319b7168adc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c61dc979641a22c3380868e59a2e62d243dcb7fd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d42e87d9efe1cc0492c4f869032c0e31638e46ea" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d8196f4032a4fbbbe8884667cf47efe7ca7c4599" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9c8ba24be2ce497b7c58995a90342245a66ff89" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/eaa7168109e6930f3f3f4fdbe2bd57ba08bf056b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f0e76fa3d6ee301060cd2bec42609153d6aebaff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/5/f50228f368a4acf784d623ccdb88b1f1fe655572" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6001e34fa3c4352013894f3ee3f75a883ca2579" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/c/0c3b953135b4845083fbdc4a86123f8a38b0cd5d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/1/111d2e7dd14fc19e4e6a2a284ff34a921ffbf8a0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/4/14413d4ed2b12311aef9afb1e6b6b0b44703a7c5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/0/30c3cbda1d37632f2c8c4592e2f60e7195c80b87" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/445d39987bcd6fad8279f4c4036cde22d238733a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/8/482b6d7336e5030744a72a72d328cf874f32a24b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/d/5d238d466660be21d104696939fad81f48355d1d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/1/7141245045c44e6c4a6d4d1ebcfdb5124fe903f5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/7/a/7abef9cb1498b07a7700aa1c824389bcb6e51726" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/f/8fc94d1676014aa30bc841d0e61751088c419999" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/6/968be9152e3779f1ef18a2ff81f80a2080f1ee87" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/8/9810d2f59dda45ae36efdd0c939eb23f093bd127" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/d/9dd82ae938a28e667b7ca923e3c9f8f37b4cadb3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/8/a8b7781545731421ebac8e4e1fc281dd8dcdc02d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/4/b4552074d41c5a08ba11f7bc6593b47540b8b889" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/8/b887316916e5864d26d72476cdfeea6038d0256d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/c/bc0dad8ac3c533e94809357dcb13f319b7168adc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/6/c61dc979641a22c3380868e59a2e62d243dcb7fd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/4/d42e87d9efe1cc0492c4f869032c0e31638e46ea" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/8/d8196f4032a4fbbbe8884667cf47efe7ca7c4599" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/9/e9c8ba24be2ce497b7c58995a90342245a66ff89" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/a/eaa7168109e6930f3f3f4fdbe2bd57ba08bf056b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f0e76fa3d6ee301060cd2bec42609153d6aebaff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/5/f50228f368a4acf784d623ccdb88b1f1fe655572" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/6/f6001e34fa3c4352013894f3ee3f75a883ca2579" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/CasaCriativa_Backend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ClienteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/MaterialController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/OrcamentoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ProdutoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/UsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/service/ClienteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/service/MaterialService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/service/OrcamentoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/service/ProdutoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/service/UsuarioService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/.idea/FrontEnd.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/CoreService/CoreService.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/CoreService/CoreService.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/CoreService/CoreService.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/CoreService/CoreService.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/body/body.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/body/body.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/body/body.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-editar/cliente-editar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-editar/cliente-editar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-editar/cliente-editar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-editar/cliente-editar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-list/cliente-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-list/cliente-list.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-list/cliente-list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-list/cliente-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/configuracoes/configuracoes.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/configuracoes/configuracoes.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/configuracoes/configuracoes.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/dashboard/dashboard.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/dashboard/dashboard.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/dashboard/dashboard.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/fornecedores/fornecedor-editar/fornecedor-editar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/fornecedores/fornecedor-editar/fornecedor-editar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/fornecedores/fornecedor-editar/fornecedor-editar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/fornecedores/fornecedor-editar/fornecedor-editar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/fornecedores/fornecedores-list/fornecedores-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/fornecedores/fornecedores-list/fornecedores-list.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/fornecedores/fornecedores-list/fornecedores-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-editar/material-editar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-editar/material-editar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-editar/material-editar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-editar/material-editar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-list/material-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-list/material-list.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-list/material-list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-list/material-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/cliente.model.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/cliente.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/fornecedores.model.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/fornecedores.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/material.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/orcamentos.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-list/orcamento-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-list/orcamento-list.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-list/orcamento-list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-list/orcamento-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/cliente.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/cliente.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/core.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/core.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/fornecedores.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/fornecedores.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/material.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/material.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/orcamentos.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/orcamentos.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/produto.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/produto.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/sidenav/helper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/sidenav/nav-data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/sidenav/sidenav.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/sidenav/sidenav.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/sidenav/sidenav.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ads4_VensatraAtelier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ads4_VensatraAtelier.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto_Materiais.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto_MateriaisId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/Produto_MateriaisRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/ClienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/UsuarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/ClienteREST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/EmployeeClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/OrcamentoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/Fornecedor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/FornecedorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/ClienteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/FornecedorREST.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Material.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/MaterialDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/MaterialRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/MaterialRest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/Orcamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Orcamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/OrcamentoDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/OrcamentoRest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/ProdutoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/ProdutoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/ProdutoRest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/ResolvCorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/util/ResolvCorsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/UsuarioDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/UsuarioRest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/Cliente.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/ClienteDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/ClienteREST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/Fornecedor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/FornecedorDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/FornecedorREST.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/Produto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/ProdutoDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/ProdutoRest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/Usuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/UsuarioDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/UsuarioRest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0c3b953135b4845083fbdc4a86123f8a38b0cd5d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produto.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produto.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produto.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/.vscode/tasks.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/CoreService/CoreService.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/CoreService/CoreService.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/CoreService/CoreService.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/CoreService/CoreService.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/app-routing.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/app.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/body/body.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/body/body.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/body/body.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/cliente/cliente-editar/cliente-editar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/cliente/cliente-editar/cliente-editar.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/cliente/cliente-editar/cliente-editar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/cliente/cliente-editar/cliente-editar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/cliente/cliente-list/cliente-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/cliente/cliente-list/cliente-list.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/cliente/cliente-list/cliente-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/cliente/cliente-list/cliente-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/configuracoes/configuracoes.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/configuracoes/configuracoes.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/configuracoes/configuracoes.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/dashboard/dashboard.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/dashboard/dashboard.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/dashboard/dashboard.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/fornecedores/fornecedor-editar/fornecedor-editar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/fornecedores/fornecedor-editar/fornecedor-editar.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/fornecedores/fornecedor-editar/fornecedor-editar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/fornecedores/fornecedor-editar/fornecedor-editar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/fornecedores/fornecedores-list/fornecedores-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/fornecedores/fornecedores-list/fornecedores-list.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/fornecedores/fornecedores-list/fornecedores-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/material/material-editar/material-editar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/material/material-editar/material-editar.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/material/material-editar/material-editar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/material/material-editar/material-editar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/material/material-list/material-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/material/material-list/material-list.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/material/material-list/material-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/material/material-list/material-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/material/material.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/material/material.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/material/material.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/models/cliente.model.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/models/cliente.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/models/fornecedores.model.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/models/fornecedores.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/models/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/models/material.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/models/orcamentos.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/orcamento/orcamento-editar/orcamento-editar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/orcamento/orcamento-editar/orcamento-editar.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/orcamento/orcamento-editar/orcamento-editar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/orcamento/orcamento-editar/orcamento-editar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/orcamento/orcamento-list/orcamento-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/orcamento/orcamento-list/orcamento-list.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/orcamento/orcamento-list/orcamento-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/orcamento/orcamento-list/orcamento-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/produtos/produto-editar/produto-editar.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/produtos/produto-editar/produto-editar.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/produtos/produto-editar/produto-editar.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/produtos/produto-editar/produto-editar.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/produtos/produto-list/produto-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/produtos/produto-list/produto-list.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/produtos/produto-list/produto-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/produtos/produto-list/produto-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/cliente.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/cliente.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/core.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/core.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/fornecedores.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/fornecedores.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/material.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/material.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/orcamentos.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/orcamentos.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/produto.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/services/produto.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/sidenav/helper.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/sidenav/nav-data.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/sidenav/sidenav.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/sidenav/sidenav.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/app/sidenav/sidenav.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/src/styles.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/sidenav-with-multilevel-menu/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/CasaCriativaBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/CasaCriativaBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/MaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/MaterialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ProdutoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Orcamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Orcamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/MaterialRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/MaterialRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/ProdutoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/ProdutoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/service/MaterialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/service/MaterialService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/service/ProdutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/service/ProdutoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/CasaCriativaBackendApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/target/classes/com/casacriativa_backend/CasaCriativaBackendApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/produto.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/produto.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -346,12 +47,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Heinrikii"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Heinrikii&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -359,6 +60,11 @@
         <option name="url" value="https://github.com/Krefit/ads4_VensatraAtelier.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="CasaCriativa_Backend/invalid/JPA" />
+    </ignored-facets>
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
@@ -384,37 +90,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/AtelierPI/Projetos/FrontEnd",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.haulmont.jpb.viewMode",
-    "show.migrate.to.gradle.popup": "false",
-    "spring.configuration.checksum": "841b3e22503e12a3e3082bf2b8a90b32",
-    "ts.external.directory.path": "D:\\AtelierPI\\Projetos\\FrontEnd\\CasaCriativa\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Netbeans/Faculdade/ads4_VensatraAtelier&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.haulmont.jpb.viewMode&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;841b3e22503e12a3e3082bf2b8a90b32&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\AtelierPI\\Projetos\\FrontEnd\\CasaCriativa\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\AtelierPI\Projetos\FrontEnd\CasaCriativa\src" />
@@ -424,7 +133,20 @@
       <recent name="com.casacriativa_backend" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.CasaCriativaBackendApplication">
+    <configuration name="CasaCriativaBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.casacriativa_backend.CasaCriativaBackendApplication" />
+      <module name="CasaCriativa_Backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.casacriativa_backend.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CasaCriativaBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="CasaCriativa_Backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.casacriativa_backend.CasaCriativaBackendApplication" />
@@ -432,6 +154,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CasaCriativaBackendApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -18,15 +18,15 @@ export class ProdutoListComponent implements OnInit{
   displayedColumns: string[] = [
     'id',
     'descricao',
-    'categoria',
+    //'categoria',
     //'idMaterial',
-    'material',
-    'qtdMaterial',
-    'tempoMaoObra',
-    'custoExtra',
-    'procentLucro',
+    //'material',
+    //'qtdMaterial',
+    //'tempoMaoObra',
+   //'custoExtra',
+    //'procentLucro',
     //'idFornecedor',
-    'fornecedor',
+    //'fornecedor',
     'action',
 
   ];
