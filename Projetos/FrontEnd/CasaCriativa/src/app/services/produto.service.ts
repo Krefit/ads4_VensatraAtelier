@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
+import { map } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +20,19 @@ export class ProdutoService {
   }
 
   getProdutoList(): Observable<any> {
-    return this.produtoServico.get(`${this.API}`);
+    //return this.produtoServico.get(`${this.API}`);
+
+    return this.produtoServico.get(`${this.API}`).pipe(
+      map((response: any) => {
+        console.log('response.data');
+        console.log(response);
+        // Check response validity before processing
+        if (response && response.data) {
+          return response.data; // or any processed data
+        }
+        return []; // or handle empty data scenario
+      })
+    );
   }
 
   deleteProduto(id: number): Observable<any> {
@@ -35,5 +49,15 @@ export class ProdutoService {
 
   addMaterial_Produto(idproduto: number, idmaterial: number, data: any): Observable<any>{
     return this.produtoServico.post(`${this.API}/${idproduto}/material/${idmaterial}`, data)
+  }
+
+  addProdutoWithMaterials(produto: any, selectedMaterials: any[]): Observable<any> {
+    const payload = {
+      produto: produto,
+      materiais: selectedMaterials
+    };
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.produtoServico.post<any>(`${this.API}/add-with-materials`, payload, { headers });
   }
 }

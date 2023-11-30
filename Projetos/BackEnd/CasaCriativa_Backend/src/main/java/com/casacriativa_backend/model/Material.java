@@ -1,6 +1,7 @@
 package com.casacriativa_backend.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
@@ -21,6 +22,7 @@ public class Material {
     private Integer quantidade;
 
     @OneToMany(mappedBy = "material")
+    @JsonManagedReference
     @JsonIgnore
     private Set<Produto_Materiais> materiaisProdutos  = new HashSet<>();
 
@@ -57,27 +59,12 @@ public class Material {
     }
 
 
-    public Set<Produto_Materiais> getProdutosMateriais() {
-        return materiaisProdutos ;
-    }
-
-    public void setProdutosMateriais(Set<Produto_Materiais> produtosMateriais) {
-        this.materiaisProdutos  = produtosMateriais;
-    }
-
-    public void addProduto(Produto produto, int quantidade) {
-        Produto_Materiais produtoMaterial = new Produto_Materiais();
-        produtoMaterial.setProduto(produto);
-        produtoMaterial.setMaterial(this);
-        produtoMaterial.setQuantidade(quantidade);
-
-        materiaisProdutos .add(produtoMaterial);
-
-        produto.getProdutosMateriais().add(produtoMaterial);
-    }
-
     public void addProdutoMateriais(Produto_Materiais produtoMateriais) {
         produtoMateriais.setMaterial(this);
         this.materiaisProdutos.add(produtoMateriais);
+    }
+
+    public void removeMaterial(int materialId) {
+        materiaisProdutos.removeIf(produtoMateriais -> produtoMateriais.getMaterial().getId().equals(materialId));
     }
 }

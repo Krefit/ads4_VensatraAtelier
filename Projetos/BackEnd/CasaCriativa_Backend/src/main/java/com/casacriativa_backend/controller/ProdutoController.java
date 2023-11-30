@@ -12,8 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RequestMapping("/api")
@@ -28,20 +27,61 @@ public class ProdutoController {
     @Autowired
     private Produto_MateriaisRepository produtoMateriaisRepository;
 
-    @GetMapping("/produto")
-    public ResponseEntity<List<Produto>> getAllProdutos(@RequestParam (required= false) String descricao){
-        List<Produto> produtos = new ArrayList<Produto>();
+//    @GetMapping("/produto")
+//    public ResponseEntity<List<Produto>> getAllProdutos(@RequestParam (required= false) String descricao){
+//        List<Produto> produtos = new ArrayList<Produto>();
+//
+//        if(descricao == null)
+//            produtoRepository.findAll().forEach(produtos::add);
+//        else
+//            produtoRepository.findByDescricaoContaining(descricao).forEach(produtos::add);
+//
+//        if (produtos.isEmpty()){
+//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+//        }
+//
+//        return new ResponseEntity<>(produtos, HttpStatus.OK);
+//    }
 
-        if(descricao == null)
+    @GetMapping("/produto")
+    public ResponseEntity<List<Map<String, Object>>> getAllProdutos(@RequestParam(required = false) String descricao) {
+        List<Produto> produtos = new ArrayList<>();
+
+        if (descricao == null)
             produtoRepository.findAll().forEach(produtos::add);
         else
             produtoRepository.findByDescricaoContaining(descricao).forEach(produtos::add);
 
-        if (produtos.isEmpty()){
+        if (produtos.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
 
-        return new ResponseEntity<>(produtos, HttpStatus.OK);
+        List<Map<String, Object>> response = new ArrayList<>();
+        for (Produto produto : produtos) {
+            Map<String, Object> produtoMap = new LinkedHashMap<>();
+            produtoMap.put("id", produto.getId());
+            produtoMap.put("descricao", produto.getDescricao());
+            produtoMap.put("materiais", getMaterialsForProduto(produto)); // Method to get materials with quantidade
+            response.add(produtoMap);
+        }
+
+        return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    // Method to get materials with quantidade for a product
+    private List<Map<String, Object>> getMaterialsForProduto(Produto produto) {
+        List<Map<String, Object>> materialsList = new ArrayList<>();
+        Set<Produto_Materiais> produtoMateriais = produto.getProdutosMateriais();
+        for (Produto_Materiais pm : produtoMateriais) {
+            Map<String, Object> materialMap = new LinkedHashMap<>();
+            Material material = pm.getMaterial();
+            materialMap.put("materialId", material.getId());
+            materialMap.put("descricao", material.getDescricao());
+            materialMap.put("quantidade", pm.getQuantidade()); // Include quantidade
+            // Add more material details as needed
+            materialsList.add(materialMap);
+        }
+        return materialsList;
     }
 
     @GetMapping("/produto/{id}")
@@ -80,10 +120,24 @@ public class ProdutoController {
     }
 
     @DeleteMapping("/produto/{id}")
-    public ResponseEntity<HttpStatus> deleteProduto(@PathVariable("id") int id){
-        produtoRepository.deleteById(id);
+    public ResponseEntity<HttpStatus> deleteProduto(@PathVariable("id") int id) {
+        try {
+            // Fetch the product entity by ID
+            Produto produto = produtoRepository.findById(id).orElseThrow();
 
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            // Handle associated entries in Produto_Materiais
+            Set<Produto_Materiais> produtoMateriais = produto.getProdutosMateriais();
+            for (Produto_Materiais pm : produtoMateriais) {
+                produtoMateriaisRepository.delete(pm);
+            }
+
+            // Delete the product entity
+            produtoRepository.delete(produto);
+
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @DeleteMapping("/produto")
@@ -93,20 +147,6 @@ public class ProdutoController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-//    @PostMapping("/produto/{produtoId}/addMaterial/{materialId}")
-//    public ResponseEntity<Produto> addMaterialToProduto(
-//            @PathVariable("produtoId") int produtoId,
-//            @PathVariable("materialId") int materialId
-//    ) {
-//        Produto produto = produtoRepository.findById(produtoId).orElseThrow();
-//
-//        Material material = materialRepository.findById(materialId).orElseThrow();
-//
-//        produto.addMaterial(material);
-//        produtoRepository.save(produto);
-//
-//        return new ResponseEntity<>(produto, HttpStatus.OK);
-//    }
 
     @PostMapping("/produto/{produtoId}/addMaterial/{materialId}")
     public ResponseEntity<Produto> addMaterialToProduto(
@@ -147,32 +187,42 @@ public class ProdutoController {
         return new ResponseEntity<>(savedProduto, HttpStatus.OK);
     }
 
+    @PostMapping("/produto/add-with-materials")
+    public ResponseEntity<Produto> addProdutoWithMaterials(@RequestBody Map<String, Object> requestData) {
+        // Extract the Produto details and selected materials from the request data
+        Map<String, Object> produtoData = (Map<String, Object>) requestData.get("produto");
+        List<Map<String, Object>> selectedMaterials = (List<Map<String, Object>>) requestData.get("materiais");
+
+        // Create the Produto entity from the received data
+        Produto produto = new Produto();
+        String teste = produtoData.get("prodDescricao").toString();
+        produto.setDescricao(teste);
+        // Set other properties as needed...
+
+        // Save the Produto entity to generate its ID
+        Produto savedProduto = produtoRepository.save(produto);
+
+        // Process the selected materials and associate them with the saved Produto
+        for (Map<String, Object> materialData : selectedMaterials) {
+            int materialId = (int) materialData.get("materialId");
+            int quantity = (int) materialData.get("quantity");
+
+            Material material = materialRepository.findById(materialId).orElse(null);
+
+            if (material != null) {
+                savedProduto.addMaterial(material, quantity);
+            } else {
+                // Handle the case where the Material with the provided ID doesn't exist
+                // You can log an error or throw an exception
+            }
+        }
+
+        // Save the updated Produto entity with associated materials
+        Produto updatedProduto = produtoRepository.save(savedProduto);
+
+        return new ResponseEntity<>(updatedProduto, HttpStatus.OK);
+    }
 
 
-
-//    private final ProdutoService produtoService;
-//
-//    public ProdutoController(ProdutoService produtoService) {
-//        this.produtoService = produtoService;
-//    }
-//
-//    @GetMapping
-//    public List<Produto> listarProduto() {
-//        return produtoService.listarProduto();
-//    }
-//
-//    @PostMapping
-//    public void createProduto(@RequestBody Produto produto) {
-//        produtoService.createProduto(produto);
-//    }
-//
-//    @PutMapping("/{id}")
-//    public void editarProduto(@PathVariable("id") Integer id, @RequestBody Produto produto) {
-//        produtoService.editarProduto(id, produto);
-//    }
-//
-//    @DeleteMapping("/{id}")
-//    public void deleteProduto(@PathVariable("id") Integer id) {
-//        produtoService.deleteProduto(id);
-//    }
+    
 }

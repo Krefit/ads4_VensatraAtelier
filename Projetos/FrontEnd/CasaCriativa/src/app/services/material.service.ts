@@ -15,10 +15,7 @@ export class MaterialService {
   constructor(private httpClient: HttpClient) { }
 
   list(){
-    return this.httpClient.get<Material[]>(this.API)
-    .pipe(
-      delay(600)
-    );
+    return this.httpClient.get<Material[]>(this.API);
   }
 
   getFornecedorPorId(id: number): Observable<any>{
@@ -44,4 +41,6 @@ export class MaterialService {
   getMaterialsPorId(id: number): Observable<any>{
     return this.httpClient.get(`${this.API}/${id}`);
   }
+
+  
 }

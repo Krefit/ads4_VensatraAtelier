@@ -74,10 +74,16 @@ public class MaterialController {
     }
 
     @DeleteMapping("/produto/{produtoId}/material/{materialId}")
-    public ResponseEntity<HttpStatus> deleteMaterialDeProduto(@PathVariable(value = "produtoId") int produtoId, @PathVariable(value = "materialId") int materialId){
+    public ResponseEntity<HttpStatus> deleteMaterialDeProduto(@PathVariable(value = "produtoId") int produtoId, @PathVariable(value = "materialId") int materialId) {
+        if (!produtoRepository.existsById(produtoId)) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
         Produto produto = produtoRepository.findById(produtoId).orElseThrow();
 
-        //produto.removeMaterial(materialId);
+        // Assuming the Produto class has a method to remove materials
+        produto.removeMaterial(materialId);
+
         produtoRepository.save(produto);
 
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -96,29 +102,4 @@ public class MaterialController {
     }
 
 
-    /*private final MaterialService materialService;
-
-    public MaterialController(MaterialService materialService) {
-        this.materialService = materialService;
-    }
-
-    @GetMapping
-    public List<Material> listarMaterial() {
-        return materialService.listarMaterial();
-    }
-
-    @PostMapping
-    public void createMaterial(@RequestBody Material material) {
-        materialService.createMaterial(material);
-    }
-
-    @PutMapping("/{id}")
-    public void editarMaterial(@PathVariable("id") Integer id, @RequestBody Material material) {
-        materialService.updateMaterial(id, material);
-    }
-
-    @DeleteMapping("/{id}")
-    public void deleteMaterial(@PathVariable("id") Integer id) {
-        materialService.deleteMaterial(id);
-    }*/
 }

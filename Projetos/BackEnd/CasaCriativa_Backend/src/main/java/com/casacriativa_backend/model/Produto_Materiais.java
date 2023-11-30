@@ -1,5 +1,6 @@
 package com.casacriativa_backend.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity(name = "Produto_Materiais")
@@ -12,10 +13,12 @@ public class Produto_Materiais {
 
     @ManyToOne
     @JoinColumn(name = "produto_id")
+    @JsonBackReference
     private Produto produto;
 
     @ManyToOne
     @JoinColumn(name = "material_id")
+    @JsonBackReference
     private Material material;
 
     @Column(name = "quantidade", nullable = false, length = 50)

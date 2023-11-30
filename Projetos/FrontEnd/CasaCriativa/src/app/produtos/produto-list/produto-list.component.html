@@ -21,67 +21,41 @@
             <!-- ID Column -->
             <ng-container matColumnDef="id">
               <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
-              <td mat-cell *matCellDef="let row"> {{row.prodId}} </td>
+              <td mat-cell *matCellDef="let row"> {{row.id}} </td>
             </ng-container>
   
             <ng-container matColumnDef="descricao">
               <th mat-header-cell *matHeaderCellDef mat-sort-header>Descrição</th>
-              <td mat-cell *matCellDef="let row"> {{row.prodDescricao}}</td>
-            </ng-container>
-  
-            <ng-container matColumnDef="categoria">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header>Categoria</th>
-              <td mat-cell *matCellDef="let row"> {{row.prodCategoria}}</td>
-            </ng-container>
-  
-            <!--ng-container matColumnDef="idMaterial">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header>Material</th>
-              <td mat-cell *matCellDef="let row"> {{row.prodIdMaterial}}</td>
-            </ng-container-->
-
-            <!--ng-container matColumnDef="material">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header>Material</th>
-              <td mat-cell *matCellDef="let row">{{ row.material }}</td>
-            </ng-container-->
-  
-            <!--ng-container matColumnDef="qtdMaterial">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header>Quantidade Material</th>
-              <td mat-cell *matCellDef="let row"> {{row.prodQtdMaterial}}</td>
-            </ng-container-->
-  
-            <ng-container matColumnDef="tempoMaoObra">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header>Tempo de mão de Obra</th>
-              <td mat-cell *matCellDef="let row"> {{row.prodTempoMaoObra}}</td>
-            </ng-container>
-  
-            <ng-container matColumnDef="procentLucro">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header>% de lucro</th>
-              <td mat-cell *matCellDef="let row"> {{row.prodProcentLucro}}</td>
+              <td mat-cell *matCellDef="let row"> {{row.descricao}}</td>
             </ng-container>
 
-            <ng-container matColumnDef="idFornecedor">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Fornecedor</th>
-                <td mat-cell *matCellDef="let row"> {{row.prodIdFornecedor}}</td>
-              </ng-container>
-
-              <ng-container matColumnDef="fornecedor">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Fornecedor</th>
-                <td mat-cell *matCellDef="let row"> {{row.fornecedor}}</td>
-              </ng-container>
-
-
-              <ng-container matColumnDef="custoExtra">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header>Custo Extra</th>
-                <td mat-cell *matCellDef="let row"> {{row.prodCustoExtra}}</td>
-              </ng-container>
+            <ng-container matColumnDef="material">
+              <td mat-cell *matCellDef="let row" [attr.colspan]="displayedColumns.length">
+                <div class="expanded-panel" *ngIf="row && row.expanded">
+                  <h3>Produtos Materiais:</h3>
+                  <ul>
+                    <li *ngFor="let material of row.materiais">
+                      <div *ngIf="material">
+                        <strong>Material ID:</strong> {{ material.descricao }} - 
+                        <strong>Quantidade:</strong> {{ material.quantidade }}
+                      </div>
+                    </li>
+                    <li *ngIf="!row.materiais || !row.materiais.length">
+                      No materials available for this product.
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </ng-container>
   
+
               <ng-container matColumnDef="action">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
                 <td mat-cell *matCellDef="let row">
                   <button mat-icon-button color="primary" (click)="openEditForm(row)">
                     <mat-icon>edit</mat-icon>
                   </button>
-                  <button mat-icon-button color="warn"  (click)="deleteProduto(row.prodId)">
+                  <button mat-icon-button color="warn"  (click)="deleteProduto(row.id)">
                     <mat-icon>delete</mat-icon>
                   </button>
                 </td>

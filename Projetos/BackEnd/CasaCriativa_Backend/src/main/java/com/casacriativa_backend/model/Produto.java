@@ -1,9 +1,12 @@
 package com.casacriativa_backend.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity(name = "produto")
@@ -15,31 +18,20 @@ public class Produto {
     @Column(name = "descricao", nullable = false, length = 100)
     private String descricao;
 
-//    @ManyToMany(fetch = FetchType.LAZY,
-//            cascade = {
-//                    CascadeType.PERSIST,
-//                    CascadeType.MERGE
-//            })
-//    @JoinTable(name = "Produto_Materiais",
-//            joinColumns = { @JoinColumn(name = "produto_id")},
-//            inverseJoinColumns = { @JoinColumn(name = "material_id")}
-//                )
-//    private Set<Material> materiaisProduto = new HashSet<>();
 
     @OneToMany(mappedBy = "produto", cascade = {
                     CascadeType.PERSIST,
-                    CascadeType.MERGE
+                    CascadeType.MERGE,
+                    CascadeType.ALL
             })
     @JsonBackReference
+    @JsonManagedReference
     private Set<Produto_Materiais> produtosMateriais = new HashSet<>();
 
     public Produto(){
 
     }
 
-//    public Produto(String descricao){
-//        this.descricao = descricao;
-//    }
 
     public int getId(){return id;}
     public String getDescricao() {
@@ -50,18 +42,15 @@ public class Produto {
         this.descricao = descricao;
     }
 
-//    public void addMaterial(Material material){
-//        this.materiaisProduto.add(material);
-//        material.getProdutos().add(this);
-//    }
-//
-//    public void removeMaterial(int materialID){
-//        Material material = this.materiaisProduto.stream().filter(t -> t.getId() == materialID).findFirst().orElse(null);
-//        if(material != null){
-//            this.materiaisProduto.remove(material);
-//            material.getProdutos().remove(this);
-//        }
-//    }
+
+    public List<Material> getMaterials() {
+        List<Material> materials = new ArrayList<>();
+        for (Produto_Materiais pm : produtosMateriais) {
+            materials.add(pm.getMaterial());
+        }
+        return materials;
+    }
+
 
     public Set<Produto_Materiais> getProdutosMateriais() {
         return produtosMateriais;
@@ -87,46 +76,8 @@ public class Produto {
         this.produtosMateriais.add(produtoMateriais);
     }
 
-    //    @OneToMany(cascade = CascadeType.ALL,
-//            orphanRemoval = true)
-//    private List<Material> listaMaterial = new ArrayList<>();
-//
-//    public Integer getId() {
-//        return id;
-//    }
-//
-//    public void setId(Integer id) {
-//        this.id = id;
-//    }
-//
-//    public String getDescricao() {
-//        return descricao;
-//    }
-//
-//    public void setDescricao(String descricao) {
-//        this.descricao = descricao;
-//    }
-//
-//    public Integer getQuantidade() {
-//        return quantidade;
-//    }
-//
-//    public void setQuantidade(Integer quantidade) {
-//        this.quantidade = quantidade;
-//    }
-//
-//
-//    public List<Material> getListaMaterial() {
-//        return listaMaterial;
-//    }
-//
-//    public void setListaMaterial(List<Material> listaMaterial, Integer produto_id) {
-//        this.produto_id = produto_id;
-//        this.listaMaterial = listaMaterial;
-//    }
-//
-//    public Integer getProduto_id() {
-//        return produto_id;
-//    }
+    public void removeMaterial(int materialId) {
+        produtosMateriais.removeIf(produtoMateriais -> produtoMateriais.getMaterial().getId().equals(materialId));
+    }
 
 }

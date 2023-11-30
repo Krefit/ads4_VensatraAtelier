@@ -36,6 +36,8 @@ import { MaterialEditarComponent } from './material/material-editar/material-edi
 import { MaterialListComponent } from './material/material-list/material-list.component';
 import { OrcamentoEditarComponent } from './orcamento/orcamento-editar/orcamento-editar.component';
 import { OrcamentoListComponent } from './orcamento/orcamento-list/orcamento-list.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 
@@ -87,7 +89,10 @@ import { OrcamentoListComponent } from './orcamento/orcamento-list/orcamento-lis
     MatSelectModule,
     MatNativeDateModule,
     MatSortModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatExpansionModule,
+    
+
 
   ],
   providers: [],
