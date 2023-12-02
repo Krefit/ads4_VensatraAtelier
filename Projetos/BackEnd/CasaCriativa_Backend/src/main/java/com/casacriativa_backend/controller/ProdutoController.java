@@ -1,18 +1,32 @@
 package com.casacriativa_backend.controller;
 
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import org.jetbrains.annotations.NotNull;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.casacriativa_backend.model.Material;
 import com.casacriativa_backend.model.Produto;
 import com.casacriativa_backend.model.Produto_Materiais;
 import com.casacriativa_backend.repository.MaterialRepository;
 import com.casacriativa_backend.repository.ProdutoRepository;
 import com.casacriativa_backend.repository.Produto_MateriaisRepository;
-import org.jetbrains.annotations.NotNull;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.*;
+import com.casacriativa_backend.service.ProdutoService;
 
 @RestController
 @RequestMapping("/api")
@@ -22,26 +36,13 @@ public class ProdutoController {
     ProdutoRepository produtoRepository;
 
     @Autowired
+    ProdutoService produtoService;
+
+    @Autowired
     MaterialRepository materialRepository;
 
     @Autowired
     private Produto_MateriaisRepository produtoMateriaisRepository;
-
-//    @GetMapping("/produto")
-//    public ResponseEntity<List<Produto>> getAllProdutos(@RequestParam (required= false) String descricao){
-//        List<Produto> produtos = new ArrayList<Produto>();
-//
-//        if(descricao == null)
-//            produtoRepository.findAll().forEach(produtos::add);
-//        else
-//            produtoRepository.findByDescricaoContaining(descricao).forEach(produtos::add);
-//
-//        if (produtos.isEmpty()){
-//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//        }
-//
-//        return new ResponseEntity<>(produtos, HttpStatus.OK);
-//    }
 
     @GetMapping("/produto")
     public ResponseEntity<List<Map<String, Object>>> getAllProdutos(@RequestParam(required = false) String descricao) {
@@ -106,8 +107,8 @@ public class ProdutoController {
 
 //    @PostMapping("/produto")
 //    public ResponseEntity<Produto> crieProduto(@RequestBody Produto produto){
-//        Produto _produto = produtoRepository.save(new Produto(produto.getDescricao()));
-//        return new ResponseEntity<>(_produto, HttpStatus.CREATED);
+//        produtoRepository.save(produto);
+//        return ResponseEntity.ok().build();
 //    }
 
     @PutMapping("/produto/{id}")

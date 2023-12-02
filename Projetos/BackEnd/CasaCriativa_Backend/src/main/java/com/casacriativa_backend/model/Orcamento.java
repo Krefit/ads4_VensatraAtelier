@@ -1,11 +1,19 @@
 package com.casacriativa_backend.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.*;
-
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 @Entity
 @Table(name = "orcamento")
 public class Orcamento {
@@ -24,10 +32,10 @@ public class Orcamento {
     private Integer quantidade;
     @Column(name = "desconto", nullable = false)
     private BigDecimal desconto;
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "produto_id", nullable = true)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private List<Produto> produto;
+//    @OneToMany(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "produto_id", nullable = true)
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+//    private List<Produto> produto;
 
     public Integer getId() {
         return id;
@@ -77,11 +85,11 @@ public class Orcamento {
         this.desconto = desconto;
     }
 
-    public List<Produto> getProduto() {
-        return produto;
-    }
-
-    public void setProduto(List<Produto> produto) {
-        this.produto = produto;
-    }
+//    public List<Produto> getProduto() {
+//        return produto;
+//    }
+//
+//    public void setProduto(List<Produto> produto) {
+//        this.produto = produto;
+//    }
 }
