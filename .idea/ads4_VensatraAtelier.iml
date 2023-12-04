@@ -2,11 +2,13 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/Projetos/ionic-ecomerce/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/Projetos/ionic-ecomerce/android/app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Projetos/ionic-ecomerce/platforms" />
+      <excludeFolder url="file://$MODULE_DIR$/Projetos/ionic-ecomerce/www" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-  <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="0eb412c7-b44f-4279-92d4-a67448cd7f10" />
   </component>
 </module>

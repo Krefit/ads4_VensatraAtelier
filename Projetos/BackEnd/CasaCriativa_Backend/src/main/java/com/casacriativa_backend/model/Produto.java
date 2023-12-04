@@ -17,16 +17,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
+
 @Entity
 @Table(name = "produto")
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     @Column(name = "nome")
     private String nome;
-
     @Column(name = "nomeFoto")
     private String nomeFoto;
     @Column(name = "descricao", nullable = false, length = 100)

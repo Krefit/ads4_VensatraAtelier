@@ -24,13 +24,19 @@ public class Produto_Materiais {
     @Column(name = "quantidade", nullable = false, length = 50)
     private int quantidade;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+// --Commented out by Inspection START (03/12/2023 10:15):
+//// --Commented out by Inspection START (03/12/2023 10:15):
+////    public Long getId() {
+////        return id;
+////    }
+// --Commented out by Inspection STOP (03/12/2023 10:15)
+// --Commented out by Inspection START (03/12/2023 10:15):
+//// --Commented out by Inspection STOP (03/12/2023 10:15)
+//
+//    public void setId(Long id) {
+// --Commented out by Inspection STOP (03/12/2023 10:15)
+//        this.id = id;
+//    }
 
     public Produto getProduto() {
         return produto;

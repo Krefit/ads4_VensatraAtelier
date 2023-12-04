@@ -44,6 +44,12 @@ public class ProdutoController {
     @Autowired
     private Produto_MateriaisRepository produtoMateriaisRepository;
 
+
+    @GetMapping("/produtos")
+    public ResponseEntity<List<Produto>> listarProduto() {
+        List<Produto> produtos = produtoService.listarProduto();
+        return ResponseEntity.ok().body(produtos);
+    }
     @GetMapping("/produto")
     public ResponseEntity<List<Map<String, Object>>> getAllProdutos(@RequestParam(required = false) String descricao) {
         List<Produto> produtos = new ArrayList<>();

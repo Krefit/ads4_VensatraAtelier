@@ -35,7 +35,7 @@ export class RegisterComponent {
             // inform the user
             this.message = 'Conta criada com sucesso\nVocê será redirecionado para a pagina de login em 3 segundos';
             setTimeout(() => {
-              this.router.navigate(['login']);
+              this.router.navigate(['dashboard']);
             }, 3000)
           }
         }

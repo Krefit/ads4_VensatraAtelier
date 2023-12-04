@@ -29,6 +29,10 @@ export class AuthenticationService {
     (`${this.baseUrl}/register`, registerRequest);
   }
 
+  getAuthToken(): string {
+    return localStorage.getItem('token') || '';
+  }
+
   login(
     authRequest: AuthenticationRequest
   ) {

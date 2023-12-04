@@ -4,172 +4,164 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8446cf8-da51-45f8-8df0-06d8ea763c60" name="Changes" comment="Adição de novas propriedades em produto.">
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/auth/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/auth/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/auth/AuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/auth/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/auth/RegisterRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/auth/VerificationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/config/JwtAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/config/JwtService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/config/OpenApiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/config/SecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/demo/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/demo/DemoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/demo/ManagementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/tfa/TwoFactorAuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/user/Permission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/user/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/user/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/user/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/authentication-request.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/authentication-response.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/register-request.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/verification-request.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/auth/auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/authentication.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a51618ad-cd80-41eb-a318-c1a0d35074e3.xml" beforeDir="false" />
+    <list default="true" id="6853c0da-74a8-4382-82fc-2d3c42716dd0" name="Changes" comment="Inicio">
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/guard/authorization.guard.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/guard/authorization.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/model/authentication-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/model/orcamento-model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/model/orcamento.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/model/produto-model.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/model/produto-model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/model/register-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/model/verification-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/two-factory-auth/two-factory-auth-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/two-factory-auth/two-factory-auth.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/two-factory-auth/two-factory-auth.page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/two-factory-auth/two-factory-auth.page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/two-factory-auth/two-factory-auth.page.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/two-factory-auth/two-factory-auth.page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/services/authentication.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/services/my-cart.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/services/orcamento.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/services/produto-service.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/services/shared-data-service.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ads4_VensatraAtelier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ads4_VensatraAtelier.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a51618ad-cd80-41eb-a318-c1a0d35074e3/storage_v2/_src_/database/casaCriativa.c8V1xg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a51618ad-cd80-41eb-a318-c1a0d35074e3/storage_v2/_src_/database/casaCriativa.c8V1xg/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a51618ad-cd80-41eb-a318-c1a0d35074e3/storage_v2/_src_/database/casaCriativa.c8V1xg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a51618ad-cd80-41eb-a318-c1a0d35074e3/storage_v2/_src_/database/casaCriativa.c8V1xg/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/MaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/MaterialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/config/ApplicationConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ProdutoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Orcamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Orcamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/util/ResolvCorsFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto_Materiais.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto_Materiais.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/ProdutoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/ProdutoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/cliente.model.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/models/fornecedores.model.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/cliente.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/core.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/fornecedores.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/material.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/orcamentos.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/produto.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/page/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/page/register/register.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/auth/auth-all.guard.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/authentication.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/authentication.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/cliente.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/cliente.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/orcamentos.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/orcamentos.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/produto.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/produto.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/.github/FUNDING.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/ionic.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/ionic.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/checkout/checkout.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/checkout/checkout.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/data.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/home/home.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/home/home.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/home/home.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/item-details/item-details.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/item-details/item-details.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/item-details/item-details.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/item-details/item-details.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/login/login-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/login/login-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/login/login.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/login/login.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/login/login.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/login/login.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/login/login.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/login/login.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/login/login.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/login/login.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/my-cart/my-cart.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/my-cart/my-cart.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/my-cart/my-cart.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/my-cart/my-cart.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/signup/signup-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/signup/signup-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/signup/signup.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/signup/signup.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/signup/signup.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/signup/signup.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/signup/signup.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/signup/signup.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/signup/signup.page.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/signup/signup.page.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/signup/signup.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/app/page/signup/signup.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/assets/categories/category-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/assets/categories/category-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/ionic-ecomerce/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Heinrikii&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="30b38fc6-e05c-4535-8467-094824c07a8c" />
-        <option name="url" value="https://github.com/Krefit/ads4_VensatraAtelier.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
-  <component name="InvalidFacetManager">
-    <ignored-facets>
-      <facet id="CasaCriativa_Backend/invalid/JPA" />
-    </ignored-facets>
-  </component>
-  <component name="JpbToolWindowState">
-    <option name="isToolWindowVisible" value="false" />
-  </component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 4
 }</component>
-  <component name="ProjectId" id="2Ot702d3sVMbNvPoxlRCDMS5Dq8" />
+  <component name="ProjectId" id="2Z1xXXQh5k0ZNYz1Qj8A74SBgaZ" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="foldersAlwaysOnTop" value="false" />
     <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+    <option name="sortByType" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;CasaCriativa.0.5.4&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/ads4_VensatraAtelier/Projetos/FrontEnd/CasaCriativa/src/app/services&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;841b3e22503e12a3e3082bf2b8a90b32&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\ads4_VensatraAtelier\\Projetos\\FrontEnd\\CasaCriativa\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "CasaCriativa.0.5.4",
+    "last_opened_file_path": "D:/ads4_VensatraAtelier",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "spring.configuration.checksum": "841b3e22503e12a3e3082bf2b8a90b32",
+    "ts.external.directory.path": "D:\\ads4_VensatraAtelier\\Projetos\\FrontEnd\\CasaCriativa\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ads4_VensatraAtelier\Projetos\FrontEnd\CasaCriativa\src\app\services" />
-      <recent name="D:\ads4_VensatraAtelier\Projetos\FrontEnd\CasaCriativa\src\app\models" />
-      <recent name="D:\ads4_VensatraAtelier\Projetos\BackEnd\CasaCriativa_Backend\src\main\java\com\casacriativa_backend" />
-      <recent name="D:\AtelierPI\Projetos\FrontEnd\CasaCriativa\src" />
-      <recent name="D:\AtelierPI\Projetos\FrontEnd\CasaCriativa\src\app" />
+      <recent name="D:\ads4_VensatraAtelier\Projetos\ionic-ecomerce\src" />
+      <recent name="D:\ads4_VensatraAtelier\Projetos\ionic-ecomerce\src\app" />
+      <recent name="D:\ads4_VensatraAtelier\Projetos\ionic-ecomerce\src\app\model" />
+      <recent name="D:\ads4_VensatraAtelier\Projetos\ionic-ecomerce\src\app\services" />
+      <recent name="D:\ads4_VensatraAtelier\Projetos\FrontEnd\CasaCriativa\src\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\ads4_VensatraAtelier\Projetos\FrontEnd\CasaCriativa\src\app\page" />
-    </key>
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.casacriativa_backend" />
+      <recent name="D:\ads4_VensatraAtelier\Projetos\ionic-ecomerce\src\app\page" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CasaCriativaBackendApplication">
-    <configuration name="CasaCriativaBackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.casacriativa_backend.CasaCriativaBackendApplication" />
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="CasaCriativaBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="CasaCriativa_Backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.casacriativa_backend.CasaCriativaBackendApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.casacriativa_backend.*" />
@@ -180,100 +172,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CasaCriativaBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="CasaCriativa_Backend" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.casacriativa_backend.CasaCriativaBackendApplication" />
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Ionic CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/Projetos/ionic-ecomerce/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="LaunchBrowser.Before.Run" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" url="http://localhost:4200/login" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="npm.Ionic CLI Server" />
+      <item itemvalue="npm.Angular CLI Server" />
+      <item itemvalue="Spring Boot.CasaCriativaBackendApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CasaCriativaBackendApplication" />
+        <item itemvalue="Spring Boot.CasaCriativaBackendApplication" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c8446cf8-da51-45f8-8df0-06d8ea763c60" name="Changes" comment="" />
-      <created>1682367802709</created>
+      <changelist id="6853c0da-74a8-4382-82fc-2d3c42716dd0" name="Changes" comment="" />
+      <created>1701603436578</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1682367802709</updated>
-      <workItem from="1684419233531" duration="824000" />
-      <workItem from="1684429184972" duration="142000" />
-      <workItem from="1684429346598" duration="45000" />
-      <workItem from="1691763605372" duration="2114000" />
-      <workItem from="1691780423832" duration="692000" />
-      <workItem from="1691796337556" duration="108000" />
-      <workItem from="1692037650256" duration="9011000" />
-      <workItem from="1692050544955" duration="3780000" />
-      <workItem from="1692064233560" duration="3527000" />
-      <workItem from="1692098627162" duration="8249000" />
-      <workItem from="1692107884192" duration="5193000" />
-      <workItem from="1692151285707" duration="8749000" />
-      <workItem from="1692182782622" duration="8355000" />
-      <workItem from="1692223117574" duration="85000" />
-      <workItem from="1692277037092" duration="15000" />
-      <workItem from="1693687440666" duration="1803000" />
-      <workItem from="1693690933194" duration="26000" />
-      <workItem from="1693690980276" duration="93000" />
-      <workItem from="1694471926638" duration="2787000" />
-      <workItem from="1694558891406" duration="35000" />
-      <workItem from="1695512486477" duration="6305000" />
-      <workItem from="1695566128660" duration="38000" />
-      <workItem from="1695594759374" duration="2538000" />
-      <workItem from="1695643588151" duration="588000" />
-      <workItem from="1695672096002" duration="5914000" />
-      <workItem from="1696548602170" duration="299000" />
-      <workItem from="1696557098472" duration="159000" />
-      <workItem from="1698523797608" duration="8862000" />
-      <workItem from="1698578804390" duration="645000" />
-      <workItem from="1698614646090" duration="2106000" />
-      <workItem from="1698622524802" duration="580000" />
-      <workItem from="1698714496370" duration="605000" />
-      <workItem from="1701453767025" duration="10340000" />
-      <workItem from="1701464785977" duration="9284000" />
-      <workItem from="1701513902128" duration="19826000" />
-      <workItem from="1701545090929" duration="1657000" />
-      <workItem from="1701546832587" duration="8883000" />
+      <updated>1701603436578</updated>
+      <workItem from="1701603437438" duration="2331000" />
+      <workItem from="1701606535523" duration="30000" />
+      <workItem from="1701606647489" duration="2471000" />
+      <workItem from="1701609596603" duration="163000" />
+      <workItem from="1701609814299" duration="97000" />
+      <workItem from="1701610012031" duration="545000" />
+      <workItem from="1701610642182" duration="55000" />
+      <workItem from="1701610879679" duration="25371000" />
     </task>
-    <task id="LOCAL-00001" summary="Adição de novas propriedades em produto.">
-      <option name="closed" value="true" />
-      <created>1701467278091</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1701467278091</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Subindo modificações do projeto." />
-    <MESSAGE value="Adição de novas propriedades em produto." />
-    <option name="LAST_COMMIT_MESSAGE" value="Adição de novas propriedades em produto." />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="this" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

@@ -9,4 +9,5 @@ public interface ProdutoRepository extends JpaRepository <Produto, Integer> {
     List<Produto> findByProdutosMateriais_Material_Id(int materialId);
 
     List<Produto> findByDescricaoContaining(String descricao);
+
 }

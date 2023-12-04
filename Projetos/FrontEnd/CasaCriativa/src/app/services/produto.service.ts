@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
-import { map } from 'rxjs/operators';
-import { catchError } from 'rxjs/operators';
+import {map} from 'rxjs/operators';
+import {AuthenticationService} from "./authentication.service";
 
 @Injectable({
   providedIn: 'root'
@@ -10,19 +10,36 @@ import { catchError } from 'rxjs/operators';
 export class ProdutoService {
 
   private readonly API = 'http://localhost:8080/api/produto';
-  constructor(private produtoServico: HttpClient) { }
+
+  constructor(private produtoServico: HttpClient,
+              private authService: AuthenticationService
+  ) {
+  }
+  private getHeaders(): HttpHeaders {
+    // Adicione o token de autenticação aos cabeçalhos da solicitação
+    const token = this.authService.getAuthToken();
+    return new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${token}`
+    });
+  }
+
+
   addProduto(data: any): Observable<any> {
-    return this.produtoServico.post(`${this.API}`, data);
+    const headers = this.getHeaders();
+    return this.produtoServico.post(`${this.API}`, data, { headers });
   }
 
   updateProduto(id: number, data: any): Observable<any> {
-    return this.produtoServico.put(`${this.API}/${id}`, data);
+    const headers = this.getHeaders();
+    return this.produtoServico.put(`${this.API}/${id}`, data, { headers });
   }
 
   getProdutoList(): Observable<any> {
+    const headers = this.getHeaders();
     //return this.produtoServico.get(`${this.API}`);
 
-    return this.produtoServico.get(`${this.API}`).pipe(
+    return this.produtoServico.get(`${this.API}`, { headers }).pipe(
       map((response: any) => {
         console.log('response.data');
         console.log(response);
@@ -36,19 +53,23 @@ export class ProdutoService {
   }
 
   deleteProduto(id: number): Observable<any> {
-    return this.produtoServico.delete(`${this.API}/${id}`);
+    const headers = this.getHeaders();
+    return this.produtoServico.delete(`${this.API}/${id}`, { headers });
   }
 
   getProdutosPorId(id: number): Observable<any>{
-    return this.produtoServico.get(`${this.API}/${id}`);
+    const headers = this.getHeaders();
+    return this.produtoServico.get(`${this.API}/${id}`, { headers });
   }
 
   getProdutosPorDescricao(descricao: string):Observable<any>{
-    return this.produtoServico.get(`${this.API}/${descricao}`);
+    const headers = this.getHeaders();
+    return this.produtoServico.get(`${this.API}/${descricao}`, { headers });
   }
 
   addMaterial_Produto(idproduto: number, idmaterial: number, data: any): Observable<any>{
-    return this.produtoServico.post(`${this.API}/${idproduto}/material/${idmaterial}`, data)
+    const headers = this.getHeaders();
+    return this.produtoServico.post(`${this.API}/${idproduto}/material/${idmaterial}`, data, { headers })
   }
 
   addProdutoWithMaterials(produto: any, selectedMaterials: any[]): Observable<any> {
