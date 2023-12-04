@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="backbtn" routerLink="/login" routerDirection="back">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-padding container">
+    <h1>Two-Factor Authentication</h1>
+
+    <div class="form-container">
+      <ion-item>
+        <ion-label position="floating">Enter 6 digits Validation Code</ion-label>
+        <ion-input [(ngModel)]="otpCode" name="otpCode" type="text"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" class="main-button" (click)="verifyTfa()">Verify code</ion-button>
+    </div>
+  </div>
+</ion-content>
