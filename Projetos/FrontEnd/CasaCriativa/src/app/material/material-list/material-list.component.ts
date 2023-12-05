@@ -19,11 +19,7 @@ export class MaterialListComponent implements OnInit{
     'descricao',
     'quantidade',
     'preco',
-
-
-
     'action',
-    
   ];
 
   dataSource!: MatTableDataSource<any>;
@@ -101,6 +97,7 @@ export class MaterialListComponent implements OnInit{
     const dialogRef= this._dialog.open(MaterialEditarComponent, {
       data,
     });
+    console.log(data);
 
     dialogRef.afterClosed().subscribe({
       next: (val) => {

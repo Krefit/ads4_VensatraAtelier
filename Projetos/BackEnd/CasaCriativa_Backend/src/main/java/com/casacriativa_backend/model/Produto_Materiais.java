@@ -24,6 +24,9 @@ public class Produto_Materiais {
     @Column(name = "quantidade", nullable = false, length = 50)
     private int quantidade;
 
+    @Column(name = "precoProduto", nullable = true, length = 50)
+    private double precoProduto;
+
     public Long getId() {
         return id;
     }
@@ -56,5 +59,11 @@ public class Produto_Materiais {
         this.quantidade = quantidade;
     }
 
-    
+    public double getPrecoProduto() {
+        return precoProduto;
+    }
+
+    public void setPrecoProduto(double precoProduto) {
+        this.precoProduto = precoProduto;
+    }
 }

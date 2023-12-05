@@ -30,7 +30,7 @@ public class OrcamentoService {
             Orcamento recordFound = orcamentoFoundOptional.get();
             recordFound.setCliente(orcamento.getCliente());
             recordFound.setDataEntrega(orcamento.getDataEntrega());
-            recordFound.setListProduto(orcamento.getListProduto());
+            //recordFound.setListProduto(orcamento.getListProduto());
             recordFound.setQuantidade(orcamento.getQuantidade());
             recordFound.setDesconto(orcamento.getDesconto());
 

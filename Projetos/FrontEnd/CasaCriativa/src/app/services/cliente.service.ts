@@ -10,6 +10,7 @@ export class ClienteService {
   private readonly API = 'http://localhost:8080/api/cliente';
   constructor(private clienteServico: HttpClient) { }
   addCliente(data: any): Observable<any> {
+    console.log(data);
     return this.clienteServico.post(`${this.API}`, data);
   }
 

@@ -8,41 +8,37 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Cliente</mat-label>
-        <mat-select formControlName="orcaIDCliente" placeholder="Selecione o cliente">
-          <mat-option *ngFor="let cliente of clientes" [value]="cliente.cliID">
-            {{ cliente.cliNome }}
+        <mat-select formControlName="cliente_id" placeholder="Selecione o cliente">
+          <mat-option *ngFor="let cliente of clientes" [value]="cliente.id">
+            {{ cliente.nome }}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="empForm.get('orcaIDCliente')?.invalid && empForm.get('orcaIDCliente')?.touched">
+        <mat-error *ngIf="empForm.get('orcaIDCliente')?.invalid && empForm.get('cliente_id')?.touched">
           Selecione um cliente.
         </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Data Inicio Produção</mat-label>
-        <input matInput [matDatepicker]="picker" formControlName="orcaDtInicioProd">
+        <input matInput [matDatepicker]="picker" formControlName="dataInicioProd">
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-
-
-
-
 
     </div>
 
     <div class="row">
       <mat-form-field appearance="outline">
         <mat-label>Desconto</mat-label>
-        <input matInput type="desconto" placeholder="25%" formControlName="orcaDesconto">
-        <mat-error *ngIf="empForm.get('orcaDesconto')?.hasError('required') && empForm.get('orcaDesconto')?.touched">
+        <input matInput type="desconto" placeholder="25%" formControlName="desconto">
+        <mat-error *ngIf="empForm.get('desconto')?.hasError('required') && empForm.get('desconto')?.touched">
           O campo Desconto é obrigatório
         </mat-error>
       </mat-form-field>
 
 
-      <mat-form-field appearance="outline">
+      <!-- <mat-form-field appearance="outline">
         <mat-label>Data Entrega</mat-label>
         <input matInput [matDatepicker]="picker2" formControlName="orcaDtEntrega">
         <mat-error *ngIf="empForm.get('orcaDtEntrega')?.hasError('required') && empForm.get('orcaDtEntrega')?.touched">
@@ -51,27 +47,27 @@
           <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
         <mat-datepicker #picker2></mat-datepicker>
-      </mat-form-field>
+      </mat-form-field> -->
     </div>
 
     <div class="row">
 
       <mat-form-field appearance="outline">
         <mat-label>Produto</mat-label>
-        <mat-select formControlName="orcaIDProduto" placeholder="Selecione o produto">
-          <mat-option *ngFor="let produto of produtos" [value]="produto.prodId">
-            {{ produto.prodDescricao }}
+        <mat-select formControlName="produto_id" placeholder="Selecione o produto">
+          <mat-option *ngFor="let produto of produtos" [value]="produto.id">
+            {{ produto.descricao }}
           </mat-option>
         </mat-select>
-        <mat-error *ngIf="empForm.get('orcaIDProduto')?.invalid && empForm.get('orcaIDProduto')?.touched">
+        <mat-error *ngIf="empForm.get('produto_id')?.invalid && empForm.get('produto_id')?.touched">
           Selecione um cliente.
         </mat-error>
       </mat-form-field>
 
       <mat-form-field appearance="outline">
         <mat-label>Qtde Produto</mat-label>
-        <input matInput type="quantidade_produto" placeholder="2 Unidades" formControlName="orcaQtdProduto">
-        <mat-error *ngIf="empForm.get('orcaQtdProduto')?.hasError('required') && empForm.get('orcaQtdProduto')?.touched">
+        <input matInput type="quantidade_produto" placeholder="2 Unidades" formControlName="quantidade">
+        <mat-error *ngIf="empForm.get('quantidade')?.hasError('required') && empForm.get('quantidade')?.touched">
           O campo Qtde Produto é obrigatório
         </mat-error>
       </mat-form-field>

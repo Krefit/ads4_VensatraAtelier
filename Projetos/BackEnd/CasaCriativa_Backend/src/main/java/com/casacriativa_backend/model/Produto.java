@@ -37,6 +37,13 @@ public class Produto {
     @Column(name = "preco")
     private Float preco;
 
+    @Column(name = "nome", nullable = true, length = 100)
+    private String nome;
+
+    @Column(name = "nomeFoto", nullable = true)
+    private String nomeFoto;
+
+
     @OneToMany(mappedBy = "produto", cascade = {
                     CascadeType.PERSIST,
                     CascadeType.MERGE,
@@ -45,6 +52,11 @@ public class Produto {
     @JsonBackReference
     @JsonManagedReference
     private Set<Produto_Materiais> produtosMateriais = new HashSet<>();
+
+    @OneToMany(mappedBy = "produto", cascade={CascadeType.ALL})
+    @JsonBackReference
+    @JsonManagedReference
+    private Set<Orcamento_Produtos> orcamentoProdutos = new HashSet<>();
 
     public Produto(){
 
@@ -86,7 +98,7 @@ public class Produto {
         this.quantidade = quantidade;
     }
 
-    public int getId(){return id;}
+    public Integer getId(){return id;}
     public String getDescricao() {
         return descricao;
     }
@@ -133,4 +145,33 @@ public class Produto {
         produtosMateriais.removeIf(produtoMateriais -> produtoMateriais.getMaterial().getId().equals(materialId));
     }
 
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNomeFoto() {
+        return nomeFoto;
+    }
+
+    public void setNomeFoto(String nomeFoto) {
+        this.nomeFoto = nomeFoto;
+    }
+
+    public Set<Orcamento_Produtos> getOrcamentoProdutos() {
+        return orcamentoProdutos;
+    }
+
+    public void setOrcamentoProdutos(Set<Orcamento_Produtos> orcamentoProdutos) {
+        this.orcamentoProdutos = orcamentoProdutos;
+    }
+
+    public void addOrcamentoProdutos(Orcamento_Produtos orcamentoProdutos){
+        orcamentoProdutos.setProduto(this);
+        this.orcamentoProdutos.add(orcamentoProdutos);
+    }
 }
