@@ -37,12 +37,6 @@ public class Produto {
     @Column(name = "preco")
     private Float preco;
 
-    @Column(name = "nome", nullable = true, length = 100)
-    private String nome;
-
-    @Column(name = "nomeFoto", nullable = true)
-    private String nomeFoto;
-
 
     @OneToMany(mappedBy = "produto", cascade = {
                     CascadeType.PERSIST,
@@ -145,22 +139,6 @@ public class Produto {
         produtosMateriais.removeIf(produtoMateriais -> produtoMateriais.getMaterial().getId().equals(materialId));
     }
 
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getNomeFoto() {
-        return nomeFoto;
-    }
-
-    public void setNomeFoto(String nomeFoto) {
-        this.nomeFoto = nomeFoto;
-    }
 
     public Set<Orcamento_Produtos> getOrcamentoProdutos() {
         return orcamentoProdutos;
