@@ -87,10 +87,17 @@ export class ProdutoEditarComponent implements OnInit {
           console.error(err);
         },
       });
+
+      this._empService.addProdutoWithMaterials(produtoData, this.selectedMaterials).subscribe((result) => {
+        // Handle the result here if needed
+        console.log(result);
+      });
     } else {
       console.error('Form is invalid or no materials are selected.');
       this._coreService.openSnackBar('Adicione um material ao produto!');
     }
+
+    
   }
 
   deleteProduto(): void {

@@ -20,12 +20,12 @@ export class ClienteEditarComponent {
     private _coreService: CoreService
   ) {
     this.empForm = this._fb.group({
-      cliID: "",
-      cliNome: "",
-      cliCPF: "",
-      cliEndereco: "",
-      cliEmail: "",
-      cliTelefone: "",
+      id: "",
+      nome: "",
+      cpf: "",
+      endereco: "",
+      email: "",
+      telefone: "",
     });
   }
   ngOnInit(): void {

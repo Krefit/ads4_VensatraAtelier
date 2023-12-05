@@ -1,11 +1,14 @@
 package com.casacriativa_backend.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "orcamento")
 public class Orcamento {
@@ -13,21 +16,25 @@ public class Orcamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
-    @Column(name = "data_entrega", nullable = false)
+    @Column(name = "data_entrega", nullable = true)
     private Date dataEntrega;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Produto> listProduto;
+
     @Column(name = "quantidade", nullable = false)
     private Integer quantidade;
     @Column(name = "desconto", nullable = false)
     private BigDecimal desconto;
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "produto_id", nullable = true)
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    private List<Produto> produto;
+
+    @Column(name="descricao", nullable = true)
+    private String descricao;
+
+    @OneToMany(mappedBy = "orcamento")
+    @JsonManagedReference
+    @JsonIgnore
+    private Set<Orcamento_Produtos> orcamentoProdutos = new HashSet<>();
+
 
     public Integer getId() {
         return id;
@@ -53,14 +60,6 @@ public class Orcamento {
         this.dataEntrega = dataEntrega;
     }
 
-    public List<Produto> getListProduto() {
-        return listProduto;
-    }
-
-    public void setListProduto(List<Produto> listProduto) {
-        this.listProduto = listProduto;
-    }
-
     public Integer getQuantidade() {
         return quantidade;
     }
@@ -77,11 +76,38 @@ public class Orcamento {
         this.desconto = desconto;
     }
 
-    public List<Produto> getProduto() {
-        return produto;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setProduto(List<Produto> produto) {
-        this.produto = produto;
+    public void setDescricao(String descricao) {
+        this.descricao = cliente.getNome();
+    }
+
+    public Set<Orcamento_Produtos> getOrcamentoProdutos() {
+        return orcamentoProdutos;
+    }
+
+    public void setOrcamentoProdutos(Set<Orcamento_Produtos> orcamentoProdutos) {
+        this.orcamentoProdutos = orcamentoProdutos;
+    }
+
+    public void addProduto(Produto produto, int quantidade){
+        Orcamento_Produtos orcamentoProdutos = new Orcamento_Produtos();
+        orcamentoProdutos.setOrcamento(this);
+        orcamentoProdutos.setProduto(produto);
+        orcamentoProdutos.setQuantidade(quantidade);
+        //orcamentoProdutos.setTotalOrcamento();
+
+        produto.addOrcamentoProdutos(orcamentoProdutos);
+    }
+
+    public void addOrcamentoProdutos(Orcamento_Produtos orcamentoProdutos){
+        orcamentoProdutos.setOrcamento(this);
+        this.orcamentoProdutos.add(orcamentoProdutos);
+    }
+
+    public void removeProduto(int produtoId){
+        orcamentoProdutos.removeIf(orcamentoProdutos -> orcamentoProdutos.getProduto().getId().equals(produtoId));
     }
 }

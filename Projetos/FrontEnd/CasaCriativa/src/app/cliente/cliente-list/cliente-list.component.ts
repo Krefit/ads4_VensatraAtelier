@@ -16,7 +16,7 @@ export class ClienteListComponent implements OnInit{
   displayedColumns: string[] = [
     'id',
     'nome',
-    'cnpj',
+    'cpf',
     'endereco',
     'email',
     'telefone',

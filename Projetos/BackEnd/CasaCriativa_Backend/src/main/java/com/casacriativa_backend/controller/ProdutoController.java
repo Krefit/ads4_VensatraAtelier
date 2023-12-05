@@ -85,10 +85,18 @@ public class ProdutoController {
     }
 
     @GetMapping("/produto/{id}")
-    public ResponseEntity<Produto> getProdutoPorId(@PathVariable("id") int id){
+    public ResponseEntity<List<Map<String, Object>>> getProdutoPorId(@PathVariable("id") int id){
+
+        List<Map<String,Object>> response = new ArrayList<>();
         Produto produto = produtoRepository.findById(id).orElseThrow(RuntimeException::new);
 
-        return new ResponseEntity<>(produto,HttpStatus.OK);
+        Map<String, Object> produtoMap = new LinkedHashMap<>();
+        produtoMap.put("id", produto.getId());
+        produtoMap.put("descricao", produto.getDescricao());
+        produtoMap.put("materiais", getMaterialsForProduto(produto)); // Method to get materials with quantidade
+        response.add(produtoMap);
+
+        return new ResponseEntity<>(response,HttpStatus.OK);
     }
 
     @GetMapping("/produto/desc/{descricao}")

@@ -25,7 +25,7 @@ export class MaterialEditarComponent {
       id: [''],
       descricao: ['', Validators.required],
       quantidade: [0, [Validators.required, Validators.min(1)]],
-      preco: [0, [Validators.required, Validators.min(1)]],
+      preco: [0, [Validators.required, Validators.min(0.01)]],
     });
   }
 
@@ -38,7 +38,7 @@ export class MaterialEditarComponent {
     if (this.empForm.valid) {
       if (this.data) {
         this._empService
-          .updateMaterial(this.data.matID, this.empForm.value)
+          .updateMaterial(this.data.id, this.empForm.value)
           .subscribe({
             next: (val: any) => {
               this._coreService.openSnackBar('Material editado com sucesso!');

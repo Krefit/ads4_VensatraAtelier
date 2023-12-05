@@ -27,8 +27,8 @@ export class ProdutoService {
         console.log('response.data');
         console.log(response);
         // Check response validity before processing
-        if (response && response.data) {
-          return response.data; // or any processed data
+        if (response) {
+          return response; // or any processed data
         }
         return []; // or handle empty data scenario
       })
@@ -58,6 +58,9 @@ export class ProdutoService {
     };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
+    console.log(payload);
+
     return this.produtoServico.post<any>(`${this.API}/add-with-materials`, payload, { headers });
+
   }
 }

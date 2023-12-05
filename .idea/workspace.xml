@@ -4,20 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8446cf8-da51-45f8-8df0-06d8ea763c60" name="Changes" comment="Subindo modificações do projeto.">
+    <list default="true" id="c8446cf8-da51-45f8-8df0-06d8ea763c60" name="Changes" comment="Inicio">
+      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Orcamento_Produtos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/repository/Orcamento_ProdutosRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/MaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/MaterialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/OrcamentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/OrcamentoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ProdutoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Orcamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Orcamento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto_Materiais.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto_Materiais.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/service/OrcamentoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/service/OrcamentoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-editar/cliente-editar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-editar/cliente-editar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-editar/cliente-editar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-editar/cliente-editar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-list/cliente-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-list/cliente-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-list/cliente-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/cliente/cliente-list/cliente-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-editar/material-editar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-editar/material-editar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-list/material-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/material/material-list/material-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-list/orcamento-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-list/orcamento-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-list/orcamento-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-list/orcamento-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-editar/produto-editar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/produtos/produto-list/produto-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/material.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/material.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/cliente.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/cliente.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/produto.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/produto.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +42,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -74,48 +85,51 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2Ot702d3sVMbNvPoxlRCDMS5Dq8" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Netbeans/Faculdade/ads4_VensatraAtelier",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "com.haulmont.jpb.viewMode",
-    "show.migrate.to.gradle.popup": "false",
-    "spring.configuration.checksum": "841b3e22503e12a3e3082bf2b8a90b32",
-    "ts.external.directory.path": "D:\\AtelierPI\\Projetos\\FrontEnd\\CasaCriativa\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Netbeans/Faculdade/ads4_VensatraAtelier&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.haulmont.jpb.viewMode&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;841b3e22503e12a3e3082bf2b8a90b32&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\AtelierPI\\Projetos\\FrontEnd\\CasaCriativa\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.casacriativa_backend.repository" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\AtelierPI\Projetos\FrontEnd\CasaCriativa\src" />
       <recent name="D:\AtelierPI\Projetos\FrontEnd\CasaCriativa\src\app" />
@@ -145,6 +159,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.CasaCriativaBackendApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.CasaCriativaBackendApplication" />
@@ -213,20 +230,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Subindo modificações do projeto." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ProdutoController.java</url>
-          <line>134</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ProdutoController.java</url>
-          <line>130</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="this" />

@@ -30,7 +30,7 @@ export class ProdutoListComponent implements OnInit {
     //'idFornecedor',
     //'fornecedor',
     //'expandedDetail',
-    'material',
+    //'material',
     'action',
 
   ];
@@ -39,8 +39,8 @@ export class ProdutoListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<any>;
-  arrayProduto: any[]=[];
-  arrayMateriais: any[]=[];
+  arrayProduto: any[] = [];
+  arrayMateriais: any[] = [];
 
   constructor(
     private _dialog: MatDialog,
@@ -79,7 +79,7 @@ export class ProdutoListComponent implements OnInit {
   //     console.log('Materials:', row.materiais);
   //     // Rest of your code
   //   }
-  
+
   //   if (row.expanded) {
   //     // Ensure 'materiais' is initialized even if it's an empty array
   //     row.materiais = row.materiais || [];
@@ -139,29 +139,29 @@ export class ProdutoListComponent implements OnInit {
         this.dataSource.paginator = this.paginator;
 
         console.log('res');
-          console.log(res);
+        console.log(res);
 
         //Trazer dados de outra tabela
-        this._matService.list().subscribe((materialArray: any[]) => {
-          console.log('materialArray');
-          console.log(materialArray);
+        // this._matService.list().subscribe((materialArray: any[]) => {
+        //   console.log('materialArray');
+        //   console.log(materialArray);
 
-          this.dataSource.data = this.dataSource.data.map((row: any) => {
-            const materialIds = row.materiais.map((pm: any) => pm.materialId);
-            console.log('materialIds');
-            console.log(materialIds);
+        //   this.dataSource.data = this.dataSource.data.map((row: any) => {
+        //     const materialIds = row.materiais.map((pm: any) => pm.materialId);
+        //     console.log('materialIds');
+        //     console.log(materialIds);
 
-            const materials = row.materiais
-              .map((pm: any) => {
-                const material = materialArray.find((m: any) => m.materialId === pm.id);
-                console.log('material');
-                console.log(material);
-                return material ? material.descricao : ''; // Return the descricao or an empty string if not found
-              });
-            console.log('materials');
-            console.log(materials);
-          });
-        });
+        //     const materials = row.materiais
+        //       .map((pm: any) => {
+        //         const material = materialArray.find((m: any) => m.materialId === pm.id);
+        //         console.log('material');
+        //         console.log(material);
+        //         return material ? material.descricao : ''; // Return the descricao or an empty string if not found
+        //       });
+        //     console.log('materials');
+        //     console.log(materials);
+        //   });
+        // });
 
       },
       error: console.log,
@@ -169,38 +169,39 @@ export class ProdutoListComponent implements OnInit {
   }
 
   // Inside getProdutoListar()
-// getProdutoListar() {
-//   forkJoin({
-//     produtos: this._prodService.getProdutoList(),
-//     materiais: this._matService.list()
-//   }).subscribe({
-//     next: (result: any) => {
-//       const produtos = result.produtos;
-//       const materiais = result.materiais;
+  // getProdutoListar() {
+  //   forkJoin({
+  //     produtos: this._prodService.getProdutoList(),
+  //     materiais: this._matService.list()
+  //   }).subscribe({
+  //     next: (result: any) => {
+  //       const produtos = result.produtos;
+  //       const materiais = result.materiais;
+  //       console.log(produtos)
 
-//       const materialsMap = new Map();
-//       materiais.forEach((material: any) => {
-//         materialsMap.set(material.id, material); // Assuming 'id' is the unique identifier
-//       });
+  //       const materialsMap = new Map();
+  //       materiais.forEach((material: any) => {
+  //         materialsMap.set(material.id, material); // Assuming 'id' is the unique identifier
+  //       });
 
-//       produtos.forEach((product: any) => {
-//         if (product.materiais && product.materiais.length > 0) {
-//           const materials = product.materiais.map((pm: any) => {
-//             const material = materialsMap.get(pm.materialId);
-//             return material ? { descricao: material.descricao, quantidade: pm.quantidade } : null;
-//           });
-//           product.materiais = materials.filter((material: any) => material !== null);
-//         } else {
-//           product.materiais = [];
-//         }
-//       });
+  //       produtos.forEach((product: any) => {
+  //         if (product.materiais && product.materiais.length > 0) {
+  //           const materials = product.materiais.map((pm: any) => {
+  //             const material = materialsMap.get(pm.materialId);
+  //             return material ? { descricao: material.descricao, quantidade: pm.quantidade } : null;
+  //           });
+  //           product.materiais = materials.filter((material: any) => material !== null);
+  //         } else {
+  //           product.materiais = [];
+  //         }
+  //       });
 
-//       this.dataSource = new MatTableDataSource(produtos);
-//       this.dataSource.sort = this.sort;
-//       this.dataSource.paginator = this.paginator;
-//     },
-//     error: console.error,
-//   });
-// }
+  //       this.dataSource = new MatTableDataSource(produtos);
+  //       this.dataSource.sort = this.sort;
+  //       this.dataSource.paginator = this.paginator;
+  //     },
+  //     error: console.error,
+  //   });
+  // }
 
 }

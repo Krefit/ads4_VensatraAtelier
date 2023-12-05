@@ -1,9 +1,10 @@
 package com.casacriativa_backend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
-import java.util.Date;
-import java.util.Objects;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "cliente")
@@ -22,6 +23,10 @@ public class Cliente {
     private String email;
     @Column(name = "telefone_cliente", nullable = false, length = 50)
     private String telefone;
+
+    @OneToMany(mappedBy = "cliente") // Assuming the property name in Orcamento is 'cliente'
+    @JsonIgnore
+    private Set<Orcamento> orcamentos = new HashSet<>();
 
     public Integer getId() {
         return id;
@@ -71,4 +76,11 @@ public class Cliente {
         this.telefone = telefone;
     }
 
+    public Set<Orcamento> getOrcamentos() {
+        return orcamentos;
+    }
+
+    public void setOrcamentos(Set<Orcamento> orcamentos) {
+        this.orcamentos = orcamentos;
+    }
 }

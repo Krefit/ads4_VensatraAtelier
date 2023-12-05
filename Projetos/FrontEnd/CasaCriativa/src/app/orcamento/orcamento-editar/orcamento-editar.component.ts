@@ -26,12 +26,12 @@ export class OrcamentoEditarComponent {
     private _prdService: ProdutoService,
   ) {
     this.empForm = this._fb.group({
-      orcaIDCliente: ['', Validators.required], // Add validation rule for required field
-      orcaDtInicioProd: ['', Validators.required], // Add validation rule for required field
-      orcaDesconto: [0, Validators.required], // Add validation rule for required field
-      orcaDtEntrega: ['', Validators.required], // Add validation rule for required field
-      orcaIDProduto: ['', Validators.required], // Add validation rule for required field
-      orcaQtdProduto: [0, Validators.required]
+      cliente_id: ['', Validators.required], // Add validation rule for required field
+      dataInicioProd: ['', Validators.required], // Add validation rule for required field
+      desconto: [0, Validators.required], // Add validation rule for required field
+      //orcaDtEntrega: ['', Validators.required], // Add validation rule for required field
+      produto_id: ['', Validators.required], // Add validation rule for required field
+      quantidade: [0, Validators.required]
     });
   }
   ngOnInit(): void {
