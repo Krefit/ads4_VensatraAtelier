@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {Observable, throwError} from "rxjs";
 import { map } from 'rxjs/operators';
 import { catchError } from 'rxjs/operators';
 
@@ -10,13 +10,23 @@ import { catchError } from 'rxjs/operators';
 export class ProdutoService {
 
   private readonly API = 'http://localhost:8080/api/produto';
+  
   constructor(private produtoServico: HttpClient) { }
   addProduto(data: any): Observable<any> {
     return this.produtoServico.post(`${this.API}`, data);
   }
 
   updateProduto(id: number, data: any): Observable<any> {
-    return this.produtoServico.put(`${this.API}/${id}`, data);
+    return this.produtoServico.put(`${this.API}/${id}`, data).pipe(
+      map((response: any) => {
+        return response; // You can process the response data if needed
+      }),
+      catchError((error: any) => {
+        // Handle error, log, or throw an observable error as needed
+        console.error('Error updating produto:', error);
+        return throwError(error);
+      })
+    );
   }
 
   getProdutoList(): Observable<any> {

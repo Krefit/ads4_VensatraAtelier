@@ -1,40 +1,68 @@
 package com.casacriativa_backend.controller;
 
 import com.casacriativa_backend.model.Cliente;
-import com.casacriativa_backend.service.ClienteService;
+import com.casacriativa_backend.repository.ClienteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/api/cliente")
+@RequestMapping(value = "/api")
 public class ClienteController {
 
-    private final ClienteService clienteService;
+    @Autowired
+    private ClienteRepository clienteRepository;
 
-    public ClienteController(ClienteService clienteService) {
-        this.clienteService = clienteService;
+    @GetMapping("/cliente")
+    public ResponseEntity<List<Cliente>> getAllCliente(){
+        List<Cliente> clientes = new ArrayList<>();
+
+        clienteRepository.findAll().forEach(clientes::add);
+
+        if(clientes.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+
+        return new ResponseEntity<>(clientes, HttpStatus.OK);
     }
 
-    @GetMapping
-    public List<Cliente> listarCliente() {
-        return clienteService.listarCliente();
+    @GetMapping("/cliente/{id}")
+    public ResponseEntity<Cliente> getClientePorId(@PathVariable(value = "id")int id){
+        Cliente cliente = clienteRepository.findById(id).orElseThrow(RuntimeException::new);
+
+        return new ResponseEntity<>(cliente,HttpStatus.OK);
     }
 
-    @PostMapping
-    public void createCLiente(@RequestBody Cliente cliente) {
-        clienteService.createCLiente(cliente);
+    @PutMapping("/cliente/{id}")
+    public ResponseEntity<Cliente> updateCliente(@PathVariable("id") int id, @RequestBody Cliente clienteRequest){
+        Cliente cliente = clienteRepository.findById(id).orElseThrow();
+
+        cliente.setEmail(clienteRequest.getEmail());
+        cliente.setEndereco(clienteRequest.getEndereco());
+        cliente.setNome(clienteRequest.getNome());
+        cliente.setTelefone(clienteRequest.getTelefone());
+
+        return new ResponseEntity<>(clienteRepository.save(cliente), HttpStatus.OK);
     }
 
-    @PutMapping("/{id}")
-    public void editarCliente(@PathVariable("id") Integer id, @RequestBody Cliente cliente) {
-        clienteService.editarCliente(id, cliente);
+    @PostMapping("/cliente")
+    public void createCliente(@RequestBody Cliente cliente){
+        clienteRepository.save(cliente);
     }
 
-    @DeleteMapping("/{id}")
-    public void deleteCliente(@PathVariable("id") Integer id) {
-        clienteService.deleteCliente(id);
+    @DeleteMapping("/cliente/{id}")
+    public ResponseEntity<HttpStatus> deleteCliente(@PathVariable("id") int id){
+        clienteRepository.deleteById(id);
+
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
+
+
+
 }
 
 

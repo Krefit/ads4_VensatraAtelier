@@ -5,6 +5,7 @@ import {CoreService} from "../../services/core.service";
 import {OrcamentosService} from "../../services/orcamentos.service";
 import { ClienteService } from 'src/app/services/cliente.service';
 import { ProdutoService } from 'src/app/services/produto.service';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-orcamento-editar',
@@ -15,6 +16,17 @@ export class OrcamentoEditarComponent {
   empForm: FormGroup;
   produtos: any[] = [];
   clientes: any[] = [];
+  selectedProdutos: {produtoId: number, descricao: string, quantidade: number}[]=[];
+  orcamentoProdutos: any[]=[];
+
+  dataSource = new MatTableDataSource<{produtoId: number, descricao: string, quantidade: number}>(this.selectedProdutos);
+
+  displayColumnsProdutos: string[]=[
+    "produtoId",
+    "descricao",
+    "quantidade",
+    "actions"
+  ];
 
   constructor(
     private _fb: FormBuilder,
@@ -31,13 +43,26 @@ export class OrcamentoEditarComponent {
       desconto: [0, Validators.required], // Add validation rule for required field
       //orcaDtEntrega: ['', Validators.required], // Add validation rule for required field
       produto_id: ['', Validators.required], // Add validation rule for required field
-      quantidade: [0, Validators.required]
+      quantidade: [0, Validators.required],
+      produtos: ['', Validators.required], // Add validation rule for required field
     });
   }
   ngOnInit(): void {
     this.empForm.patchValue(this.data);
     this.loadCliente();
     this.loadProduto();
+    this.dataSource = this.data.produtos;
+    if(this.data){
+      this.empForm.patchValue({
+        cliente_id: this.data.cliente_id,
+        dataInicioProd: this.data.dataInicioProd,
+        desconto: this.data.desconto,
+        //orcaDtEntrega: this.data.orcaDtEntrega,
+        produto_id: this.data.produto_id,
+        quantidade: this.data.quantidade,
+        orcamentoProdutos: this.data.produtos
+      });
+    }
 
   }
   onFormSubmit() {

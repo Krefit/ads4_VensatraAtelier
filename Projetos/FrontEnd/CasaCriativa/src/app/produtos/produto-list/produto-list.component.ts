@@ -70,30 +70,6 @@ export class ProdutoListComponent implements OnInit {
   }
 
 
-
-  // toggleExpansion(row: any) {
-  //   row.expanded = !row.expanded;
-
-  //   if (row.expanded) {
-  //     console.log('Row:', row);
-  //     console.log('Materials:', row.materiais);
-  //     // Rest of your code
-  //   }
-
-  //   if (row.expanded) {
-  //     // Ensure 'materiais' is initialized even if it's an empty array
-  //     row.materiais = row.materiais || [];
-  //     row.materialsDataSource = new MatTableDataSource(row.materiais);
-  //   }
-  // }
-
-  // isDefaultRow = (index: number, row: any) => {
-  //   return row.expanded; // Define the condition that makes a row the default one
-  // };
-
-
-
-
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -141,67 +117,9 @@ export class ProdutoListComponent implements OnInit {
         console.log('res');
         console.log(res);
 
-        //Trazer dados de outra tabela
-        // this._matService.list().subscribe((materialArray: any[]) => {
-        //   console.log('materialArray');
-        //   console.log(materialArray);
-
-        //   this.dataSource.data = this.dataSource.data.map((row: any) => {
-        //     const materialIds = row.materiais.map((pm: any) => pm.materialId);
-        //     console.log('materialIds');
-        //     console.log(materialIds);
-
-        //     const materials = row.materiais
-        //       .map((pm: any) => {
-        //         const material = materialArray.find((m: any) => m.materialId === pm.id);
-        //         console.log('material');
-        //         console.log(material);
-        //         return material ? material.descricao : ''; // Return the descricao or an empty string if not found
-        //       });
-        //     console.log('materials');
-        //     console.log(materials);
-        //   });
-        // });
-
       },
       error: console.log,
     });
   }
-
-  // Inside getProdutoListar()
-  // getProdutoListar() {
-  //   forkJoin({
-  //     produtos: this._prodService.getProdutoList(),
-  //     materiais: this._matService.list()
-  //   }).subscribe({
-  //     next: (result: any) => {
-  //       const produtos = result.produtos;
-  //       const materiais = result.materiais;
-  //       console.log(produtos)
-
-  //       const materialsMap = new Map();
-  //       materiais.forEach((material: any) => {
-  //         materialsMap.set(material.id, material); // Assuming 'id' is the unique identifier
-  //       });
-
-  //       produtos.forEach((product: any) => {
-  //         if (product.materiais && product.materiais.length > 0) {
-  //           const materials = product.materiais.map((pm: any) => {
-  //             const material = materialsMap.get(pm.materialId);
-  //             return material ? { descricao: material.descricao, quantidade: pm.quantidade } : null;
-  //           });
-  //           product.materiais = materials.filter((material: any) => material !== null);
-  //         } else {
-  //           product.materiais = [];
-  //         }
-  //       });
-
-  //       this.dataSource = new MatTableDataSource(produtos);
-  //       this.dataSource.sort = this.sort;
-  //       this.dataSource.paginator = this.paginator;
-  //     },
-  //     error: console.error,
-  //   });
-  // }
 
 }

@@ -27,21 +27,6 @@ public class ProdutoController {
     @Autowired
     private Produto_MateriaisRepository produtoMateriaisRepository;
 
-//    @GetMapping("/produto")
-//    public ResponseEntity<List<Produto>> getAllProdutos(@RequestParam (required= false) String descricao){
-//        List<Produto> produtos = new ArrayList<Produto>();
-//
-//        if(descricao == null)
-//            produtoRepository.findAll().forEach(produtos::add);
-//        else
-//            produtoRepository.findByDescricaoContaining(descricao).forEach(produtos::add);
-//
-//        if (produtos.isEmpty()){
-//            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-//        }
-//
-//        return new ResponseEntity<>(produtos, HttpStatus.OK);
-//    }
 
     @GetMapping("/produto")
     public ResponseEntity<List<Map<String, Object>>> getAllProdutos(@RequestParam(required = false) String descricao) {
@@ -107,24 +92,49 @@ public class ProdutoController {
 
         if(produto.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        }else
+        }else{
+            //tratar depois
+        }
 
         return new ResponseEntity<>(produto, HttpStatus.OK);
     }
 
-//    @PostMapping("/produto")
-//    public ResponseEntity<Produto> crieProduto(@RequestBody Produto produto){
-//        Produto _produto = produtoRepository.save(new Produto(produto.getDescricao()));
-//        return new ResponseEntity<>(_produto, HttpStatus.CREATED);
-//    }
-
     @PutMapping("/produto/{id}")
-    public ResponseEntity<Produto> updateProduto(@PathVariable("id") int id, @RequestBody Produto produto){
-        Produto _produto = produtoRepository.findById(id).orElseThrow();
+    public ResponseEntity<Produto> updateProduto(@PathVariable("id") int id, @RequestBody Produto updatedProdutoData) {
+        try {
+            Produto existingProduto = produtoRepository.findById(id).orElseThrow();
 
-        _produto.setDescricao(produto.getDescricao());
+            existingProduto.setDescricao(updatedProdutoData.getDescricao());
+            // Update other properties as needed...
 
-        return new ResponseEntity<>(produtoRepository.save(_produto), HttpStatus.OK);
+            // Clear existing materials associated with the product
+            Set<Produto_Materiais> existingProdutoMateriais = existingProduto.getProdutosMateriais();
+            existingProdutoMateriais.clear();
+
+            // Process and update the list of materials
+            Set<Produto_Materiais> updatedProdutoMateriais = updatedProdutoData.getProdutosMateriais();
+            if (updatedProdutoMateriais != null && !updatedProdutoMateriais.isEmpty()) {
+                for (Produto_Materiais updatedPm : updatedProdutoMateriais) {
+                    Material material = materialRepository.findById(updatedPm.getMaterial().getId()).orElse(null);
+                    if (material != null) {
+                        Produto_Materiais produtoMateriais = new Produto_Materiais();
+                        produtoMateriais.setProduto(existingProduto);
+                        produtoMateriais.setMaterial(material);
+                        produtoMateriais.setQuantidade(updatedPm.getQuantidade());
+                        // Set other Produto_Materiais properties if needed...
+
+                        existingProdutoMateriais.add(produtoMateriais);
+                    }
+                }
+            }
+
+            // Save the updated Produto
+            Produto updatedProduto = produtoRepository.save(existingProduto);
+
+            return new ResponseEntity<>(updatedProduto, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @DeleteMapping("/produto/{id}")

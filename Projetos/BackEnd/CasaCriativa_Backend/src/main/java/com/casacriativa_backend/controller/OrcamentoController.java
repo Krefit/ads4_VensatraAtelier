@@ -1,5 +1,6 @@
 package com.casacriativa_backend.controller;
 
+import com.casacriativa_backend.model.Cliente;
 import com.casacriativa_backend.model.Orcamento;
 import com.casacriativa_backend.model.Orcamento_Produtos;
 import com.casacriativa_backend.model.Produto;
@@ -115,6 +116,77 @@ public class OrcamentoController {
 
         return new ResponseEntity<>(updatedOrcamento, HttpStatus.OK);
     }
+
+    @DeleteMapping("/orcamento/{id}")
+    public ResponseEntity<HttpStatus> deleteOrcamento(@PathVariable("id") int id){
+        try{
+            Orcamento orcamento = orcamentoRepository.findById(id).orElseThrow();
+
+            Set<Orcamento_Produtos> orcamentoProdutos = orcamento.getOrcamentoProdutos();
+            for(Orcamento_Produtos op : orcamentoProdutos){
+                orcamento_produtosRepository.delete(op);
+            }
+
+            orcamentoRepository.delete(orcamento);
+
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }catch (Exception e){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PutMapping("/orcamento/{id}")
+    public ResponseEntity<Orcamento> updateOrcamento(@PathVariable("id") int id, @RequestBody Orcamento updatedOrcamentoData) {
+        try {
+            Orcamento existingOrcamento = orcamentoRepository.findById(id).orElseThrow();
+
+            // Update existing Orcamento properties with the new data
+            existingOrcamento.setDescricao(updatedOrcamentoData.getDescricao());
+            existingOrcamento.setDataEntrega(updatedOrcamentoData.getDataEntrega());
+            existingOrcamento.setDesconto(updatedOrcamentoData.getDesconto());
+            // Update other properties as needed
+
+            // Update Cliente (if needed)
+            Cliente updatedCliente = updatedOrcamentoData.getCliente();
+            if (updatedCliente != null) {
+                Cliente existingCliente = clienteRepository.findById(updatedCliente.getId()).orElse(null);
+                if (existingCliente != null) {
+                    existingOrcamento.setCliente(existingCliente);
+                }
+                // If you need to update Cliente properties, update them here
+                // existingCliente.setNome(updatedCliente.getNome());
+                // Update other Cliente properties as needed
+            }
+
+            // Update the list of produtos associated with the Orcamento
+            Set<Orcamento_Produtos> existingOrcamentoProdutos = existingOrcamento.getOrcamentoProdutos();
+            existingOrcamentoProdutos.clear(); // Remove existing associations
+
+            Set<Orcamento_Produtos> updatedOrcamentoProdutos = updatedOrcamentoData.getOrcamentoProdutos();
+            if (updatedOrcamentoProdutos != null && !updatedOrcamentoProdutos.isEmpty()) {
+                for (Orcamento_Produtos updatedOp : updatedOrcamentoProdutos) {
+                    Produto produto = produtoRepository.findById(updatedOp.getProduto().getId()).orElse(null);
+                    if (produto != null) {
+                        Orcamento_Produtos orcamentoProduto = new Orcamento_Produtos();
+                        orcamentoProduto.setOrcamento(existingOrcamento);
+                        orcamentoProduto.setProduto(produto);
+                        orcamentoProduto.setQuantidade(updatedOp.getQuantidade());
+                        // Set other Orcamento_Produtos properties if needed
+
+                        existingOrcamentoProdutos.add(orcamentoProduto);
+                    }
+                }
+            }
+
+            // Save the updated Orcamento
+            Orcamento updatedOrcamento = orcamentoRepository.save(existingOrcamento);
+
+            return new ResponseEntity<>(updatedOrcamento, HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 
 
 }

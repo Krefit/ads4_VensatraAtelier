@@ -11,6 +11,7 @@ import { Material } from '../models/material';
 export class MaterialService {
 
   private API = 'http://localhost:8080/api/material';
+  //private API = 'https://f8c767f3-4ab2-4108-a8a4-99afc940b521.btunnel.co.in/api/material';
 
   constructor(private httpClient: HttpClient) { }
 

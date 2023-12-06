@@ -16,12 +16,12 @@ import {MatDialog} from "@angular/material/dialog";
 export class ProdutoEditarComponent implements OnInit {
   empForm!: FormGroup;
   materials: any[] = [];
-  selectedMaterials: { materialId: number, material: string,  quantity: number }[] = [];
+  selectedMaterials: { materialId: number, descricao: string,  quantity: number }[] = [];
   prodIdMaterial: any;
   prodQtdMaterial: any;
   produtosMateriais: any[]=[];
 
-  dataSource = new MatTableDataSource<{ materialId: number, material: string, quantity: number }>(this.selectedMaterials);
+  dataSource = new MatTableDataSource<{ materialId: number, descricao: string, quantity: number }>(this.selectedMaterials);
 
   displayedColumnsMaterial: string[]=[
     "materialId",
@@ -43,15 +43,17 @@ export class ProdutoEditarComponent implements OnInit {
   ngOnInit(): void {
     this.initializeForm();
     this.loadMaterials();
+    this.dataSource = this.data.materiais;
     if (this.data) {
-      // Populate form fields with this.data properties
       this.empForm.patchValue({
         ProdID: this.data.id,
         prodDescricao: this.data.descricao,
         // Other fields based on this.data properties
-        prodMateriais: this.data.produtosMateriais
+        materiais: this.data.materiais,
+        produtosMateriais:  this.data.materiais,
       });
     }
+    
   }
 
   initializeForm(): void {
@@ -61,6 +63,7 @@ export class ProdutoEditarComponent implements OnInit {
       prodIdMaterial: ['', Validators.required],
       prodQtdMaterial: ['', [Validators.required, Validators.min(1)]],
       produtosMateriais: ['', Validators.required],
+      materiais: ['', Validators.required],
     });
   }
 
@@ -70,14 +73,11 @@ export class ProdutoEditarComponent implements OnInit {
     });
   }
 
-  
 
   onFormSubmit(): void {
     if (this.selectedMaterials.length > 0) {
       const produtoData = this.empForm.value;
 
-      console.log(produtoData);
-      //Send the Produto details and selected materials to your backend
       this._empService.addProdutoWithMaterials(produtoData, this.selectedMaterials).subscribe({
         next: (val: any) => {
           this._coreService.openSnackBar('Produto adicionado com sucesso!');
@@ -85,19 +85,13 @@ export class ProdutoEditarComponent implements OnInit {
         },
         error: (err: any) => {
           console.error(err);
+          // Handle error appropriately (display error message, log, etc.)
         },
-      });
-
-      this._empService.addProdutoWithMaterials(produtoData, this.selectedMaterials).subscribe((result) => {
-        // Handle the result here if needed
-        console.log(result);
       });
     } else {
       console.error('Form is invalid or no materials are selected.');
       this._coreService.openSnackBar('Adicione um material ao produto!');
     }
-
-    
   }
 
   deleteProduto(): void {
@@ -121,7 +115,7 @@ export class ProdutoEditarComponent implements OnInit {
 
       if (selectedMaterial) {
         this.selectedMaterials.push({
-          material: selectedMaterial.descricao,
+          descricao: selectedMaterial.descricao,
           materialId: selectedMaterialId,
           quantity: selectedQuantity
         });

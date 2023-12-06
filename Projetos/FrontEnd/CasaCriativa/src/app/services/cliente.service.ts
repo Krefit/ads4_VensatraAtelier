@@ -8,6 +8,7 @@ import {Observable} from "rxjs";
 export class ClienteService {
 
   private readonly API = 'http://localhost:8080/api/cliente';
+  //private readonly API = 'https://f8c767f3-4ab2-4108-a8a4-99afc940b521.btunnel.co.in/api/cliente';
   constructor(private clienteServico: HttpClient) { }
   addCliente(data: any): Observable<any> {
     console.log(data);
