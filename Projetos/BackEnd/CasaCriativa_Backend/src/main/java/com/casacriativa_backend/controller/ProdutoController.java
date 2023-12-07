@@ -47,6 +47,10 @@ public class ProdutoController {
             produtoMap.put("id", produto.getId());
             produtoMap.put("descricao", produto.getDescricao());
             produtoMap.put("materiais", getMaterialsForProduto(produto)); // Method to get materials with quantidade
+            produtoMap.put("nome", produto.getNome());
+            produtoMap.put("nomeFoto", produto.getNomeFoto());
+            produtoMap.put("preco", produto.getPreco());
+            produtoMap.put("quantidade",produto.getQuantidade());
             response.add(produtoMap);
         }
 

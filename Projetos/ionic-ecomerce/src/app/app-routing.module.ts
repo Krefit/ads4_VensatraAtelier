@@ -3,11 +3,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {AuthorizationGuard} from './guard/authorization.guard';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'welcome',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'welcome',
+  //   pathMatch: 'full'
+  // },
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
@@ -27,47 +27,48 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
-    canActivate: [AuthorizationGuard]
+    // canActivate: [AuthorizationGuard]
   },
   {
     path: 'item-details',
     loadChildren: () => import('./item-details/item-details.module').then( m => m.ItemDetailsPageModule),
-    canActivate: [AuthorizationGuard]
+    // canActivate: [AuthorizationGuard]
   },
   {
     path: 'my-cart',
     loadChildren: () => import('./my-cart/my-cart.module').then( m => m.MyCartPageModule),
-    canActivate: [AuthorizationGuard]
+    // canActivate: [AuthorizationGuard]
   },
   {
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule),
-    canActivate: [AuthorizationGuard]
+    // canActivate: [AuthorizationGuard]
   },
   {
     path: 'my-orders',
     loadChildren: () => import('./my-orders/my-orders.module').then( m => m.MyOrdersPageModule),
-    canActivate: [AuthorizationGuard]
+    // canActivate: [AuthorizationGuard]
   },
   {
     path: 'favorite',
     loadChildren: () => import('./favorite/favorite.module').then( m => m.FavoritePageModule),
-    canActivate: [AuthorizationGuard]
+    // canActivate: [AuthorizationGuard]
   },
   {
     path: 'checkout',
     loadChildren: () => import('./checkout/checkout.module').then( m => m.CheckoutPageModule),
-    canActivate: [AuthorizationGuard]
+    // canActivate: [AuthorizationGuard]
   },
   {
     path: 'confirm',
     loadChildren: () => import('./confirm/confirm.module').then( m => m.ConfirmPageModule),
-    canActivate: [AuthorizationGuard]
+    // canActivate: [AuthorizationGuard]
   },
   {
     path: 'two-factory-auth',
     loadChildren: () => import('./page/two-factory-auth/two-factory-auth.module').then( m => m.TwoFactoryAuthPageModule)
-  },  {
+  },
+  {
     path: 'cart-icon',
     loadChildren: () => import('./cart-icon/cart-icon.module').then( m => m.CartIconPageModule)
   }
