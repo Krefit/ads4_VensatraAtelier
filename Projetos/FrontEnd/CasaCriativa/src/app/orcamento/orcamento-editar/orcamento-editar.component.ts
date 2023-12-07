@@ -1,8 +1,8 @@
-import {Component, Inject} from '@angular/core';
-import {FormBuilder, FormGroup, Validators } from "@angular/forms";
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
-import {CoreService} from "../../services/core.service";
-import {OrcamentosService} from "../../services/orcamentos.service";
+import { Component, Inject } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
+import { CoreService } from "../../services/core.service";
+import { OrcamentosService } from "../../services/orcamentos.service";
 import { ClienteService } from 'src/app/services/cliente.service';
 import { ProdutoService } from 'src/app/services/produto.service';
 import { MatTableDataSource } from '@angular/material/table';
@@ -16,16 +16,17 @@ export class OrcamentoEditarComponent {
   empForm: FormGroup;
   produtos: any[] = [];
   clientes: any[] = [];
-  selectedProdutos: {produtoId: number, descricao: string, quantidade: number}[]=[];
-  orcamentoProdutos: any[]=[];
+  selectedProdutos: { produtoId: number, descricao: string, quantidadeProduto: number }[] = [];
+  selectedCliente: any;
+  orcamentoProdutos: any[] = [];
 
-  dataSource = new MatTableDataSource<{produtoId: number, descricao: string, quantidade: number}>(this.selectedProdutos);
+  dataSource = new MatTableDataSource<{ produtoId: number, descricao: string, quantidadeProduto: number }>(this.selectedProdutos);
 
-  displayColumnsProdutos: string[]=[
+  displayColumnsProdutos: string[] = [
     "produtoId",
     "descricao",
-    "quantidade",
-    "actions"
+    "quantidadeProduto",
+    //"actions"
   ];
 
   constructor(
@@ -43,7 +44,7 @@ export class OrcamentoEditarComponent {
       desconto: [0, Validators.required], // Add validation rule for required field
       //orcaDtEntrega: ['', Validators.required], // Add validation rule for required field
       produto_id: ['', Validators.required], // Add validation rule for required field
-      quantidade: [0, Validators.required],
+      quantidadeProduto: [0, Validators.required],
       produtos: ['', Validators.required], // Add validation rule for required field
     });
   }
@@ -52,46 +53,47 @@ export class OrcamentoEditarComponent {
     this.loadCliente();
     this.loadProduto();
     this.dataSource = this.data.produtos;
-    if(this.data){
+    if (this.data) {
       this.empForm.patchValue({
         cliente_id: this.data.cliente_id,
         dataInicioProd: this.data.dataInicioProd,
         desconto: this.data.desconto,
         //orcaDtEntrega: this.data.orcaDtEntrega,
         produto_id: this.data.produto_id,
-        quantidade: this.data.quantidade,
+        quantidadeProduto: this.data.quantidadeProduto,
         orcamentoProdutos: this.data.produtos
       });
     }
 
   }
-  onFormSubmit() {
-    if (this.empForm.valid) {
-      if (this.data) {
-        this._orcamentoService
-          .updateOrcamento(this.data.orcaID, this.empForm.value)
-          .subscribe({
-            next: (val: any) => {
-              this._coreService.openSnackBar('Orçamento editado com sucesso!');
-              this._dialogRef.close(true);
-            },
-            error: (err: any) => {
-              console.error(err);
-            },
-          });
-        console.log(this.empForm.value);
-      } else {
-        this._orcamentoService.addOrcamento(this.empForm.value).subscribe({
-          next: (val: any) => {
-            this._coreService.openSnackBar('Orçamento adicionado com sucesso!');
-            this._dialogRef.close(true);
-          },
-          error: (err: any) => {
-            console.error(err);
-          },
-        });
 
-      }
+  initializeForm(): void {
+    this.empForm = this._fb.group({
+      orcamentoID: [0],
+      cliente_id: ['', Validators.required],
+      desconto: ['', Validators.required],
+      quantidadeProduto: ['', [Validators.required, Validators.min(1)]],
+      produto_id: ['', Validators.required],
+      orcamentoProdutos: ['', Validators.required],
+    });
+  }
+
+  onFormSubmit() {
+    if (this.selectedProdutos.length > 0) {
+      const orcamentoData = this.empForm.value;
+
+      this._orcamentoService.addOrcamentoWithProdutos(orcamentoData, this.selectedProdutos, this.selectedCliente).subscribe({
+        next: (val: any) => {
+          this._coreService.openSnackBar('Orcamento adicionado com sucesso!');
+          this._dialogRef.close(true);
+        },
+        error: (err: any) => {
+          console.error(err);
+        },
+      });
+    }else{
+      console.error('Form is invalid or no produtos are selected.');
+      this._coreService.openSnackBar('Adicione um produto ao orçamento!');
     }
   }
 
@@ -107,6 +109,28 @@ export class OrcamentoEditarComponent {
     });
   }
 
+  addProdutoToTable(): void{
+    if(true){
+      const selectedProdutoId = this.empForm.get('produto_id')?.value;
+      const selectedProduto = this.produtos.find(produto => produto.id === selectedProdutoId);
+      const selectedQuantity = this.empForm.get('quantidadeProduto')?.value;
+
+      if(selectedProduto){
+        this.selectedProdutos.push({
+          descricao: selectedProduto.descricao,
+          produtoId: selectedProdutoId,
+          quantidadeProduto: selectedQuantity
+        });
+
+        this.dataSource = new MatTableDataSource(this.selectedProdutos);
+      }else{
+        console.error('Selected produto nof found.');
+      }
+    }else{
+      console.error('Form is invalid or no produtos are selected.');
+    }   
+  }
+
   deleteOrcamento() {
     if (this.data) {
       this._orcamentoService.deleteOrcamento(this.data.orcaID).subscribe({
@@ -120,5 +144,7 @@ export class OrcamentoEditarComponent {
       });
     }
   }
+
+  //deleteProdutoFromTable()
 
 }

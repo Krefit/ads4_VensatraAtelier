@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 @RestController
@@ -93,15 +94,30 @@ public class OrcamentoController {
         Map<String,Object> orcamentoData = (Map<String, Object>) requestData.get("orcamento");
         List<Map<String, Object>> selectedProdutos = (List<Map<String, Object>>) requestData.get("produtos");
 
+
+
         Orcamento orcamento = new Orcamento();
-        String teste = orcamentoData.get("orcaDescricao").toString();
-        orcamento.setDescricao(teste);
+
+        orcamento.setDesconto(BigDecimal.valueOf(0));
+        orcamento.setQuantidade(0);
+
+//        String teste = orcamentoData.get("orcaDescricao").toString();
+//        orcamento.setDescricao(teste);
 
         Orcamento savedOrcamento = orcamentoRepository.save(orcamento);
 
+        Integer clienteId = (int) orcamentoData.get("cliente_id");
+
+        Cliente clienteOrcamento = clienteRepository.findById(clienteId).orElse(null);
+
+        savedOrcamento.setCliente(clienteOrcamento);
+
         for(Map<String, Object> produtoData : selectedProdutos){
-            int produtoId = (int) produtoData.get("produtoId");
-            int quantity = (int) produtoData.get("quantity");
+
+           // System.out.println((int) produtoData.get("quantidadeProduto"));
+
+            Integer produtoId = (int) produtoData.get("produtoId");
+            int quantity = Integer.parseInt(produtoData.get("quantidadeProduto").toString());
 
             Produto produto = produtoRepository.findById(produtoId).orElse(null);
 
@@ -111,6 +127,8 @@ public class OrcamentoController {
 
             }
         }
+
+
 
         Orcamento updatedOrcamento = orcamentoRepository.save(savedOrcamento);
 

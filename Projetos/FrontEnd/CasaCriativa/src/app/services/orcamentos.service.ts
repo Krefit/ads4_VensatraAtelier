@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import {delay, Observable} from 'rxjs';
@@ -27,5 +27,16 @@ export class OrcamentosService {
 
   deleteOrcamento(id: number): Observable<any> {
     return this.orcamentoServico.delete(`${this.API}/${id}`);
+  }
+
+  addOrcamentoWithProdutos(orcamento: any, selectedProdutos: any[], cliente: any): Observable<any>{
+    const payload = {
+      orcamento: orcamento,
+      produtos: selectedProdutos,
+      cliente: cliente
+    };
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    return this.orcamentoServico.post<any>(`${this.API}/add-with-produtos`, payload, {headers});
   }
 }

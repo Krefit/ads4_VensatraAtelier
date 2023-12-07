@@ -23,7 +23,7 @@ public class Orcamento {
     private Date dataEntrega;
 
     @Column(name = "quantidade", nullable = false)
-    private Integer quantidade;
+    private int quantidade;
     @Column(name = "desconto", nullable = false)
     private BigDecimal desconto;
 
@@ -60,11 +60,11 @@ public class Orcamento {
         this.dataEntrega = dataEntrega;
     }
 
-    public Integer getQuantidade() {
+    public int getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(Integer quantidade) {
+    public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
 
