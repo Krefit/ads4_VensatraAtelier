@@ -37,17 +37,6 @@
         </mat-error>
       </mat-form-field>
 
-
-      <!-- <mat-form-field appearance="outline">
-        <mat-label>Data Entrega</mat-label>
-        <input matInput [matDatepicker]="picker2" formControlName="orcaDtEntrega">
-        <mat-error *ngIf="empForm.get('orcaDtEntrega')?.hasError('required') && empForm.get('orcaDtEntrega')?.touched">
-          O campo Data Entrega é obrigatório
-        </mat-error>
-          <mat-hint>MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
-        <mat-datepicker #picker2></mat-datepicker>
-      </mat-form-field> -->
     </div>
 
     <div class="row">
@@ -66,12 +55,55 @@
 
       <mat-form-field appearance="outline">
         <mat-label>Qtde Produto</mat-label>
-        <input matInput type="quantidade_produto" placeholder="2 Unidades" formControlName="quantidade">
-        <mat-error *ngIf="empForm.get('quantidade')?.hasError('required') && empForm.get('quantidade')?.touched">
+        <input matInput type="quantidade_produto" placeholder="2 Unidades" formControlName="quantidadeProduto">
+        <mat-error *ngIf="empForm.get('quantidadeProduto')?.hasError('required') && empForm.get('quantidadeProduto')?.touched">
           O campo Qtde Produto é obrigatório
         </mat-error>
       </mat-form-field>
+
+      <button mat-raised-button collor="primary" type = "button" (click)="addProdutoToTable()" style="height: 56px;">+</button>
     </div>
+
+    <div class="table-container">
+      <table mat-table [dataSource]="dataSource" matSort>
+
+        <ng-container matColumnDef="produtoId">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
+          <td mat-cell *matCellDef="let element">
+            {{element.id}}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="descricao">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Produto</th>
+          <td mat-cell *matCellDef="let element">
+            {{element.descricao}}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="quantidadeProduto">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Quantidade</th>
+          <td mat-cell *matCellDef="let element">
+            {{element.quantidadeProduto}}
+          </td>
+        </ng-container>
+
+        <!-- Delete Button Column -->
+        <!-- <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let row; let i = index;">
+            <button mat-icon-button color="warn" (click)="deleteProdutoFromTable(i)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container> -->
+
+        <tr mat-header-row *matHeaderRowDef="displayColumnsProdutos"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayColumnsProdutos;"></tr>
+      </table>
+    </div>
+
+
   </div>
   <div mat-dialog-actions class="action">
     <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
