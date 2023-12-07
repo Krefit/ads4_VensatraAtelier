@@ -45,6 +45,10 @@ public class ProdutoController {
         for (Produto produto : produtos) {
             Map<String, Object> produtoMap = new LinkedHashMap<>();
             produtoMap.put("id", produto.getId());
+            produtoMap.put("nome", produto.getNome());
+            produtoMap.put("nomeFoto", produto.getNomeFoto());
+            produtoMap.put("preco", produto.getPreco());
+            produtoMap.put("quantidade",produto.getQuantidade());
             produtoMap.put("descricao", produto.getDescricao());
             produtoMap.put("materiais", getMaterialsForProduto(produto)); // Method to get materials with quantidade
             response.add(produtoMap);
@@ -63,6 +67,7 @@ public class ProdutoController {
             materialMap.put("materialId", material.getId());
             materialMap.put("descricao", material.getDescricao());
             materialMap.put("quantidade", pm.getQuantidade()); // Include quantidade
+
             // Add more material details as needed
             materialsList.add(materialMap);
         }
