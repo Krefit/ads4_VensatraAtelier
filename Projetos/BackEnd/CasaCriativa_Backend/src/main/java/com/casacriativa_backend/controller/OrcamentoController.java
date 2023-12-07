@@ -72,7 +72,7 @@ public class OrcamentoController {
             produtoMap.put("nome", produto.getNome());
             produtoMap.put("descricao", produto.getDescricao());
             produtoMap.put("nomeFoto", produto.getNomeFoto());
-            produtoMap.put("", op.getQuantidade());
+            produtoMap.put("quantidade", op.getQuantidade());
 
             produtoList.add(produtoMap);
         }

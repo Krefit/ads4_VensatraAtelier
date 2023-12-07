@@ -57,10 +57,10 @@
                 <ion-label slot="end"
                            class="ion-text-right"> {{ getTotalSubtotal() | currency:'BRL':'symbol':'1.2-2' }}</ion-label>
             </ion-item>
-            <ion-item lines="none">
+            <ion-item lines="none" >
                 <ion-label>Discount</ion-label>
                 <ion-label slot="end"
-                           class="ion-text-right">{{(getDiscount() *100) + "%" }}</ion-label>
+                           class="ion-text-right">{{ getDiscount() | currency:'BRL':'symbol':'1.2-2' }} </ion-label>
             </ion-item>
             <ion-item lines="none">
                 <ion-label>Total</ion-label>

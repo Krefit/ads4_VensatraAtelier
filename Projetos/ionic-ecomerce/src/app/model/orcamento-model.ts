@@ -8,6 +8,6 @@ export interface OrcamentoModel {
     cliente?: Cliente;
     dataEntrega?: Date;
     produtos?: ProdutoModel[];
-    desconto?: number;
+    desconto?: string;
     total?: number;
 }

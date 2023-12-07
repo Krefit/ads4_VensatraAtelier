@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+                                                                                                                                                                  import { Component, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 import { CoreService } from "../../services/core.service";
@@ -58,11 +58,13 @@ export class OrcamentoEditarComponent {
         cliente_id: this.data.cliente_id,
         dataInicioProd: this.data.dataInicioProd,
         desconto: this.data.desconto,
+
         //orcaDtEntrega: this.data.orcaDtEntrega,
         produto_id: this.data.produto_id,
         quantidadeProduto: this.data.quantidadeProduto,
         orcamentoProdutos: this.data.produtos
       });
+      console.log(this.data);
     }
 
   }
@@ -81,7 +83,7 @@ export class OrcamentoEditarComponent {
   onFormSubmit() {
     if (this.selectedProdutos.length > 0) {
       const orcamentoData = this.empForm.value;
-    
+
       console.log(orcamentoData);
 
       this._orcamentoService.addOrcamentoWithProdutos(orcamentoData, this.selectedProdutos, this.selectedCliente).subscribe({
@@ -130,7 +132,7 @@ export class OrcamentoEditarComponent {
       }
     }else{
       console.error('Form is invalid or no produtos are selected.');
-    }   
+    }
   }
 
   deleteOrcamento() {

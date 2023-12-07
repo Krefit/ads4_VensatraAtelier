@@ -8,24 +8,28 @@
         </button>
       </mat-toolbar>
       <div class="main-body">
-  
+
         <mat-form-field>
           <mat-label>Filtro</mat-label>
           <input matInput (keyup)="applyFilter($event)" placeholder="Sementes Plante" #input>
         </mat-form-field>
-  
+
         <div class="table-container">
-  
+
           <table mat-table [dataSource]="dataSource" matSort>
-  
+
             <!-- ID Column -->
             <ng-container matColumnDef="id">
               <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
               <td mat-cell *matCellDef="let row"> {{row.id}} </td>
             </ng-container>
-  
+
+            <ng-container matColumnDef="nome">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
+              <td mat-cell *matCellDef="let row"> {{row.nome}}</td>
+            </ng-container>
             <ng-container matColumnDef="descricao">
-              <th mat-header-cell *matHeaderCellDef mat-sort-header>Descrição</th>
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>descricao</th>
               <td mat-cell *matCellDef="let row"> {{row.descricao}}</td>
             </ng-container>
 
@@ -36,7 +40,7 @@
                   <ul>
                     <li *ngFor="let material of row.materiais">
                       <div *ngIf="material">
-                        <strong>Material ID:</strong> {{ material.descricao }} - 
+                        <strong>Material ID:</strong> {{ material.descricao }} -
                         <strong>Quantidade:</strong> {{ material.quantidade }}
                       </div>
                     </li>
@@ -47,7 +51,7 @@
                 </div>
               </td>
             </ng-container>
-  
+
 
               <ng-container matColumnDef="action">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
@@ -60,19 +64,18 @@
                   </button>
                 </td>
               </ng-container>
-  
+
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  
+
             <!-- Row shown when there is no matching data. -->
             <tr class="mat-row" *matNoDataRow>
               <td class="mat-cell" colspan="4">Nenhum dado correspondente "{{input.value}}"</td>
             </tr>
           </table>
-  
+
           <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
         </div>
       </div>
     </mat-card-content>
   </mat-card>
-  

@@ -31,9 +31,9 @@ export class CheckoutPage implements OnInit {
         const orcamentoData = {
             orcamento: {
                 cliente_id: this.cliente?.id || 0,
-                dataEntrega: '2023-12-31T23:59:59',  // Substitua pela data desejada
+                dataInicioProd: '2023-12-01T03:00:00.000Z',  // Substitua pela data desejada
                 quantidade: 1,  // Substitua pela quantidade desejada
-                desconto: 0.05,  // Substitua pelo desconto desejado
+                desconto: 5,  // Substitua pelo desconto desejado
                 descricao: 'Descrição do Orcamento',  // Substitua pela descrição desejada
             },
             listaProdutos: this.cartItems.map(item => ({
@@ -85,7 +85,7 @@ export class CheckoutPage implements OnInit {
     getDiscount(): number {
         // Aqui você pode implementar a lógica para obter o valor do desconto
         // Por exemplo, se o desconto for 5%, retorne 0.05
-        return 0.05;
+        return 5;
     }
 
     getTotal(): number {
