@@ -1,0 +1,4 @@
+<ion-button (click)="irParaCarrinho()">
+  <ion-icon name="cart-outline"></ion-icon>
+  <ion-badge color="primary" *ngIf="totalItems > 0">{{ totalItems }}</ion-badge>
+</ion-button>
