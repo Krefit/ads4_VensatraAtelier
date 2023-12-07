@@ -36,6 +36,7 @@ public class OrcamentoController {
     public ResponseEntity<List<Map<String, Object>>> getAllOrcamentos() {
         List<Orcamento> orcamentos = new ArrayList<>();
 
+        orcamentos = orcamentoRepository.findAll();
 
         if (orcamentos.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);

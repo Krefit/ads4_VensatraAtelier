@@ -7,11 +7,8 @@
     <list default="true" id="c8446cf8-da51-45f8-8df0-06d8ea763c60" name="Changes" comment="Inicio">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/OrcamentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/OrcamentoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Orcamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Orcamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/model/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/ProdutoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/orcamento/orcamento-editar/orcamento-editar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/orcamentos.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Projetos/FrontEnd/CasaCriativa/src/app/services/orcamentos.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,15 +210,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Subindo modificações do projeto." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Projetos/BackEnd/CasaCriativa_Backend/src/main/java/com/casacriativa_backend/controller/OrcamentoController.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="this" />
