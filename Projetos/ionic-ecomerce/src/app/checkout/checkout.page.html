@@ -1,77 +1,78 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-button color="primary" class="backbtn" routerLink="/my-cart" routerDirection="back">
-                <img src="../../assets/back-dark.svg" />
-            </ion-button>
-        </ion-buttons>
-        <ion-buttons slot="end">
-            <ion-button class="notification">
-                <ion-icon name="notifications-outline" color="dark"></ion-icon>
-                <span>&nbsp;</span>
-            </ion-button>
-            <ion-button class="filter">
-                <ion-icon name="funnel-outline" color="dark"></ion-icon>
-            </ion-button>
-            <app-cart-icon></app-cart-icon>
-        </ion-buttons>
-    </ion-toolbar>
+    <ion-header>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-button color="primary" class="backbtn" routerLink="/my-cart" routerDirection="back">
+                    <img src="../../assets/back-dark.svg"/>
+                </ion-button>
+            </ion-buttons>
+            <ion-buttons slot="end">
+                <ion-button class="notification">
+                    <ion-icon name="notifications-outline" color="dark"></ion-icon>
+                    <span>&nbsp;</span>
+                </ion-button>
+                <ion-button class="filter">
+                    <ion-icon name="funnel-outline" color="dark"></ion-icon>
+                </ion-button>
+                <app-cart-icon></app-cart-icon>
+            </ion-buttons>
+        </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen="true">
-    <h1 class="title">Checkout</h1>
+    <ion-content fullscreen="true">
+        <h1 class="title">Checkout</h1>
 
-    <div class="cart-items" *ngIf="cartItems && cartItems.length > 0">
-        <ion-card mode="ios" *ngFor="let item of cartItems">
-            <ion-card-content>
-                <div class="item-img">
-                    <img [src]="'../../assets/cart/' + item.produto.nomeFoto"/>
-                </div>
-
-                <div class="item-info">
-                    <p>{{ item.produto.nome }}</p>
-                    <p>{{ item.produto.preco | currency:'BRL':'symbol':'1.2-2' }}</p>
-
-                    <div class="qty-selector">
-                        <ion-button fill="clear" (click)="decreaseQuantity(item)">-</ion-button>
-                        <ion-label>{{ item.quantidade }}</ion-label>
-                        <ion-button fill="clear" (click)="increaseQuantity(item)">+</ion-button>
+        <div class="cart-items" *ngIf="cartItems && cartItems.length > 0">
+            <ion-card mode="ios" *ngFor="let item of cartItems">
+                <ion-card-content>
+                    <div class="item-img">
+                        <img [src]="'../../assets/cart/' + item.produto.nomeFoto"/>
                     </div>
-                </div>
-            </ion-card-content>
-        </ion-card>
-    </div>
 
-    <div class="address" *ngIf="cliente">
-        <ion-item lines="none">
-            {{ cliente.endereco }}
-            <ion-badge slot="end">&nbsp;</ion-badge>
-        </ion-item>
-    </div>
+                    <div class="item-info">
+                        <p>{{ item.produto.nome }}</p>
+                        <p>{{ item.produto.preco | currency:'BRL':'symbol':'1.2-2' }}</p>
 
-    <hr>
+                        <div class="qty-selector">
+                            <ion-button fill="clear" (click)="decreaseQuantity(item)">-</ion-button>
+                            <ion-label>{{ item.quantidade }}</ion-label>
+                            <ion-button fill="clear" (click)="increaseQuantity(item)">+</ion-button>
+                        </div>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+        </div>
 
-    <div class="cart-total">
-        <ion-item lines="none">
-            <ion-label>Sub Total</ion-label>
-            <ion-label slot="end"
-                       class="ion-text-right"> {{ getTotalSubtotal() | currency:'BRL':'symbol':'1.2-2' }}</ion-label>
-        </ion-item>
-        <ion-item lines="none">
-            <ion-label>Discount</ion-label>
-            <ion-label slot="end"
-                       class="ion-text-right">{{(getDiscount() *100) + "%" }}</ion-label>
-        </ion-item>
-        <ion-item lines="none">
-            <ion-label>Total</ion-label>
-            <ion-label slot="end" class="ion-text-right">{{ getTotal()| currency:'BRL':'symbol':'1.2-2' }}</ion-label>
-        </ion-item>
-    </div>
+        <div class="address" *ngIf="cliente">
+            <ion-item lines="none">
+                {{ cliente.endereco }}
+                <ion-badge slot="end">&nbsp;</ion-badge>
+            </ion-item>
+        </div>
 
-</ion-content>
-<ion-footer translucent="true" class="ion-no-border" mode="md">
-    <ion-toolbar color="translucent">
-        <ion-button expand="block" class="main-button" routerLink="/confirm"
-                    (click)="finalizeOrcamento()" routerDirection="forward">Buy</ion-button>
-    </ion-toolbar>
-</ion-footer>
+        <hr>
+
+        <div class="cart-total">
+            <ion-item lines="none">
+                <ion-label>Sub Total</ion-label>
+                <ion-label slot="end"
+                           class="ion-text-right"> {{ getTotalSubtotal() | currency:'BRL':'symbol':'1.2-2' }}</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label>Discount</ion-label>
+                <ion-label slot="end"
+                           class="ion-text-right">{{(getDiscount() *100) + "%" }}</ion-label>
+            </ion-item>
+            <ion-item lines="none">
+                <ion-label>Total</ion-label>
+                <ion-label slot="end" class="ion-text-right">{{ getTotal()| currency:'BRL':'symbol':'1.2-2' }}</ion-label>
+            </ion-item>
+        </div>
+
+    </ion-content>
+    <ion-footer translucent="true" class="ion-no-border" mode="md">
+        <ion-toolbar color="translucent">
+            <ion-button expand="block" class="main-button" routerLink="/confirm"
+                        (click)="finalizeOrcamento()" routerDirection="forward">Buy
+            </ion-button>
+        </ion-toolbar>
+    </ion-footer>

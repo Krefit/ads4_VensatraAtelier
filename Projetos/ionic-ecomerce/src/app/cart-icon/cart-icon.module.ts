@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular';
+import {IonicModule} from '@ionic/angular';
 
-import { CartIconPageRoutingModule } from './cart-icon-routing.module';
+import {CartIconPageRoutingModule} from './cart-icon-routing.module';
 
-import { CartIconPage } from './cart-icon.page';
+import {CartIconPage} from './cart-icon.page';
 
 @NgModule({
     imports: [
