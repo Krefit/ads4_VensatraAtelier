@@ -6,6 +6,7 @@ import {ProdutoServiceService} from '../services/produto-service.service';
 import {NavController, ToastController} from '@ionic/angular';
 import {Router} from '@angular/router';
 import {SharedDataServiceService} from '../services/shared-data-service.service';
+import {MyCartService} from '../services/my-cart.service';
 
 @Component({
   selector: 'app-home',
@@ -14,15 +15,16 @@ import {SharedDataServiceService} from '../services/shared-data-service.service'
 })
 export class HomePage implements OnInit {
   public categories = [];
-
   public bestSellProducts = [];
   produtoList?: ProdutoModel[];
   filtroPrecoMaximo: number;
+  totalItems: number;
 
 
   constructor(
       private data: DataService,
       private produtoService: ProdutoServiceService,
+      private cartService: MyCartService,
       private toastController: ToastController,
       private navCtrl: NavController,
       private router: Router,
@@ -35,6 +37,9 @@ export class HomePage implements OnInit {
     this.bestSellProducts = this.data.getBestSellProducts();
     this.filtrarProdutosMaisBaratos();
     this.listarProdutos();
+    this.cartService.totalItems$.subscribe(totalItems => {
+      this.totalItems = totalItems;
+    });
   }
   filtrarProdutosMaisBaratos() {
     // Defina um preço máximo, por exemplo, R$ 10,00. Ajuste conforme necessário.

@@ -1,15 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {MyCartService} from '../services/my-cart.service';
-import {ActivatedRoute, Router} from '@angular/router';
 import {CheckoutService} from '../services/checkout.service';
 import {ProdutoModel} from '../model/produto-model';
 import {ClienteService} from '../services/cliente.service';
 import {Cliente} from '../model/cliente';
-import {CheckoutPageModule} from './checkout.module';
 import {OrcamentoService} from '../services/orcamento.service';
 import {NavController} from '@ionic/angular';
-import {OrcamentoDTO} from '../model/orcamento-dto';
-import {HttpHeaders} from '@angular/common/http';
 
 @Component({
     selector: 'app-checkout',
@@ -31,38 +27,24 @@ export class CheckoutPage implements OnInit {
     ) {}
     finalizeOrcamento() {
         // Construa o objeto JSON com base nas informações do cliente e do carrinho
-        const orcamentoData: OrcamentoDTO = {
+        console.log(this.cartItems);
+        const orcamentoData = {
             orcamento: {
-                cliente: {
-                    id: this.cliente?.id || 0,  // Use o valor real ou um valor padrão, se não existir
-                    nome: this.cliente?.nome || '',
-                    cpf: this.cliente?.cpf || '',
-                    endereco: this.cliente?.endereco || '',
-                    email: this.cliente?.email || '',
-                    telefone: this.cliente?.telefone || ''
-                },
+                cliente_id: this.cliente?.id || 0,
                 dataEntrega: '2023-12-31T23:59:59',  // Substitua pela data desejada
                 quantidade: 1,  // Substitua pela quantidade desejada
                 desconto: 0.05,  // Substitua pelo desconto desejado
                 descricao: 'Descrição do Orcamento',  // Substitua pela descrição desejada
-                orcamentoProdutos: this.cartItems.map(item => ({
-                    produto: {
-                        id: item.produto.id,
-                        nome: item.produto.nome,
-                        descricao: item.produto.descricao,
-                        nomeFoto: item.produto.nomeFoto,
-                        quantidade: item.quantidade
-                    },
-                    quantidade: 1
-                }))
-            }
+            },
+            listaProdutos: this.cartItems.map(item => ({
+                produtoId: item.produto.id,
+                descricao: item.produto.descricao,
+                quantidadeProduto: item.quantidade
+            }))
         };
-
-        const headers = new HttpHeaders({
-            'Content-Type': 'application/json',
-        });
         // Envie o JSON ao serviço OrcamentoService
-        this.orcamentoService.salvarOrcamento(orcamentoData).subscribe(
+        // tslint:disable-next-line:max-line-length
+        this.orcamentoService.salvarOrcamento(orcamentoData.orcamento, orcamentoData.listaProdutos, orcamentoData.orcamento.cliente_id).subscribe(
             response => {
                 console.log('Orcamento processado com sucesso:', response);
                 // Adicione a navegação ou outras ações necessárias após o orcamento
@@ -73,6 +55,7 @@ export class CheckoutPage implements OnInit {
                 // Adicione tratamento de erro apropriado
             }
         );
+        this.cartService.clearCart();
     }
 
 
@@ -128,6 +111,7 @@ export class CheckoutPage implements OnInit {
     clearCart() {
         this.checkoutService.clearCartItems();
         this.checkoutItems = [];
+        this.cartService.clearCart();
     }
 
     // getDiscountedSubtotal(item: { produto: any; quantidade: number }): number {
