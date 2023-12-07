@@ -34,8 +34,6 @@ export class ProdutoService {
 
     return this.produtoServico.get(`${this.API}`).pipe(
       map((response: any) => {
-        console.log('response.data');
-        console.log(response);
         // Check response validity before processing
         if (response) {
           return response; // or any processed data

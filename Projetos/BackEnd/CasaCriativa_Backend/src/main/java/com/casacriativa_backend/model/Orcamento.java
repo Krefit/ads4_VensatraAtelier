@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,7 +20,7 @@ public class Orcamento {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
     @Column(name = "data_entrega", nullable = true)
-    private Date dataEntrega;
+    private LocalDateTime dataEntrega;
 
     @Column(name = "quantidade", nullable = false)
     private int quantidade;
@@ -52,11 +52,11 @@ public class Orcamento {
         this.cliente = cliente;
     }
 
-    public Date getDataEntrega() {
+    public LocalDateTime getDataEntrega() {
         return dataEntrega;
     }
 
-    public void setDataEntrega(Date dataEntrega) {
+    public void setDataEntrega(LocalDateTime dataEntrega) {
         this.dataEntrega = dataEntrega;
     }
 

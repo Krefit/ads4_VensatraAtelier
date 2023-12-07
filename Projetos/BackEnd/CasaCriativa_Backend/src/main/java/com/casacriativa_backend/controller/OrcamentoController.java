@@ -14,6 +14,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
+import java.text.ParseException;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @RestController
@@ -47,8 +52,9 @@ public class OrcamentoController {
             Map<String, Object> orcamentoMap = new LinkedHashMap<>();
             orcamentoMap.put("id", orcamento.getId());
             orcamentoMap.put("desconto", orcamento.getDesconto());
-            orcamentoMap.put("", orcamento.getDataEntrega());
+            orcamentoMap.put("dataEmtregta", orcamento.getDataEntrega());
             orcamentoMap.put("produtos", getProdutosForOrcamento(orcamento));
+            orcamentoMap.put("cliente", orcamento.getCliente().getId());
             response.add(orcamentoMap);
         }
 
@@ -90,7 +96,7 @@ public class OrcamentoController {
     }
 
     @PostMapping("/orcamento/add-with-produtos")
-    public ResponseEntity<Orcamento> addOrcamentoWithProdutos(@RequestBody Map<String, Object> requestData){
+    public ResponseEntity<Orcamento> addOrcamentoWithProdutos(@RequestBody Map<String, Object> requestData) throws ParseException {
 
         Map<String,Object> orcamentoData = (Map<String, Object>) requestData.get("orcamento");
         List<Map<String, Object>> selectedProdutos = (List<Map<String, Object>>) requestData.get("produtos");
@@ -99,7 +105,14 @@ public class OrcamentoController {
 
         Orcamento orcamento = new Orcamento();
 
-        orcamento.setDesconto(BigDecimal.valueOf(0));
+        orcamento.setDesconto(BigDecimal.valueOf(Long.parseLong(orcamentoData.get("desconto").toString())));
+
+
+        DateTimeFormatter formatter = DateTimeFormatter.ISO_INSTANT;
+        Instant instant = Instant.from(formatter.parse(orcamentoData.get("dataInicioProd").toString()));
+        LocalDateTime dateTime = LocalDateTime.ofInstant(instant, ZoneId.of("UTC")); // Convert to your desired timezone if necessary
+
+        orcamento.setDataEntrega(dateTime);
         orcamento.setQuantidade(0);
 
 //        String teste = orcamentoData.get("orcaDescricao").toString();

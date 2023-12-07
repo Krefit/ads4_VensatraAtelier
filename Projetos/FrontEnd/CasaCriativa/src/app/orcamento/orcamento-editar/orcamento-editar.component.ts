@@ -82,7 +82,7 @@ export class OrcamentoEditarComponent {
     if (this.selectedProdutos.length > 0) {
       const orcamentoData = this.empForm.value;
     
-      
+      console.log(orcamentoData);
 
       this._orcamentoService.addOrcamentoWithProdutos(orcamentoData, this.selectedProdutos, this.selectedCliente).subscribe({
         next: (val: any) => {

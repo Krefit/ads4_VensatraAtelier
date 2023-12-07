@@ -22,8 +22,8 @@ export class OrcamentoListComponent implements  OnInit{
     'dt_producao',
     //'data_entrega',
     //'id_produto',
-    'produto',
-    'qtde_produto',
+    //'produto',
+   // 'qtde_produto',
     'desconto',
     'action',
   ];
@@ -69,18 +69,19 @@ getClientePorId(id: number){
         this.dataSource = new MatTableDataSource(res);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
+
         console.log(res);
 
         this._cliService.getClienteList().subscribe((clienteArray: any[]) => {
           this.dataSource.data = this.dataSource.data.map((row: any) => {
-            const cliente = clienteArray.find((m: any) => m.id === row.cliente_id);
+            const cliente = clienteArray.find((m: any) => m.id === row.cliente);
             return { ...row, cliente: cliente ? cliente.nome : '' };
           });
         });
         this._prdService.getProdutoList().subscribe((produtoArray: any[]) => {
           this.dataSource.data = this.dataSource.data.map((row: any) => {
-            const produto = produtoArray.find((m: any) => m.id === row.produto_id);
-            return { ...row, produto: produto ? produto.descricao : '' };
+            const produto = produtoArray.find((m: any) => m.id === row.produtos.produtoId);
+            return { ...row, produto: produto ? produto.id : '' };
           });
         });
       },
